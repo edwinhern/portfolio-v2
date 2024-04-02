@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended", "plugin:tailwindcss/recommended"],
+  "plugins": ["simple-import-sort", "prettier", "tailwindcss"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-types": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "prettier/prettier": "error"
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  }
 }
