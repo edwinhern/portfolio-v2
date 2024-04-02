@@ -13,6 +13,23 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        sm: '0.707rem',
+        base: '1rem',
+        xl: '1.414rem',
+        '2xl': '1.999rem',
+        '3xl': '2.827rem',
+        '4xl': '3.997rem',
+        '5xl': '5.652rem',
+      },
+      fontFamily: {
+        heading: 'var(--heading-font)',
+        body: 'var(--body-font)',
+      },
+      fontWeight: {
+        normal: '400',
+        bold: '700',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

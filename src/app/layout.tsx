@@ -5,6 +5,7 @@ import { Poppins, Raleway } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 
 import { cn } from '@/lib/utils';
+import { Providers } from '@/providers';
 
 const raleway = Raleway({
   subsets: ['latin'],
@@ -25,7 +26,9 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={cn('font-body flex min-h-screen flex-col', raleway.variable, poppins.variable)}>{children}</body>
+      <body className={cn('flex min-h-screen flex-col font-body', raleway.variable, poppins.variable)}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 };
