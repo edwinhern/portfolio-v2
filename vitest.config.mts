@@ -6,7 +6,13 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
     coverage: {
-      exclude: ['**/vitest.setup.ts', '**/next.config.mjs', '**/postcss.config.js', '**/tailwind.config.ts'],
+      exclude: [
+        '**/node_modules/**',
+        '**/vitest.setup.ts',
+        '**/next.config.mjs',
+        '**/postcss.config.js',
+        '**/tailwind.config.ts',
+      ],
     },
     globals: true,
     environment: 'jsdom',
