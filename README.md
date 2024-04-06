@@ -19,6 +19,7 @@ Here's what powers edwinhern.com, from the framework down to the animation libra
 Explore these tools to further enhance your development workflow:
 
 - [Realtime Colors](https://www.realtimecolors.com) - Elevate your design with modern fonts and a dynamic color palette generator.
+- [Meta Tags](https://metatags.io) - Debug and generate meta tag code for any website
 
 ## 🛠️ Getting Started
 
