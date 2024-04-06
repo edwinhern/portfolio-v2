@@ -1,11 +1,13 @@
 import '@/styles/globals.css';
 
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Poppins, Raleway } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 
+import { ThemeProvider } from '@/components/common/providers';
 import { cn } from '@/lib/utils';
-import { Providers } from '@/providers';
 
 const raleway = Raleway({
   subsets: ['latin'],
@@ -25,9 +27,14 @@ export const metadata: Metadata = {
 
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <html lang="en">
-      <body className={cn('flex min-h-screen flex-col font-body', raleway.variable, poppins.variable)}>
-        <Providers>{children}</Providers>
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body className={cn('min-h-screen bg-background font-body antialiased', raleway.variable, poppins.variable)}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+          <SpeedInsights />
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );
