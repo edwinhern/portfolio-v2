@@ -3,12 +3,11 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { buttonVariants } from '@/components/ui/button';
+import { Icons } from '@/components/ui/icons';
+import { ModeToggleButton } from '@/components/ui/mode-toggle';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
-
-import { buttonVariants } from '../ui/button';
-import { Icons } from '../ui/icons';
-import { ThemeToggleButton } from '../ui/mode-toggle';
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -16,12 +15,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center">
-        <div className="mr-4 hidden md:flex">
+        <div className="flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Icons.logo />
-            <span className="hidden font-bold sm:inline-block">Edwinhern</span>
+            <Icons.logo className="size-6" />
+            <span className="inline-block font-bold">Edwinhern</span>
           </Link>
-          <nav className="flex items-center gap-4 text-sm lg:gap-6">
+          <nav className="hidden items-center gap-4 text-sm md:flex lg:gap-6">
             <Link
               href="/#experience"
               scroll
@@ -65,8 +64,8 @@ export function SiteHeader() {
           </nav>
         </div>
 
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <div className="w-full flex-1 md:w-auto md:flex-none">Add command to search through page</div>
+        <div className="flex flex-1 items-center justify-end space-x-2">
+          {/* <div className="w-full flex-1 md:w-auto md:flex-none">Add command to search through page</div> */}
           <div className="flex items-center">
             <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
               <div className={cn(buttonVariants({ variant: 'ghost' }), 'w-9 px-0')}>
@@ -81,7 +80,7 @@ export function SiteHeader() {
                 <span className="sr-only">LinkedIn</span>
               </div>
             </Link>
-            <ThemeToggleButton />
+            <ModeToggleButton />
           </div>
         </div>
       </div>

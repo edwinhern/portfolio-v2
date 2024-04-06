@@ -2,7 +2,6 @@
 
 import { MoonIcon, SunIcon } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import * as React from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -12,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-const ThemeToggleButton = () => {
+export const ModeToggleButton = () => {
   const { setTheme } = useTheme();
 
   return (
@@ -31,5 +30,3 @@ const ThemeToggleButton = () => {
     </DropdownMenu>
   );
 };
-
-export { ThemeToggleButton };
