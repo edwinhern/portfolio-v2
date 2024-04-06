@@ -9,6 +9,16 @@ export const siteConfig = {
     github: 'https://github.com/edwinhern',
     githubRepo: 'https://github.com/edwinhern/portfolio-v2',
   },
+  keywords: [
+    'Next.js',
+    'TypeScript',
+    'Tailwind CSS',
+    'Vitest',
+    'React Testing Library',
+    'Framer Motion',
+    'shadcn/ui',
+    'Aceternity UI',
+  ],
 };
 
 export type SiteConfig = typeof siteConfig;
