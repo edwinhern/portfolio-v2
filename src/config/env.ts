@@ -13,4 +13,5 @@ export const env = createEnv({
     NEXT_PUBLIC_NODE_ENV: process.env.NEXT_PUBLIC_NODE_ENV,
   },
   extends: [vercel],
+  skipValidation: process.env.NEXT_PUBLIC_SKIP_ENV_VALIDATION === 'true',
 });
