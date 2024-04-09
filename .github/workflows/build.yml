@@ -25,14 +25,14 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Set up .env for tests
+        run: cp .env.template .env
+
       - name: Run lint
         run: npm run lint
 
       - name: Run Build
         run: npm run build
-
-      - name: Set up .env for tests
-        run: cp .env.template .env
 
       - name: Run Test
         run: npm run test
