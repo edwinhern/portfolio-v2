@@ -1,10 +1,12 @@
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { configDefaults, defineConfig } from 'vitest/config';
+import { loadEnv } from 'vite';
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
+    env: loadEnv('', process.cwd(), ''),
     coverage: {
       exclude: [
         '**/node_modules/**',
