@@ -25,5 +25,9 @@
       "packagePatterns": ["@vitest", "vitest"],
       "groupName": "vitest"
     }
-  ]
+  ],
+  "dependencyDashboard": true,
+  "lockFileMaintenance": {
+    "enabled": true
+  }
 }
