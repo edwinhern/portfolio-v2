@@ -1,3 +1,18 @@
+# [0.2.0](https://github.com/edwinhern/portfolio-v2/compare/v0.1.2...v0.2.0) (2024-04-09)
+
+### Bug Fixes
+
+- :arrow_up: Add .npmrc file with legacy-peer-deps setting ([f8d8ec9](https://github.com/edwinhern/portfolio-v2/commit/f8d8ec9451cfb5a285212d3d0ac89a83853291ac))
+- :green_heart: Fix pull_request trigger in Docker Image CI workflow ([2e3fac8](https://github.com/edwinhern/portfolio-v2/commit/2e3fac880942a5c5d0fc2e51a10ac63fdec2543e))
+- :green_heart: Update build workflow to set up .env for tests ([d880ad7](https://github.com/edwinhern/portfolio-v2/commit/d880ad7151292eca242e2ea87320669602e9d027))
+- :green_heart: Update release workflow permissions ([1369581](https://github.com/edwinhern/portfolio-v2/commit/13695815a6d2fc0340216d6858f811d1f27beccf))
+- :white_check_mark: Add environment variable loading to vitest.config.mts ([be825f2](https://github.com/edwinhern/portfolio-v2/commit/be825f2fc58c1819f13016f984a434699502023d))
+
+### Features
+
+- :construction_worker: Update release configuration and dependencies ([543f747](https://github.com/edwinhern/portfolio-v2/commit/543f7477864f8cc7c83d59d9f006c92eb5f4f69c))
+- :sparkles: Mobile Navbar and env. config ([a3f81e4](https://github.com/edwinhern/portfolio-v2/commit/a3f81e43184f1435409cbbf38d87d6869765156b))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
