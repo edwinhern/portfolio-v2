@@ -1,3 +1,13 @@
+## [0.2.2](https://github.com/edwinhern/portfolio-v2/compare/v0.2.1...v0.2.2) (2024-04-09)
+
+### Bug Fixes
+
+- **deps:** update dependency lucide-react to ^0.366.0 ([#16](https://github.com/edwinhern/portfolio-v2/issues/16)) ([c0bf830](https://github.com/edwinhern/portfolio-v2/commit/c0bf830a22c99f63981819de32ae5b0354dcda2f))
+
+### Reverts
+
+- :rewind: Fix commit message interpolation in release.config.cjs ([3722362](https://github.com/edwinhern/portfolio-v2/commit/3722362b00879cff56429740c022f724fc27e8a5))
+
 ## [0.2.1](https://github.com/edwinhern/portfolio-v2/compare/v0.2.0...v0.2.1) (2024-04-09)
 
 ### Bug Fixes
