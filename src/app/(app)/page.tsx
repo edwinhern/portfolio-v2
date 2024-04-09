@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { Experience } from '@/components/experience';
+import { Projects } from '@/components/projects';
 import { buttonVariants } from '@/components/ui/button';
 import { Icons } from '@/components/ui/icons';
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/ui/page-header';
@@ -27,6 +29,9 @@ export default function Home() {
           </Link>
         </PageActions>
       </PageHeader>
+
+      <Experience />
+      <Projects />
     </div>
   );
 }
