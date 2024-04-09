@@ -1,3 +1,16 @@
+const { execSync } = require('child_process');
+
+function getPreviousTag() {
+  try {
+    return execSync('git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1)', {
+      encoding: 'utf-8',
+    }).trim();
+  } catch (error) {
+    console.error('Error getting previous tag:', error);
+    return 'unknown';
+  }
+}
+
 /**
  * @type {import('semantic-release').GlobalConfig}
  */
@@ -13,7 +26,7 @@ module.exports = {
       '@semantic-release/git',
       {
         assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
-        message: 'chore(release): :bookmark: bump version ${nextRelease.version}',
+        message: `chore(release): :bookmark: bump version v${getPreviousTag()} → ${nextRelease.version}`,
       },
     ],
   ],
