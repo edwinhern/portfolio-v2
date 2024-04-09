@@ -1,6 +1,8 @@
+import { env } from '@/config/env';
+
 export const siteConfig = {
   name: 'edwinhern',
-  url: 'https://edwinhern.com',
+  url: env.NEXT_PUBLIC_VERCEL_URL,
   opImage: 'https://edwinhern.com/assets/images/og-image.png',
   descriptions:
     "Portfolio of Edwin Hernandez, a software engineer based in Dallas, TX. I'm passionate about building accessible, inclusive, and performant web applications.",

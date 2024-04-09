@@ -31,7 +31,7 @@ function PageHeaderHeading({ className, ...props }: React.HTMLAttributes<HTMLHea
 function PageHeaderDescription({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) {
   return (
     <Balance
-      className={cn('max-w-[750px] text-center font-body text-lg text-muted-foreground sm:text-xl', className)}
+      className={cn('text-md max-w-[750px] text-center font-body text-muted-foreground sm:text-xl', className)}
       {...props}
     />
   );
