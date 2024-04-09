@@ -1,3 +1,9 @@
+## [0.2.1](https://github.com/edwinhern/portfolio-v2/compare/v0.2.0...v0.2.1) (2024-04-09)
+
+### Bug Fixes
+
+- :green_heart: Remove unnecessary environment variable copy in Dockerfile ([b848d2e](https://github.com/edwinhern/portfolio-v2/commit/b848d2e15c08d75e8095802a0d2535970e7aabad))
+
 # [0.2.0](https://github.com/edwinhern/portfolio-v2/compare/v0.1.2...v0.2.0) (2024-04-09)
 
 ### Bug Fixes
