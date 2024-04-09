@@ -17,6 +17,9 @@ RUN npm ci
 # Copy the rest of your app's source code from your host to your image filesystem.
 COPY . .
 
+# Copy the environment variables
+RUN cp -r /app/.env.template /app/.env
+
 # Build the Next.js application
 RUN npm run build
 # For Yarn, use the following command instead
