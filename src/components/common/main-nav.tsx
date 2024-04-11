@@ -1,9 +1,9 @@
 'use client';
 
+import { Earth } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
-import { Icons } from '@/components/ui/icons';
 import { docsConfig } from '@/config/docs';
 import { siteConfig } from '@/config/site';
 import { useLocationHash } from '@/hooks/useLocationHash';
@@ -41,10 +41,10 @@ export function MainNav() {
   }, [currentHash]);
 
   return (
-    <div className="mr-4 flex">
-      <Link href="/" onClick={scrollToSection} className="mr-6 flex items-center space-x-2">
-        <Icons.logo className="size-6" />
-        <span className="font-heading font-bold">{siteConfig.name}</span>
+    <div className="flex">
+      <Link href="/" onClick={scrollToSection} className="mr-4 flex items-center space-x-2">
+        <Earth className="size-6" />
+        <span className="font-heading text-lg font-bold">{siteConfig.name}</span>
       </Link>
       <nav className="hidden items-center gap-4 text-sm md:flex lg:gap-6">
         {docsConfig.mainNav.map((item) => (

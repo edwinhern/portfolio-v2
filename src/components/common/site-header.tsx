@@ -16,8 +16,7 @@ export function SiteHeader() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <MainNav />
 
-        <div className="flex flex-1 items-center justify-end space-x-2">
-          {/* <div className="w-full flex-1 md:w-auto md:flex-none">Add command </div> */}
+        <div className="flex flex-1 items-center justify-end">
           <div className="flex items-center">
             <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
               <div className={cn(buttonVariants({ variant: 'ghost' }), 'w-9 px-0')}>
@@ -32,7 +31,7 @@ export function SiteHeader() {
                 <span className="sr-only">LinkedIn</span>
               </div>
             </Link>
-            <ModeToggleButton />
+            <ModeToggleButton className="hidden md:flex" />
             <MobileNav />
           </div>
         </div>
