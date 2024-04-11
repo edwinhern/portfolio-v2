@@ -12,7 +12,8 @@ export default function Home() {
   return (
     <div className="container relative">
       <PageHeader>
-        <PageHeaderHeading>My Name is Edwin Hernandez .</PageHeaderHeading>
+        <h1 className="font-light">My Name is</h1>
+        <PageHeaderHeading>Edwin Hernandez .</PageHeaderHeading>
         <PageHeaderDescription>{siteConfig.descriptions}</PageHeaderDescription>
         <PageActions>
           <Link href="/" className={cn(buttonVariants())}>
