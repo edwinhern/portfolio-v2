@@ -1,3 +1,9 @@
+## [0.2.6](https://github.com/edwinhern/portfolio-v2/compare/v0.2.5...v0.2.6) (2024-04-13)
+
+### Bug Fixes
+
+- **deps:** update dependency next to v14.2.1 ([#32](https://github.com/edwinhern/portfolio-v2/issues/32)) ([e643cae](https://github.com/edwinhern/portfolio-v2/commit/e643caed0b3d972936b75c365a4e9824e15388cd))
+
 ## [0.2.5](https://github.com/edwinhern/portfolio-v2/compare/v0.2.4...v0.2.5) (2024-04-12)
 
 ### Bug Fixes
