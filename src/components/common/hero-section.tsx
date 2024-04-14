@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 export function HeroSection() {
   return (
-    <div className="grid min-h-dvh grid-cols-1 lg:grid-cols-2">
+    <div className="grid min-h-[calc(100vh-4rem)] grid-cols-1 lg:grid-cols-2">
       <Image
         draggable={false}
         src={siteConfig.assets.avatar}
