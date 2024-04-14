@@ -1,3 +1,27 @@
+## [0.2.6](https://github.com/edwinhern/portfolio-v2/compare/v0.2.5...v0.2.6) (2024-04-13)
+
+### Bug Fixes
+
+- **deps:** update dependency next to v14.2.1 ([#32](https://github.com/edwinhern/portfolio-v2/issues/32)) ([e643cae](https://github.com/edwinhern/portfolio-v2/commit/e643caed0b3d972936b75c365a4e9824e15388cd))
+
+## [0.2.5](https://github.com/edwinhern/portfolio-v2/compare/v0.2.4...v0.2.5) (2024-04-12)
+
+### Bug Fixes
+
+- **deps:** update dependency lucide-react to ^0.368.0 ([51a1b5a](https://github.com/edwinhern/portfolio-v2/commit/51a1b5ae3d3cf60586f6e54ed6b946481728dadf))
+
+## [0.2.4](https://github.com/edwinhern/portfolio-v2/compare/v0.2.3...v0.2.4) (2024-04-12)
+
+### Bug Fixes
+
+- **deps:** update dependency next to v14.2.0 ([00acbec](https://github.com/edwinhern/portfolio-v2/commit/00acbecde1f662eb4bf62e9b59c5b910bad36672))
+
+## [0.2.3](https://github.com/edwinhern/portfolio-v2/compare/v0.2.2...v0.2.3) (2024-04-10)
+
+### Bug Fixes
+
+- **deps:** update dependency lucide-react to ^0.367.0 ([8d320c8](https://github.com/edwinhern/portfolio-v2/commit/8d320c8177fbb389e13870887aeac92af982f4a7))
+
 ## [0.2.2](https://github.com/edwinhern/portfolio-v2/compare/v0.2.1...v0.2.2) (2024-04-09)
 
 ### Bug Fixes
