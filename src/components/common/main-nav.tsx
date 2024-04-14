@@ -1,4 +1,3 @@
-import { Earth } from 'lucide-react';
 import Link from 'next/link';
 
 import { docsConfig } from '@/config/docs';
@@ -9,8 +8,7 @@ export function MainNav() {
   return (
     <div className="flex">
       <Link href="/#home-section" className="mr-4 flex items-center space-x-2">
-        <Earth className="size-6" />
-        <span className="font-heading text-lg font-bold">{siteConfig.name}</span>
+        <span className="font-heading font-bold">{siteConfig.name}</span>
       </Link>
       <nav className="hidden items-center gap-4 text-sm md:flex lg:gap-6">
         {docsConfig.mainNav.map((item) => (

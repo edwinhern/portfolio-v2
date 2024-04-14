@@ -67,9 +67,7 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
       <head />
       <body className={cn('min-h-screen bg-background font-body antialiased', raleway.variable, poppins.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div id="home-section" className="relative flex min-h-screen flex-col bg-background">
-            {children}
-          </div>
+          <div className="relative flex min-h-screen flex-col bg-background">{children}</div>
           <SpeedInsights />
           <Analytics />
         </ThemeProvider>

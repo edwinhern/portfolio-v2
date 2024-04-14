@@ -15,14 +15,13 @@ import {
 import { cn } from '@/lib/utils';
 
 export const ModeToggleButton: React.FC<DropdownMenuTriggerProps> = (props) => {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger {...props} asChild>
         <Button variant="ghost" size="icon" aria-label="Toggle Theme" title="Toggle Theme">
-          <SunIcon className="size-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <MoonIcon className="absolute size-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          {theme === 'light' ? <SunIcon size={18} /> : <MoonIcon size={18} />}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -35,7 +34,7 @@ export const ModeToggleButton: React.FC<DropdownMenuTriggerProps> = (props) => {
 };
 
 export const MobileModeToggleButton: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
-  const { setTheme, theme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const handleThemeChange = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };

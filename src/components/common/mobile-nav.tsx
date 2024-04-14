@@ -24,12 +24,11 @@ export function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="container pr-0">
-        <MobileLink href="/" className="flex items-center" onOpenChange={setOpen}>
-          <Earth className="mr-2 size-4" />
-          <span className="text-md font-heading font-bold">{siteConfig.name}</span>
-        </MobileLink>
         <ScrollArea className="container my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
+            <MobileLink href="/#home-section" className="flex items-center" onOpenChange={setOpen}>
+              <span className="font-heading font-bold">{siteConfig.name}</span>
+            </MobileLink>
             {docsConfig.mainNav?.map(
               (item) =>
                 item.href && (
