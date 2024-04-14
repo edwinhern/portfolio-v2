@@ -1,6 +1,6 @@
 'use client';
 
-import { AlignJustify, Earth } from 'lucide-react';
+import { AlignJustify } from 'lucide-react';
 import Link, { LinkProps } from 'next/link';
 import { useCallback, useState } from 'react';
 
@@ -26,17 +26,14 @@ export function MobileNav() {
       <SheetContent side="right" className="container pr-0">
         <ScrollArea className="container my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
-            <MobileLink href="/#home-section" className="flex items-center" onOpenChange={setOpen}>
+            <MobileLink href="/#home-section" onOpenChange={setOpen}>
               <span className="font-heading font-bold">{siteConfig.name}</span>
             </MobileLink>
-            {docsConfig.mainNav?.map(
-              (item) =>
-                item.href && (
-                  <MobileLink className="border-b" key={item.href} href={item.href} onOpenChange={setOpen}>
-                    {item.title}
-                  </MobileLink>
-                )
-            )}
+            {docsConfig.mainNav?.map((item) => (
+              <MobileLink className="border-b" key={item.href} href={item.href} onOpenChange={setOpen}>
+                {item.title}
+              </MobileLink>
+            ))}
             <MobileModeToggleButton />
           </div>
         </ScrollArea>
@@ -51,10 +48,10 @@ interface MobileLinkProps extends LinkProps {
   className?: string;
 }
 
-function MobileLink({ href, onOpenChange, className, children, ...props }: MobileLinkProps) {
+function MobileLink({ href, onOpenChange, className, children }: MobileLinkProps) {
   const handleLinkClick = useCallback(() => onOpenChange(false), [onOpenChange]);
   return (
-    <Link href={href} onClick={handleLinkClick} className={cn(className)} {...props}>
+    <Link href={href} onClick={handleLinkClick} className={cn(className)}>
       {children}
     </Link>
   );
