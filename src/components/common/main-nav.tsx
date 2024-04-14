@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 export function MainNav() {
   return (
     <div className="flex">
-      <Link href="/#home-section" className="mr-4 flex items-center space-x-2">
+      <Link href="/" className="mr-4 flex items-center space-x-2">
         <span className="font-heading font-bold">{siteConfig.name}</span>
       </Link>
       <nav className="hidden items-center gap-4 text-sm md:flex lg:gap-6">

@@ -7,9 +7,7 @@ export default function AppLayout({ children }: PropsWithChildren) {
   return (
     <>
       <SiteHeader />
-      <main id="home-section" className="flex-1">
-        {children}
-      </main>
+      <main className="flex-1">{children}</main>
       <SiteFooter />
     </>
   );
