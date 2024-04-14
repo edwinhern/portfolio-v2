@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     shortcut: '/favicon-16x16.ico',
     apple: '/apple-touch-icon.png',
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+  manifest: `/site.webmanifest`,
 };
 
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
