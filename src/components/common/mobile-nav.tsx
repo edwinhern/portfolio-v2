@@ -2,7 +2,7 @@
 
 import { AlignJustify, Earth } from 'lucide-react';
 import Link, { LinkProps } from 'next/link';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { MobileModeToggleButton } from '@/components/ui/mode-toggle';
@@ -10,7 +10,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { docsConfig } from '@/config/docs';
 import { siteConfig } from '@/config/site';
-import { cn, scrollToSection } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -47,17 +47,13 @@ export function MobileNav() {
 }
 
 interface MobileLinkProps extends LinkProps {
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange: (open: boolean) => void;
   children: React.ReactNode;
   className?: string;
 }
 
 function MobileLink({ href, onOpenChange, className, children, ...props }: MobileLinkProps) {
-  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    scrollToSection(event);
-    onOpenChange?.(false);
-  };
-
+  const handleLinkClick = useCallback(() => onOpenChange(false), [onOpenChange]);
   return (
     <Link href={href} onClick={handleLinkClick} className={cn(className)} {...props}>
       {children}

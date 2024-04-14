@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: siteConfig.url,
     title: siteConfig.name,
-    description: siteConfig.descriptions,
+    description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
-    description: siteConfig.descriptions,
+    description: siteConfig.description,
     images: [siteConfig.opImage],
     creator: '@edwinhern15',
   },
@@ -67,7 +67,9 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
       <head />
       <body className={cn('min-h-screen bg-background font-body antialiased', raleway.variable, poppins.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className="relative flex min-h-screen flex-col bg-background">{children}</div>
+          <div id="home-section" className="relative flex min-h-screen flex-col bg-background">
+            {children}
+          </div>
           <SpeedInsights />
           <Analytics />
         </ThemeProvider>

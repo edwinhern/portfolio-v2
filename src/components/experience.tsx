@@ -1,6 +1,7 @@
 export function Experience() {
   return (
-    <div id="experience" className="min-h-lvh">
+    <div className="min-h-dvh">
+      <div className="pt-16" id="experience-section" />
       <h1>Experience</h1>
     </div>
   );
