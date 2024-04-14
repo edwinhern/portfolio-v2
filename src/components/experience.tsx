@@ -1,7 +1,7 @@
 export function Experience() {
   return (
     <div className="min-h-dvh">
-      <div className="pt-16" id="experience-section" />
+      <div id="experience-section" className="invisible pt-16" />
       <h1>Experience</h1>
     </div>
   );

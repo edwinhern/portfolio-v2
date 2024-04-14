@@ -1,7 +1,7 @@
 export function Projects() {
   return (
     <div className="min-h-dvh">
-      <div className="pt-16" id="projects-section" />
+      <div id="projects-section" className="invisible pt-16" />
       <h1>Projects</h1>
     </div>
   );

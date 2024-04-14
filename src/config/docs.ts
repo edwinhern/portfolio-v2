@@ -8,6 +8,10 @@ interface IDocsConfig {
 export const docsConfig: IDocsConfig = {
   mainNav: [
     {
+      title: 'About',
+      href: '/#about-section',
+    },
+    {
       title: 'Experience',
       href: '/#experience-section',
     },
