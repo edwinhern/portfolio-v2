@@ -7,7 +7,11 @@ import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } fro
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 
+import { TypewriterEffectSmooth } from '../ui/typewriter-effect';
+
 export function HeroSection() {
+  const name = [{ text: 'Edwin' }, { text: 'Hernandez' }];
+
   return (
     <div className="grid min-h-[calc(100vh-4rem)] grid-cols-1 lg:grid-cols-2">
       <Image
@@ -22,7 +26,9 @@ export function HeroSection() {
         priority
       />
       <PageHeader>
-        <PageHeaderHeading>Edwin Hernandez</PageHeaderHeading>
+        <PageHeaderHeading>
+          <TypewriterEffectSmooth words={name} />
+        </PageHeaderHeading>
         <PageHeaderDescription>{siteConfig.description}</PageHeaderDescription>
         <PageActions>
           <a href={siteConfig.assets.resume} download className={cn(buttonVariants())}>
