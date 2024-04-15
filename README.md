@@ -25,6 +25,7 @@ Explore these tools to further enhance your development workflow:
 
 - [Realtime Colors](https://www.realtimecolors.com) - Elevate your design with modern fonts and a dynamic color palette generator.
 - [Meta Tags](https://metatags.io) - Debug and generate meta tag code for any website
+- [Favicon.io](https://favicon.io/favicon-converter/) - Quickly generate variety of favicon sizes
 
 ## 🛠️ Getting Started
 

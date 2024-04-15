@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 
 import { MainNav } from '@/components/common/main-nav';
@@ -16,25 +14,22 @@ export function SiteHeader() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <MainNav />
 
-        <div className="flex flex-1 items-center justify-end space-x-2">
-          {/* <div className="w-full flex-1 md:w-auto md:flex-none">Add command </div> */}
-          <div className="flex items-center">
-            <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
-              <div className={cn(buttonVariants({ variant: 'ghost' }), 'w-9 px-0')}>
-                <Icons.gitHub className="size-4" />
-                <span className="sr-only">GitHub</span>
-              </div>
-            </Link>
+        <div className="flex flex-1 items-center justify-end">
+          <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
+            <div className={cn(buttonVariants({ variant: 'ghost' }), 'w-9 px-0')}>
+              <Icons.gitHub className="size-4" />
+              <span className="sr-only">GitHub</span>
+            </div>
+          </Link>
 
-            <Link href={siteConfig.links.linkedin} target="_blank" rel="noreferrer">
-              <div className={cn(buttonVariants({ variant: 'ghost' }), 'w-9 px-0')}>
-                <Icons.linkedIn className="size-4 fill-current" />
-                <span className="sr-only">LinkedIn</span>
-              </div>
-            </Link>
-            <ModeToggleButton />
-            <MobileNav />
-          </div>
+          <Link href={siteConfig.links.linkedin} target="_blank" rel="noreferrer">
+            <div className={cn(buttonVariants({ variant: 'ghost' }), 'w-9 px-0')}>
+              <Icons.linkedIn className="size-4 fill-current" />
+              <span className="sr-only">LinkedIn</span>
+            </div>
+          </Link>
+          <ModeToggleButton className="hidden md:flex" />
+          <MobileNav />
         </div>
       </div>
     </header>

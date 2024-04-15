@@ -8,20 +8,24 @@ interface IDocsConfig {
 export const docsConfig: IDocsConfig = {
   mainNav: [
     {
+      title: 'About',
+      href: '/#about-section',
+    },
+    {
       title: 'Experience',
-      href: '/#experience',
+      href: '/#experience-section',
     },
     {
       title: 'Projects',
-      href: '/#projects',
+      href: '/#projects-section',
     },
     {
       title: 'Stack',
-      href: '/#stack',
+      href: '/#stack-section',
     },
     {
       title: 'Resume',
-      href: '/#resume',
+      href: '/assets/Edwin-Hernandez-Resume-2024.pdf',
     },
   ],
 };

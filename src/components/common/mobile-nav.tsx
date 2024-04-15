@@ -2,15 +2,15 @@
 
 import { AlignJustify } from 'lucide-react';
 import Link, { LinkProps } from 'next/link';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
-import { Icons } from '@/components/ui/icons';
+import { MobileModeToggleButton } from '@/components/ui/mode-toggle';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { docsConfig } from '@/config/docs';
 import { siteConfig } from '@/config/site';
-import { cn, scrollToSection } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -23,21 +23,18 @@ export function MobileNav() {
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="pr-0">
-        <MobileLink href="/" className="flex items-center" onOpenChange={setOpen}>
-          <Icons.logo className="mr-2 size-4" />
-          <span className="font-bold">{siteConfig.name}</span>
-        </MobileLink>
-        <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
+      <SheetContent side="right" className="container pr-0">
+        <ScrollArea className="container my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
-            {docsConfig.mainNav?.map(
-              (item) =>
-                item.href && (
-                  <MobileLink key={item.href} href={item.href} onOpenChange={setOpen}>
-                    {item.title}
-                  </MobileLink>
-                )
-            )}
+            <MobileLink href="/" onOpenChange={setOpen}>
+              <span className="font-heading font-bold">{siteConfig.name}</span>
+            </MobileLink>
+            {docsConfig.mainNav?.map((item) => (
+              <MobileLink className="border-b" key={item.href} href={item.href} onOpenChange={setOpen}>
+                {item.title}
+              </MobileLink>
+            ))}
+            <MobileModeToggleButton />
           </div>
         </ScrollArea>
       </SheetContent>
@@ -46,19 +43,15 @@ export function MobileNav() {
 }
 
 interface MobileLinkProps extends LinkProps {
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange: (open: boolean) => void;
   children: React.ReactNode;
   className?: string;
 }
 
-function MobileLink({ href, onOpenChange, className, children, ...props }: MobileLinkProps) {
-  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    scrollToSection(event);
-    onOpenChange?.(false);
-  };
-
+function MobileLink({ href, onOpenChange, className, children }: MobileLinkProps) {
+  const handleLinkClick = useCallback(() => onOpenChange(false), [onOpenChange]);
   return (
-    <Link href={href} onClick={handleLinkClick} className={cn(className)} {...props}>
+    <Link href={href} onClick={handleLinkClick} className={cn(className)}>
       {children}
     </Link>
   );

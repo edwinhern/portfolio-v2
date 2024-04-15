@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: siteConfig.url,
     title: siteConfig.name,
-    description: siteConfig.descriptions,
+    description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
-    description: siteConfig.descriptions,
+    description: siteConfig.description,
     images: [siteConfig.opImage],
     creator: '@edwinhern15',
   },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     shortcut: '/favicon-16x16.ico',
     apple: '/apple-touch-icon.png',
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+  manifest: `/site.webmanifest`,
 };
 
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
