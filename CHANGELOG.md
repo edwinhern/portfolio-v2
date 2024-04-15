@@ -1,3 +1,9 @@
+## [0.2.7](https://github.com/edwinhern/portfolio-v2/compare/v0.2.6...v0.2.7) (2024-04-15)
+
+### Bug Fixes
+
+- :bug: mobile title name to be width-fit rather than full ([0f5a5cf](https://github.com/edwinhern/portfolio-v2/commit/0f5a5cfb9d3d1bebbf6c51c2d1851d96b6306a4d))
+
 ## [0.2.6](https://github.com/edwinhern/portfolio-v2/compare/v0.2.5...v0.2.6) (2024-04-13)
 
 ### Bug Fixes
