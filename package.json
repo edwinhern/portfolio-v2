@@ -1,6 +1,6 @@
 {
   "name": "edwin-portfolio",
-  "version": "0.2.7",
+  "version": "0.3.0",
   "description": "My personal portfolio website",
   "private": true,
   "scripts": {

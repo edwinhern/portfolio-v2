@@ -1,3 +1,9 @@
+# [0.3.0](https://github.com/edwinhern/portfolio-v2/compare/v0.2.7...v0.3.0) (2024-04-15)
+
+### Features
+
+- :sparkles: Add About section ([8cfbf6a](https://github.com/edwinhern/portfolio-v2/commit/8cfbf6a0ace46274384cb7d1ddc612406ffdb48e))
+
 ## [0.2.7](https://github.com/edwinhern/portfolio-v2/compare/v0.2.6...v0.2.7) (2024-04-15)
 
 ### Bug Fixes
