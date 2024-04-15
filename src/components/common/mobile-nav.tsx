@@ -26,7 +26,7 @@ export function MobileNav() {
       <SheetContent side="right" className="container pr-0">
         <ScrollArea className="container my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
-            <MobileLink href="/" onOpenChange={setOpen}>
+            <MobileLink className="w-fit" href="/" onOpenChange={setOpen}>
               <span className="font-heading font-bold">{siteConfig.name}</span>
             </MobileLink>
             {docsConfig.mainNav?.map((item) => (
