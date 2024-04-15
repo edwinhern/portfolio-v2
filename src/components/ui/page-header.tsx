@@ -1,5 +1,6 @@
 import Balance from 'react-wrap-balancer';
 
+import { Reveal } from '@/components/ui/reveal';
 import { cn } from '@/lib/utils';
 
 function PageHeader({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
@@ -15,13 +16,15 @@ function PageHeader({ className, children, ...props }: React.HTMLAttributes<HTML
 
 function PageHeaderHeading({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
-    <Balance
-      className={cn(
-        'text-center font-heading text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1]',
-        className
-      )}
-      {...props}
-    />
+    <Reveal initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0, transition: { duration: 0.4 } }}>
+      <Balance
+        className={cn(
+          'text-center font-heading text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1]',
+          className
+        )}
+        {...props}
+      />
+    </Reveal>
   );
 }
 
@@ -36,7 +39,9 @@ function PageHeaderDescription({ className, ...props }: React.HTMLAttributes<HTM
 
 function PageActions({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={cn('flex w-full items-center justify-center space-x-4 py-4 md:pb-10', className)} {...props} />
+    <Reveal initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}>
+      <div className={cn('flex w-full items-center justify-center space-x-4 py-4 md:pb-10', className)} {...props} />
+    </Reveal>
   );
 }
 

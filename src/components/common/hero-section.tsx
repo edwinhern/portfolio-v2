@@ -4,14 +4,20 @@ import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 import { Icons } from '@/components/ui/icons';
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/ui/page-header';
+import { TypewriterEffect } from '@/components/ui/typewriter-effect';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 
-import { TypewriterEffectSmooth } from '../ui/typewriter-effect';
-
 export function HeroSection() {
-  const name = [{ text: 'Edwin' }, { text: 'Hernandez' }];
-
+  const words = [
+    'hey there!',
+    'nice to meet you.',
+    'my name is edwin.',
+    'i am a computer engineer.',
+    'i love drinking boba and coffee.',
+    'i also love to build using code!',
+    'thanks for visiting!',
+  ];
   return (
     <div className="grid min-h-[calc(100vh-4rem)] grid-cols-1 lg:grid-cols-2">
       <Image
@@ -26,10 +32,10 @@ export function HeroSection() {
         priority
       />
       <PageHeader>
-        <PageHeaderHeading>
-          <TypewriterEffectSmooth words={name} />
-        </PageHeaderHeading>
-        <PageHeaderDescription>{siteConfig.description}</PageHeaderDescription>
+        <PageHeaderHeading>Edwin Hernandez</PageHeaderHeading>
+        <PageHeaderDescription>
+          <TypewriterEffect words={words} />
+        </PageHeaderDescription>
         <PageActions>
           <a href={siteConfig.assets.resume} download className={cn(buttonVariants())}>
             Download Resume
