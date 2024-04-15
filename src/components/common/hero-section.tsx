@@ -8,7 +8,11 @@ import { TypewriterEffect } from '@/components/ui/typewriter-effect';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 
-export function HeroSection() {
+interface HeroSectionProps {
+  className?: string;
+}
+
+export function HeroSection({ className }: HeroSectionProps) {
   const words = [
     'hey there!',
     'nice to meet you.',
@@ -19,7 +23,7 @@ export function HeroSection() {
     'thanks for visiting!',
   ];
   return (
-    <div className="grid min-h-[calc(100vh-4rem)] grid-cols-1 lg:grid-cols-2">
+    <div className={cn('grid min-h-[calc(100vh-4rem)] grid-cols-1 lg:grid-cols-2', className)}>
       <Image
         draggable={false}
         src={siteConfig.assets.avatar}
