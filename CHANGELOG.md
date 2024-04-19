@@ -1,3 +1,9 @@
+## [0.3.8](https://github.com/edwinhern/portfolio-v2/compare/v0.3.7...v0.3.8) (2024-04-19)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([9c54f36](https://github.com/edwinhern/portfolio-v2/commit/9c54f36c4949a9af523e10e27c8d3d71d2cc6fe5))
+
 ## [0.3.7](https://github.com/edwinhern/portfolio-v2/compare/v0.3.6...v0.3.7) (2024-04-19)
 
 ### Bug Fixes
