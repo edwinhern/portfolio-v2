@@ -9,8 +9,8 @@ interface TextUrlProps extends LinkProps {
 }
 
 const TextUrl = ({ className, children, href }: TextUrlProps) => (
-  <Link href={href} className={cn('text-primary hover:underline', className)} target="_blank" rel="noopener noreferrer">
-    &nbsp;{children}
+  <Link href={href} className={cn('text-primary', className)} target="_blank" rel="noopener noreferrer">
+    &nbsp;<span className="hover:underline">{children}</span>
   </Link>
 );
 
