@@ -6,11 +6,11 @@ import { cn } from '@/lib/utils';
 
 export function MainNav() {
   return (
-    <div className="flex items-center">
-      <Link href="/" className="mr-4 flex">
-        <span className="font-heading font-bold">{siteConfig.name}</span>
+    <div className="flex">
+      <Link href="/" className="mr-4">
+        <span className="font-heading text-lg font-bold">{siteConfig.name}</span>
       </Link>
-      <nav className="mt-[0.2rem] hidden gap-4 text-sm md:flex lg:gap-6">
+      <nav className="mt-[0.1rem] hidden items-center gap-6 text-sm md:flex">
         {mainNav.map((item) => (
           <Link key={item.title} href={item.href} className={cn('transition-colors hover:text-foreground/80')}>
             {item.title}
