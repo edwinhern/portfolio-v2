@@ -4,7 +4,7 @@ import { HeroSection } from '@/components/hero-section';
 import { Projects } from '@/components/projects';
 import { Stack } from '@/components/stack';
 import { AuroraBackground } from '@/components/ui/aurora-background';
-import { Separator } from '@/components/ui/separator';
+import { SectionLayout } from '@/components/ui/section-layout';
 
 export default function Home() {
   return (
@@ -12,15 +12,12 @@ export default function Home() {
       <AuroraBackground>
         <HeroSection className="container relative" />
       </AuroraBackground>
-      <div className="container relative">
+      <SectionLayout className="container relative">
         <About />
-        <Separator />
         <Experience />
-        <Separator />
         <Projects />
-        <Separator />
         <Stack />
-      </div>
+      </SectionLayout>
     </>
   );
 }

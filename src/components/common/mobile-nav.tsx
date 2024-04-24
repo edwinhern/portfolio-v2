@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { MobileModeToggleButton } from '@/components/ui/mode-toggle';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { docsConfig } from '@/config/docs';
+import { mainNav } from '@/config/mainNav';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 
@@ -29,7 +29,7 @@ export function MobileNav() {
             <MobileLink className="w-fit" href="/" onOpenChange={setOpen}>
               <span className="font-heading font-bold">{siteConfig.name}</span>
             </MobileLink>
-            {docsConfig.mainNav?.map((item) => (
+            {mainNav.map((item) => (
               <MobileLink className="border-b" key={item.href} href={item.href} onOpenChange={setOpen}>
                 {item.title}
               </MobileLink>

@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 import { Icons } from '@/components/ui/icons';
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/ui/page-header';
-import { Separator } from '@/components/ui/separator';
 import { TypewriterEffect } from '@/components/ui/typewriter-effect';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
@@ -58,7 +57,6 @@ export function HeroSection({ className }: HeroSectionProps) {
           </PageActions>
         </PageHeader>
       </div>
-      <Separator />
     </div>
   );
 }
