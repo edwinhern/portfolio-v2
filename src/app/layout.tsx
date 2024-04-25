@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { PropsWithChildren } from 'react';
+import { Provider as ReactWrapProvider } from 'react-wrap-balancer';
 
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -69,7 +70,9 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
       <head />
       <body className={cn('min-h-screen bg-background font-body antialiased', raleway.variable, poppins.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange enableSystem>
-          <div className="relative flex min-h-screen flex-col bg-background">{children}</div>
+          <ReactWrapProvider>
+            <div className="relative flex min-h-screen flex-col bg-background">{children}</div>
+          </ReactWrapProvider>
           <SpeedInsights />
           <Analytics />
         </ThemeProvider>

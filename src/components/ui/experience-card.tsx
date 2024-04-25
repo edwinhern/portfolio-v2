@@ -1,3 +1,5 @@
+import Balancer from 'react-wrap-balancer';
+
 import Image from 'next/image';
 
 import { Badge } from '@/components/ui/badge';
@@ -19,11 +21,13 @@ export function ExperienceCard({ company, date, description, image, skills, titl
       <Reveal initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, transition: { duration: 0.4 }, y: 0 }}>
         <CardHeader>
           {image && (
-            <Image alt="Company Logo" className="mb-4 rounded-lg object-cover" height="900" src={image} width="1000" />
+            <Image alt="Company Logo" className="mb-4 rounded-lg object-cover" height="1000" src={image} width="1200" />
           )}
 
-          <CardTitle className="font-heading">
-            {title} · {company}
+          <CardTitle className="font-heading text-xl md:text-2xl">
+            <Balancer preferNative={false} ratio={0.4}>
+              {title} · {company}
+            </Balancer>
           </CardTitle>
 
           <CardDescription>{date}</CardDescription>
@@ -31,7 +35,9 @@ export function ExperienceCard({ company, date, description, image, skills, titl
       </Reveal>
       <CardContent className="flex flex-col gap-4 font-heading">
         <Reveal initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, transition: { duration: 0.4 }, x: 0 }}>
-          <p className="leading-7">{description}</p>
+          <Balancer as="p" className="leading-7 md:text-lg" preferNative={false} ratio={0.1}>
+            {description}
+          </Balancer>
         </Reveal>
         {skills && (
           <div className="flex flex-wrap gap-2">
