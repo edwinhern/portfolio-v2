@@ -7,12 +7,12 @@ import { cn } from '@/lib/utils';
 export function MainNav() {
   return (
     <div className="flex">
-      <Link href="/" className="mr-4">
+      <Link className="mr-4" href="/">
         <span className="font-heading text-lg font-bold">{siteConfig.name}</span>
       </Link>
       <nav className="mt-[0.1rem] hidden items-center gap-6 text-sm md:flex">
         {mainNav.map((item) => (
-          <Link key={item.title} href={item.href} className={cn('transition-colors hover:text-foreground/80')}>
+          <Link className={cn('transition-colors hover:text-foreground/80')} href={item.href} key={item.title}>
             {item.title}
           </Link>
         ))}

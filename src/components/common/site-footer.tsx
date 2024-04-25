@@ -7,19 +7,19 @@ export function SiteFooter() {
         <p className="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left">
           Built by{' '}
           <a
-            href={siteConfig.links.linkedin}
-            target="_blank"
-            rel="noreferrer"
             className="font-medium underline underline-offset-4"
+            href={siteConfig.links.linkedin}
+            rel="noreferrer"
+            target="_blank"
           >
             edwinhern
           </a>
           . The source code is available on{' '}
           <a
-            href={siteConfig.links.githubRepo}
-            target="_blank"
-            rel="noreferrer"
             className="font-medium underline underline-offset-4"
+            href={siteConfig.links.githubRepo}
+            rel="noreferrer"
+            target="_blank"
           >
             GitHub
           </a>

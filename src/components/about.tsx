@@ -8,8 +8,8 @@ interface TextUrlProps extends LinkProps {
   className?: string;
 }
 
-const TextUrl = ({ className, children, href }: TextUrlProps) => (
-  <Link href={href} className={cn('text-primary', className)} target="_blank" rel="noopener noreferrer">
+const TextUrl = ({ children, className, href }: TextUrlProps) => (
+  <Link className={cn('text-primary', className)} href={href} rel="noopener noreferrer" target="_blank">
     &nbsp;<span className="hover:underline">{children}</span>
   </Link>
 );
@@ -17,13 +17,13 @@ const TextUrl = ({ className, children, href }: TextUrlProps) => (
 export function About() {
   return (
     <section className="flex flex-col items-start justify-start gap-4 py-16">
-      <h2 id="about-section" className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl">
+      <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl" id="about-section">
         About Me
       </h2>
       <Reveal
         className="text-md lg:text-base lg:font-medium"
         initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0, transition: { duration: 0.4 } }}
+        whileInView={{ opacity: 1, transition: { duration: 0.4 }, x: 0 }}
       >
         <p className="lg:text-xl">
           Hello! I&apos;m a Software Engineer based in the vibrant tech hubs of Dallas and Austin, TX.

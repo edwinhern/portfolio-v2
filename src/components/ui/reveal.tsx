@@ -8,7 +8,7 @@ interface RevealProps extends HTMLMotionProps<'div'> {
   children: React.ReactNode;
 }
 
-export const Reveal = ({ className, children, ...props }: RevealProps) => {
+export const Reveal = ({ children, className, ...props }: RevealProps) => {
   return (
     <motion.div className={cn(className)} {...props}>
       {children}

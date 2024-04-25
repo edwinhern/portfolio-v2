@@ -7,7 +7,7 @@ interface SectionLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode[];
 }
 
-export const SectionLayout: React.FC<SectionLayoutProps> = ({ className, children, ...rest }) => {
+export const SectionLayout: React.FC<SectionLayoutProps> = ({ children, className, ...rest }) => {
   return (
     <div className={cn(className)} {...rest}>
       {children.map((child, index) => (

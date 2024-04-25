@@ -3,7 +3,7 @@ import Balance from 'react-wrap-balancer';
 import { Reveal } from '@/components/ui/reveal';
 import { cn } from '@/lib/utils';
 
-function PageHeader({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+function PageHeader({ children, className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <section
       className={cn('mx-auto flex max-w-4xl flex-col items-center gap-2 py-8 md:py-0 lg:m-auto', className)}
@@ -16,7 +16,7 @@ function PageHeader({ className, children, ...props }: React.HTMLAttributes<HTML
 
 function PageHeaderHeading({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
-    <Reveal initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0, transition: { duration: 0.4 } }}>
+    <Reveal initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, transition: { duration: 0.4 }, x: 0 }}>
       <Balance
         className={cn(
           'text-center font-heading text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1]',
@@ -39,7 +39,7 @@ function PageHeaderDescription({ className, ...props }: React.HTMLAttributes<HTM
 
 function PageActions({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <Reveal initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}>
+    <Reveal initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, transition: { duration: 0.4 }, y: 0 }}>
       <div className={cn('flex w-full items-center justify-center space-x-4 py-4 md:pb-10', className)} {...props} />
     </Reveal>
   );

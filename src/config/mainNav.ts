@@ -1,33 +1,33 @@
 import { Icons } from '@/components/ui/icons';
 
 export interface NavItem {
-  title: string;
-  href: string;
   disabled?: boolean;
   external?: boolean;
+  href: string;
   icon?: keyof typeof Icons;
   label?: string;
+  title: string;
 }
 
 export const mainNav: NavItem[] = [
   {
-    title: 'About',
     href: '/#about-section',
+    title: 'About',
   },
   {
-    title: 'Experience',
     href: '/#experience-section',
+    title: 'Experience',
   },
   {
-    title: 'Projects',
     href: '/#projects-section',
+    title: 'Projects',
   },
   {
-    title: 'Stack',
     href: '/#stack-section',
+    title: 'Stack',
   },
   {
-    title: 'Resume',
     href: '/assets/Edwin-Hernandez-Resume-2024.pdf',
+    title: 'Resume',
   },
 ];
