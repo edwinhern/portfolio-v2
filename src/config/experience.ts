@@ -1,32 +1,47 @@
 export interface ExperienceItem {
-  title: string;
   company: string;
   date: string;
   description: string;
+  image?: string;
   skills: string[];
+  title: string;
 }
 
 export const experiences: ExperienceItem[] = [
   {
-    title: 'Software Engineer II',
     company: 'Tesla Inc.',
-    date: 'Feb 2023 - March 2024', // · 1 yr 2 mos
+    date: 'Jul 2023 - Present',
     // date: { start: 'July 2023', end: 'Present' },
     description:
       'Recently joined the company as a Software Engineer 1. I am responsible for developing and maintaining software applications for internal use. I work closely with the product owner and other team members to deliver high-quality software solutions.',
-    skills: ['C#', '.NET Core', 'Angular', 'TypeScript', 'Agile Development', 'Jira'],
+    image: '/assets/companies/tesla.jpg',
+    skills: [
+      'C#',
+      '.NET Core',
+      'TypeScript',
+      'React',
+      'Agile Development',
+      'Jira',
+      'MySQL',
+      'Docker',
+      'REST API',
+      'CI/CD',
+      'Unit Testing',
+      'Redux',
+    ],
+    title: 'Software Engineer II',
   },
   {
-    title: 'Software Engineer | Intern',
     company: 'Tesla Inc.',
     date: 'Feb 2023 - March 2024',
     // date: { start: 'August 2022', end: 'December 2022' },
     description:
       'Recently joined the company as a Software Engineer 1. I am responsible for developing and maintaining software applications for internal use. I work closely with the product owner and other team members to deliver high-quality software solutions.',
+    image: '/assets/companies/tesla-02.jpg',
     skills: ['C#', '.NET Core', 'Angular', 'TypeScript', 'Agile Development', 'Jira'],
+    title: 'Software Engineer Intern',
   },
   {
-    title: 'Backend Engineer | Intern',
     company: 'JPMorgan Chase & Co.',
     date: 'Feb 2023 - March 2024', // · 1 yr 2 mos
     // date: 'Feb 2023 - March 2024', // · 1 yr 2 mos
@@ -47,10 +62,10 @@ export const experiences: ExperienceItem[] = [
       'Database Management',
       'Unit Testing',
     ],
+    title: 'Backend Engineer Intern',
   },
   {
-    title: 'Full Stack Developer | Intern',
-    company: 'Seizing Every Opportunity (SEO) USA',
+    company: 'Seizing Every Opportunity (SEO)',
     date: 'August 2022 - January 2023 · 6 mos',
     description:
       'Designed and developed web system that streamlines inventory management process for internal employees. Collaborated with other engineers on existing internal systems to add new features and fix bugs.',
@@ -67,5 +82,6 @@ export const experiences: ExperienceItem[] = [
       'Agile Development',
       'Unit Testing',
     ],
+    title: 'Full Stack Developer Intern',
   },
 ];

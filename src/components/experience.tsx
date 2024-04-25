@@ -4,19 +4,19 @@ import { experiences } from '@/config/experience';
 
 export function Experience() {
   return (
-    <section id="experience-section" className="flex flex-col items-start justify-start gap-4 py-20 sm:py-24 md:mx-16">
+    <section className="flex flex-col items-start justify-start gap-4 py-20 sm:py-24 md:mx-16" id="experience-section">
       <div className="flex flex-col gap-4 md:hidden">
         <h2 className="mb-4 w-full scroll-m-20 text-center text-3xl font-extrabold tracking-tight lg:text-4xl">
           Where I&apos;ve Worked
         </h2>
         {experiences.map((experience) => (
           <ExperienceCard
-            key={experience.title}
-            title={experience.title}
             company={experience.company}
             date={experience.date}
             description={experience.description}
+            key={experience.title}
             skills={experience.skills}
+            title={experience.title}
           />
         ))}
       </div>
@@ -27,12 +27,13 @@ export function Experience() {
           </h2>
           {experiences.map((experience) => (
             <ExperienceCard
-              key={experience.title}
-              title={experience.title}
               company={experience.company}
               date={experience.date}
               description={experience.description}
+              image={experience.image}
+              key={experience.title}
               skills={experience.skills}
+              title={experience.title}
             />
           ))}
         </div>
