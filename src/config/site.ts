@@ -22,7 +22,7 @@ export const siteConfig = {
     linkedin: 'https://www.linkedin.com/in/edwinhern/',
   },
   name: 'edwinhern',
-  opImage: '/og-image.jpg',
+  opImage: '/og-image.png',
   url: new URL('https://edwinhern.com'),
 };
 
