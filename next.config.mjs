@@ -9,6 +9,7 @@ const nextConfig = {
   },
   experimental: {
     optimizePackageImports: ['framer-motion'],
+    serverComponentsExternalPackages: ['@react-pdf/renderer'],
     webVitalsAttribution: ['FCP', 'LCP', 'CLS', 'FID', 'TTFB', 'INP'],
   },
   images: {
