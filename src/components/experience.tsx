@@ -14,6 +14,7 @@ export function Experience() {
             company={experience.company}
             date={experience.date}
             description={experience.description}
+            employmentType={experience.employmentType}
             key={experience.title}
             skills={experience.skills}
             title={experience.title}
@@ -30,6 +31,7 @@ export function Experience() {
               company={experience.company}
               date={experience.date}
               description={experience.description}
+              employmentType={experience.employmentType}
               image={experience.image}
               key={experience.title}
               skills={experience.skills}

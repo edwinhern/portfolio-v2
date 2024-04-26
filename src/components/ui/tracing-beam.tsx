@@ -22,10 +22,27 @@ export const TracingBeam = ({ children, className }: { children: React.ReactNode
   const [svgHeight, setSvgHeight] = useState(0);
 
   useEffect(() => {
-    if (contentRef.current) {
-      setSvgHeight(contentRef.current.offsetHeight);
-    }
+    const handleResize = () => {
+      if (contentRef.current) {
+        const newHeight = contentRef.current.offsetHeight;
+
+        // Define minimum and maximum allowed heights
+        const minHeight = 0; // Set this to whatever is appropriate for your layout
+        const maxHeight = 3400; // Set this to whatever is appropriate for your layout
+
+        // Constrain newHeight to be within minHeight and maxHeight
+        const constrainedHeight = Math.max(minHeight, Math.min(newHeight, maxHeight));
+        setSvgHeight(constrainedHeight);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+
+    // Set initial SVG Height
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
+
   useEffect(() => {
     return scrollYProgress.on('change', setVelocity);
   }, [scrollYProgress, scrollYProgressVelocity]);

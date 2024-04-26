@@ -21,7 +21,7 @@ export function About() {
         About Me
       </h2>
       <Reveal
-        className="text-md lg:text-base lg:font-medium"
+        className="text-md/loose lg:text-base/loose lg:font-medium"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, transition: { duration: 0.4 }, x: 0 }}
       >
