@@ -27,6 +27,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   authors: [{ name: 'Edwin Hernandez', url: siteConfig.links.linkedin }],
   creator: 'Edwin Hernandez',
+  description: siteConfig.description,
   icons: {
     apple: '/apple-touch-icon.png',
     icon: '/favicon.ico',
