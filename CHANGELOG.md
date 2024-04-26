@@ -1,3 +1,16 @@
+## [0.3.10](https://github.com/edwinhern/portfolio-v2/compare/v0.3.9...v0.3.10) (2024-04-25)
+
+### Bug Fixes
+
+- **deps:** update dependency next to v14.2.3 ([44dfa33](https://github.com/edwinhern/portfolio-v2/commit/44dfa33c41cbe41b7d3ea7da6796a0be5d54f14b))
+
+## [0.3.9](https://github.com/edwinhern/portfolio-v2/compare/v0.3.8...v0.3.9) (2024-04-24)
+
+### Bug Fixes
+
+- 💄 Styling Issues ([#54](https://github.com/edwinhern/portfolio-v2/issues/54)) ([22ed05e](https://github.com/edwinhern/portfolio-v2/commit/22ed05ec0e6b99728f47a7279caa3a68d7468ad7))
+- **deps:** update dependency lucide-react to ^0.373.0 ([#53](https://github.com/edwinhern/portfolio-v2/issues/53)) ([4a95ad9](https://github.com/edwinhern/portfolio-v2/commit/4a95ad9a2f72f7edc8f5df12205003984cce9cb1))
+
 ## [0.3.8](https://github.com/edwinhern/portfolio-v2/compare/v0.3.7...v0.3.8) (2024-04-19)
 
 ### Bug Fixes

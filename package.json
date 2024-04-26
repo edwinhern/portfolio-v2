@@ -1,6 +1,6 @@
 {
   "name": "edwin-portfolio",
-  "version": "0.3.8",
+  "version": "0.3.10",
   "description": "My personal portfolio website",
   "private": true,
   "scripts": {
@@ -29,7 +29,7 @@
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.28",
     "lucide-react": "^0.373.0",
-    "next": "14.2.2",
+    "next": "14.2.3",
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
@@ -54,7 +54,7 @@
     "@vitest/coverage-v8": "^1.4.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
-    "eslint-config-next": "14.2.2",
+    "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-perfectionist": "^2.10.0",
     "eslint-plugin-prettier": "^5.1.3",
