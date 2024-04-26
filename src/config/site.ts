@@ -23,7 +23,7 @@ export const siteConfig = {
   },
   name: 'edwinhern',
   opImage: '/og-image.png',
-  url: new URL('https://edwinhern.com'),
+  url: new URL('https://portfolio-v2-two-murex.vercel.app'),
 };
 
 export type SiteConfig = typeof siteConfig;
