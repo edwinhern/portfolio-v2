@@ -64,21 +64,15 @@ export const TracingBeam = ({ children, className }: { children: React.ReactNode
             boxShadow: scrollYProgress.get() > 0 ? 'none' : 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
           }}
           className="ml-[27px] flex size-4 items-center justify-center rounded-full border border-neutral-200 shadow-sm"
-          transition={{
-            delay: 0.5,
-            duration: 0.2,
-          }}
+          transition={{ delay: 0.5, duration: 0.2 }}
         >
           <motion.div
             animate={{
-              backgroundColor: scrollYProgress.get() > 0 ? 'white' : 'var(--emerald-400)',
-              borderColor: scrollYProgress.get() > 0 ? 'white' : 'var(--emerald-600)',
+              backgroundColor: scrollYProgress.get() > 0 ? 'var(--white)' : 'var(--emerald-400)',
+              borderColor: scrollYProgress.get() > 0 ? 'var(--white)' : 'var(--emerald-600)',
             }}
             className="size-2 rounded-full border border-neutral-300 bg-white"
-            transition={{
-              delay: 0.5,
-              duration: 0.2,
-            }}
+            transition={{ delay: 0.5, duration: 0.2 }}
           />
         </motion.div>
         <svg

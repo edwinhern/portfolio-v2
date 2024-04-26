@@ -21,7 +21,7 @@ export function Experience() {
           />
         ))}
       </div>
-      <TracingBeam className="hidden px-6 md:flex md:flex-col">
+      <TracingBeam className=" hidden md:flex md:flex-col">
         <div className="flex flex-col gap-4">
           <h2 className="mb-4 w-full scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl">
             Where I&apos;ve Worked
