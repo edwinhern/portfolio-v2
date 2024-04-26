@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 import { Icons } from '@/components/ui/icons';
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/ui/page-header';
-import { Separator } from '@/components/ui/separator';
 import { TypewriterEffect } from '@/components/ui/typewriter-effect';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
@@ -27,15 +26,15 @@ export function HeroSection({ className }: HeroSectionProps) {
     <div className={cn(className)}>
       <div className={cn('grid min-h-[calc(100vh-4rem)] grid-cols-1 lg:grid-cols-2')}>
         <Image
-          draggable={false}
-          src={siteConfig.assets.avatar}
-          className="mx-auto mb-0 mt-auto h-auto w-full max-w-md justify-center object-cover object-center lg:m-auto lg:max-w-xl"
           alt="Picture of the author"
-          width={1200}
+          className="mx-auto mb-0 mt-auto h-auto w-full max-w-md justify-center object-cover object-center lg:m-auto lg:max-w-xl"
+          draggable={false}
           height={1000}
-          quality={100}
           loading="eager"
           priority
+          quality={100}
+          src={siteConfig.assets.avatar}
+          width={1200}
         />
         <PageHeader>
           <PageHeaderHeading>Edwin Hernandez</PageHeaderHeading>
@@ -43,14 +42,14 @@ export function HeroSection({ className }: HeroSectionProps) {
             <TypewriterEffect words={words} />
           </PageHeaderDescription>
           <PageActions>
-            <a href={siteConfig.assets.resume} download className={cn(buttonVariants())}>
+            <a className={cn(buttonVariants())} download href={siteConfig.assets.resume}>
               Download Resume
             </a>
             <Link
-              target="_blank"
-              rel="noreferrer"
-              href={siteConfig.links.github}
               className={cn(buttonVariants({ variant: 'outline' }))}
+              href={siteConfig.links.github}
+              rel="noreferrer"
+              target="_blank"
             >
               <Icons.gitHub className="mr-2 size-4" />
               GitHub
@@ -58,7 +57,6 @@ export function HeroSection({ className }: HeroSectionProps) {
           </PageActions>
         </PageHeader>
       </div>
-      <Separator />
     </div>
   );
 }

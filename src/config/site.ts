@@ -1,19 +1,11 @@
 export const siteConfig = {
-  name: 'edwinhern',
-  url: new URL('https://edwinhern.com'),
-  opImage: '/og-image.png',
-  description:
-    "Portfolio of Edwin Hernandez, a software engineer based in Dallas, TX. I'm passionate about building accessible, inclusive, and performant web applications.",
-  links: {
-    linkedin: 'https://www.linkedin.com/in/edwinhern/',
-    github: 'https://github.com/edwinhern',
-    githubRepo: 'https://github.com/edwinhern/portfolio-v2',
-  },
   assets: {
-    logo: '/assets/images/logo.png',
     avatar: '/assets/images/avatar.png',
+    logo: '/assets/images/logo.png',
     resume: '/assets/Edwin-Hernandez-Resume-2024.pdf',
   },
+  description:
+    "Portfolio of Edwin Hernandez, a software engineer based in Dallas, TX. I'm passionate about building accessible, inclusive, and performant web applications.",
   keywords: [
     'Next.js',
     'TypeScript',
@@ -24,6 +16,14 @@ export const siteConfig = {
     'shadcn/ui',
     'Aceternity UI',
   ],
+  links: {
+    github: 'https://github.com/edwinhern',
+    githubRepo: 'https://github.com/edwinhern/portfolio-v2',
+    linkedin: 'https://www.linkedin.com/in/edwinhern/',
+  },
+  name: 'edwinhern',
+  opImage: '/og-image.png',
+  url: new URL('https://edwinhern.com'),
 };
 
 export type SiteConfig = typeof siteConfig;

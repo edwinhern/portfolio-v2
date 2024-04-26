@@ -15,14 +15,14 @@ export function SiteHeader() {
         <MainNav />
 
         <div className="flex flex-1 items-center justify-end">
-          <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
+          <Link href={siteConfig.links.github} rel="noreferrer" target="_blank">
             <div className={cn(buttonVariants({ variant: 'ghost' }), 'w-9 px-0')}>
               <Icons.gitHub className="size-4" />
               <span className="sr-only">GitHub</span>
             </div>
           </Link>
 
-          <Link href={siteConfig.links.linkedin} target="_blank" rel="noreferrer">
+          <Link href={siteConfig.links.linkedin} rel="noreferrer" target="_blank">
             <div className={cn(buttonVariants({ variant: 'ghost' }), 'w-9 px-0')}>
               <Icons.linkedIn className="size-4 fill-current" />
               <span className="sr-only">LinkedIn</span>
