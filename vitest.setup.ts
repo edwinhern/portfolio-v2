@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
-
 import { cleanup } from '@testing-library/react';
+
+import '@testing-library/jest-dom';
 
 // Mock IntersectionObserver
 export class IntersectionObserver {
