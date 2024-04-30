@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Balancer from 'react-wrap-balancer';
 
 import { AnimatePresence, motion } from 'framer-motion';
@@ -16,10 +16,18 @@ interface GitHubRepositoryHoverCardProps {
 }
 
 export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps> = ({ className, items }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<null | number>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<null | number>(null);
 
+  const gridLayoutClass = useMemo(() => {
+    const length = items.length;
+    if (length === 3 || length === 6) {
+      return 'lg:grid-cols-3';
+    } else {
+      return 'lg:grid-cols-2';
+    }
+  }, [items.length]);
   return (
-    <div className={cn('grid grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-3', className)}>
+    <div className={cn('grid grid-cols-1 py-10 md:grid-cols-2', gridLayoutClass, className)}>
       {items.map((item, idx) => (
         <Reveal
           initial={{ opacity: 0, y: -50 }}
