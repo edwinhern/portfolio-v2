@@ -2,7 +2,7 @@
 
 import { useCallback, useState } from 'react';
 
-import { AlignJustify } from 'lucide-react';
+import { Command } from 'lucide-react';
 import Link, { LinkProps } from 'next/link';
 
 import { Button } from '@/components/ui/button';
@@ -20,7 +20,7 @@ export function MobileNav() {
     <Sheet onOpenChange={setOpen} open={open}>
       <SheetTrigger asChild>
         <Button className="flex w-9 px-0 md:hidden" variant={'ghost'}>
-          <AlignJustify className="size-5 fill-current" />
+          <Command className="size-5" />
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>

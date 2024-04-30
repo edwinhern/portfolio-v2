@@ -6,7 +6,7 @@ export function Experience() {
   return (
     <section className="flex flex-col items-start justify-start gap-4 py-20 sm:py-24 md:mx-16" id="experience-section">
       <div className="flex flex-col gap-4 md:hidden">
-        <h2 className="mb-4 w-full scroll-m-20 text-center text-3xl font-extrabold tracking-tight lg:text-4xl">
+        <h2 className="w-full scroll-m-20 text-center font-heading text-3xl font-extrabold tracking-tight lg:text-4xl">
           Where I&apos;ve Worked
         </h2>
         {experiences.map((experience) => (
@@ -23,7 +23,7 @@ export function Experience() {
       </div>
       <TracingBeam className=" hidden md:flex md:flex-col">
         <div className="flex flex-col gap-4">
-          <h2 className="mb-4 w-full scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl">
+          <h2 className="scroll-m-20 font-heading text-3xl font-extrabold tracking-tight lg:text-4xl">
             Where I&apos;ve Worked
           </h2>
           {experiences.map((experience) => (
