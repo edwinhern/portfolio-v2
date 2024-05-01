@@ -26,8 +26,4 @@ export const mainNav: NavItem[] = [
     href: '/#stack-section',
     title: 'Stack',
   },
-  {
-    href: '/assets/Edwin-Hernandez-Resume-2024.pdf',
-    title: 'Resume',
-  },
 ];

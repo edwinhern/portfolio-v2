@@ -17,7 +17,7 @@ const TextUrl = ({ children, className, href }: TextUrlProps) => (
 export function About() {
   return (
     <section className="flex flex-col items-start justify-start gap-4 py-16">
-      <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl" id="about-section">
+      <h2 className="scroll-m-20 font-heading text-3xl font-extrabold tracking-tight lg:text-4xl" id="about-section">
         About Me
       </h2>
       <Reveal
