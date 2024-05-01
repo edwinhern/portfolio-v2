@@ -1,3 +1,9 @@
+# [0.4.0](https://github.com/edwinhern/portfolio-v2/compare/v0.3.11...v0.4.0) (2024-05-01)
+
+### Features
+
+- ✨ Add Projects ([#67](https://github.com/edwinhern/portfolio-v2/issues/67)) ([3366d94](https://github.com/edwinhern/portfolio-v2/commit/3366d942b38bb65625fa632107936aa6994122b8))
+
 ## [0.3.11](https://github.com/edwinhern/portfolio-v2/compare/v0.3.10...v0.3.11) (2024-04-26)
 
 ### Bug Fixes
