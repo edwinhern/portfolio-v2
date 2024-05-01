@@ -22,8 +22,4 @@ export const mainNav: NavItem[] = [
     href: '/#projects-section',
     title: 'Projects',
   },
-  {
-    href: '/#stack-section',
-    title: 'Stack',
-  },
 ];
