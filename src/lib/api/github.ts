@@ -1,9 +1,8 @@
-import { env } from '@/env';
 import wretch from 'wretch';
 
 // Configure API URL from environment
-const apiUrl = env.GH_API_URL;
-const githubUsername = env.GH_USERNAME;
+const apiUrl = 'https://gh-pinned-repos-tsj7ta5xfhep.deno.dev';
+const githubUsername = 'edwinhern';
 
 // Create a wretch instance configured for API interactions
 const api = wretch(apiUrl, {
