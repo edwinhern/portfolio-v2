@@ -1,3 +1,4 @@
+import { server } from '@/test/setup';
 import { cleanup } from '@testing-library/react';
 
 import '@testing-library/jest-dom';
@@ -26,6 +27,18 @@ export class IntersectionObserver {
 }
 window.IntersectionObserver = IntersectionObserver;
 global.IntersectionObserver = IntersectionObserver;
+
+beforeAll(() => {
+  server.listen();
+});
+
+afterEach(() => {
+  server.resetHandlers();
+});
+
+afterAll(() => {
+  server.close();
+});
 
 afterEach(() => {
   cleanup();
