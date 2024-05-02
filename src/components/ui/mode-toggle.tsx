@@ -16,7 +16,7 @@ import {
 import { cn } from '@/lib/utils';
 
 export const ModeToggleButton: React.FC<DropdownMenuTriggerProps> = ({ className, ...props }) => {
-  const { setTheme, theme } = useTheme();
+  const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>

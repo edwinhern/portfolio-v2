@@ -3,17 +3,11 @@
     "next/core-web-vitals",
     "plugin:prettier/recommended",
     "plugin:tailwindcss/recommended",
-    "plugin:perfectionist/recommended-natural"
+    "plugin:perfectionist/recommended-natural",
+    "plugin:testing-library/react"
   ],
-  "plugins": ["perfectionist", "prettier", "tailwindcss"],
+  "plugins": ["perfectionist"],
   "rules": {
-    "tailwindcss/no-custom-classname": "off",
-    "tailwindcss/classnames-order": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/ban-types": "off",
-    "prettier/prettier": "error",
-    "perfectionist/sort-interfaces": "error",
     "perfectionist/sort-imports": [
       "error",
       {
@@ -33,20 +27,12 @@
           "unknown"
         ],
         "custom-groups": {
-          "value": {
-            "react": ["react", "react-*"]
-          },
-          "type": {
-            "react": "react"
-          }
+          "value": { "react": ["react", "react-*"] },
+          "type": { "react": "react" }
         },
         "newlines-between": "always",
         "internal-pattern": ["@/components/**", "@/config/**", "@/lib/**", "@/app/**"]
       }
     ]
-  },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": "latest"
   }
 }

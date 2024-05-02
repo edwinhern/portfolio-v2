@@ -16,12 +16,12 @@ const TextUrl = ({ children, className, href }: TextUrlProps) => (
 
 export function About() {
   return (
-    <section className="flex flex-col items-start justify-start gap-4 py-16">
+    <section className="flex flex-col items-start justify-start gap-4 py-16" data-testid="about-section">
       <h2 className="scroll-m-20 font-heading text-3xl font-extrabold tracking-tight lg:text-4xl" id="about-section">
         About Me
       </h2>
       <Reveal
-        className="text-md/loose lg:text-base/loose lg:font-medium"
+        className="lg:text-lg/loose lg:font-medium"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, transition: { duration: 0.4 }, x: 0 }}
       >

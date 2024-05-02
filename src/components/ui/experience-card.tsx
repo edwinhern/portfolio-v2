@@ -2,11 +2,10 @@ import Balancer from 'react-wrap-balancer';
 
 import Image from 'next/image';
 
-import { Badge, badgeVariants } from '@/components/ui/badge';
+import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Reveal } from '@/components/ui/reveal';
 import { ExperienceItem } from '@/config/experience';
-import { cn } from '@/lib/utils';
 
 interface ExperienceCardProps extends ExperienceItem {}
 

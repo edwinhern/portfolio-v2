@@ -4,7 +4,11 @@ import { experiences } from '@/config/experience';
 
 export function Experience() {
   return (
-    <section className="flex flex-col items-start justify-start gap-4 py-16 md:mx-16" id="experience-section">
+    <section
+      className="flex flex-col items-start justify-start gap-4 py-16 md:mx-16"
+      data-testid="experience-section"
+      id="experience-section"
+    >
       <div className="flex flex-col gap-4 md:hidden">
         <h2 className="w-full scroll-m-20 text-center font-heading text-3xl font-extrabold tracking-tight lg:text-4xl">
           Where I&apos;ve Worked
