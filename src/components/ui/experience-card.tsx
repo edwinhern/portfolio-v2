@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Reveal } from '@/components/ui/reveal';
-import { ExperienceItem } from '@/config/experience';
 
 interface ExperienceCardProps extends ExperienceItem {}
 

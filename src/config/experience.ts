@@ -1,19 +1,4 @@
-export enum EmploymentType {
-  Contractor = 'Contractor',
-  FullTime = 'Full-Time',
-  Intern = 'Intern',
-  PartTime = 'Part-Time',
-}
-
-export interface ExperienceItem {
-  company: string;
-  date: string;
-  description: string;
-  employmentType: EmploymentType;
-  image?: string;
-  skills?: string[];
-  title: string;
-}
+import { EmploymentType } from '@/types/enum';
 
 export const experiences: ExperienceItem[] = [
   {
