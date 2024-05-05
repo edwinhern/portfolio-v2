@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { Reveal } from '@/components/ui/reveal';
 import { cn } from '@/lib/utils';
 
-import { CardHeader } from './card';
+import { CardHeader } from '../ui/card';
 
 interface GitHubRepositoryHoverCardProps {
   className?: string;
