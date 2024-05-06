@@ -7,7 +7,7 @@ export const fetchGithubMockUrl = 'https://gh-pinned-repos-tsj7ta5xfhep.deno.dev
 
 /**
  * This mock data is associated with the GitHub pinned repositories endpoint
- * @url https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/'
+ * @url https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/
  **/
 export const githubMockData: GithubRepo[] = [
   {

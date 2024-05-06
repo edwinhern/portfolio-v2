@@ -8,8 +8,8 @@ import { RenderIf } from '@/components/common/render-if';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
+import { env } from '@/config/env';
 
-import { discordId } from '../dashboard-config';
 import { DiscordActivityCard } from './discord-activity-card';
 import { DiscordStatus } from './discord-status';
 
@@ -35,7 +35,7 @@ const ActivityFeed = ({ activities, lanyard }: { activities: Activity[]; lanyard
 );
 
 export const DiscordActivity = () => {
-  const lanyard = useLanyardWS(discordId, {});
+  const lanyard = useLanyardWS(`${BigInt(env.NEXT_PUBLIC_DISCORD_ID)}`);
 
   return (
     <Card className="w-full">

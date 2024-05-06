@@ -1,5 +1,4 @@
 import { server } from '@/test/setup';
-import { cleanup } from '@testing-library/react';
 
 import '@testing-library/jest-dom';
 
@@ -38,8 +37,4 @@ afterEach(() => {
 
 afterAll(() => {
   server.close();
-});
-
-afterEach(() => {
-  cleanup();
 });
