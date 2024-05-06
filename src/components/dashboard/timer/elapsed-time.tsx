@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { useEffect, useState } from 'react';
 
 import { discordTimestamp } from '../utils/time';
 
@@ -9,9 +9,9 @@ interface TimestampProps {
 }
 
 export function ElapsedTime({ unixTimestamp }: TimestampProps) {
-  const [timeAgo, setTimeAgo] = React.useState(discordTimestamp(unixTimestamp));
+  const [timeAgo, setTimeAgo] = useState(discordTimestamp(unixTimestamp));
 
-  React.useEffect(() => {
+  useEffect(() => {
     const intervalId = setInterval(() => {
       setTimeAgo(discordTimestamp(unixTimestamp));
     }, 1000);

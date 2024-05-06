@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { useEffect, useState } from 'react';
 
 import { Progress } from '@/components/ui/progress';
 
@@ -12,9 +12,9 @@ interface SpotifyBarProps {
 }
 
 export function ProgressBar({ end, start }: SpotifyBarProps) {
-  const [progress, setProgress] = React.useState(calculateProgress(start, end));
+  const [progress, setProgress] = useState(calculateProgress(start, end));
 
-  React.useEffect(() => {
+  useEffect(() => {
     const intervalId = setInterval(() => {
       setProgress(calculateProgress(start, end));
     }, 1000);

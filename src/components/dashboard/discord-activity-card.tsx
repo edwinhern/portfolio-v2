@@ -26,9 +26,13 @@ function ActivityImage({ activity, data }: { activity: Activity; data: Data }) {
 
   if (!activity.assets && !activity.application_id) {
     return (
-      <div className="flex size-20 items-center justify-center rounded bg-card object-cover">
-        <Icons.discord className="size-12" />
-      </div>
+      <Image
+        alt="Discord Icon"
+        className="flex size-20 items-center justify-center rounded bg-card object-cover"
+        height={1000}
+        src={'/assets/gifs/discord.gif'}
+        width={1200}
+      />
     );
   }
 
