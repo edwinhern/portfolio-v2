@@ -1,4 +1,4 @@
-import { DiscordActivity } from '@/components/dashboard/discord-activity';
+import { DiscordActivity } from '@/components/dashboard/discord/discord-activity';
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/ui/page-header';
 
 export const metadata = {
@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Dashboard',
 };
 
-export default async function Dashboard() {
+export default function Dashboard() {
   return (
     <main className="container relative max-w-3xl space-y-4 py-16">
       <PageHeader className="items-start py-0">

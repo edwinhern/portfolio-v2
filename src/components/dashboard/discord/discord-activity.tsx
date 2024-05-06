@@ -9,7 +9,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 
-import { discordId } from './dashboard-config';
+import { discordId } from '../dashboard-config';
 import { DiscordActivityCard } from './discord-activity-card';
 import { DiscordStatus } from './discord-status';
 
