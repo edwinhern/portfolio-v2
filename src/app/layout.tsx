@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
   },
   title: {
-    default: siteConfig.name,
+    default: 'Edwin Hernandez - Coffee Lover',
     template: `%s | ${siteConfig.name}`,
   },
   twitter: {

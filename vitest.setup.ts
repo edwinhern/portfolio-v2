@@ -1,7 +1,12 @@
 import { server } from '@/test/setup';
-import { cleanup } from '@testing-library/react';
 
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
+
+vi.stubEnv('NODE_ENV', 'test');
+vi.stubEnv('NEXT_PUBLIC_APP_URL', 'http://localhost:3000');
+vi.stubEnv('NEXT_PUBLIC_DISCORD_ID', '123456789012345678');
+vi.stubEnv('DISCORD_ID', '123456789012345678');
+vi.stubEnv('WAKATIME_API_KEY', 'waka_123456789012345678');
 
 // Mock IntersectionObserver
 export class IntersectionObserver {
@@ -38,8 +43,4 @@ afterEach(() => {
 
 afterAll(() => {
   server.close();
-});
-
-afterEach(() => {
-  cleanup();
 });

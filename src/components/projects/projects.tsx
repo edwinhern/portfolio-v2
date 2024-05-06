@@ -1,4 +1,4 @@
-import { GitHubRepositoryHoverCard } from '@/components/ui/github-repository-hover-card';
+import { GitHubRepositoryHoverCard } from './github-repository-hover-card';
 
 interface ProjectsProps {
   repositories: GithubRepo[];

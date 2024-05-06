@@ -1,7 +1,7 @@
 import { About } from '@/components/about';
-import { Experience } from '@/components/experience';
+import { Experience } from '@/components/experience/experience';
 import { HeroSection } from '@/components/hero-section';
-import { Projects } from '@/components/projects';
+import { Projects } from '@/components/projects/projects';
 import { AuroraBackground } from '@/components/ui/aurora-background';
 import { SectionLayout } from '@/components/ui/section-layout';
 import { fetchGithubRepos } from '@/lib/api/github';
