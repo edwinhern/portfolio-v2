@@ -1,7 +1,7 @@
 import type { Data, Spotify } from 'use-lanyard';
 
 import Image from 'next/image';
-import { Activity, LanyardResponse } from 'use-lanyard';
+import { Activity } from 'use-lanyard';
 
 import { RenderIf } from '@/components/common/render-if';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -28,7 +28,7 @@ export function DiscordActivityCard({ activity, data }: DiscordActivityCardProps
               )}
             >
               <Image
-                alt="Activity image"
+                alt="Activity image 01"
                 className="rounded"
                 height={90}
                 src={(data.spotify as Spotify)?.album_art_url as string}
@@ -44,11 +44,11 @@ export function DiscordActivityCard({ activity, data }: DiscordActivityCardProps
               )}
             >
               <Image
-                alt="Activity image"
-                className="rounded"
+                alt="Activity image 02"
+                className="size-20 rounded object-cover"
                 height={90}
-                src={`https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets?.large_image}.webp?size=512`}
-                width={90}
+                src={`https://media.discordapp.net/external/${activity?.assets?.large_image.replace('mp:external/', '')}`}
+                width={1090}
               />
             </RenderIf>
 

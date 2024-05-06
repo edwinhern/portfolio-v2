@@ -1,7 +1,8 @@
-import type { API, Data } from 'use-lanyard';
+import type { Data } from 'use-lanyard';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Icons } from '@/components/ui/icons';
+import { cn } from '@/lib/utils';
 
 interface DiscordStatusProps {
   data: Data;
@@ -9,14 +10,14 @@ interface DiscordStatusProps {
 
 export const DiscordStatus: React.FC<DiscordStatusProps> = ({ data }) => {
   const status = (status: Data['discord_status']) => {
-    const statusMap: Record<Data['discord_status'], { color: string; text: string }> = {
-      dnd: { color: '#F04747', text: 'Do Not Disturb' },
-      idle: { color: '#FAA61A', text: 'Idle' },
-      offline: { color: 'gray', text: 'Offline' },
-      online: { color: '#49d073', text: 'Online' },
+    const statusMap: Record<Data['discord_status'], { cn: string; text: string }> = {
+      dnd: { cn: 'text-rose-400', text: 'Do Not Disturb' },
+      idle: { cn: 'text-amber-400', text: 'Idle' },
+      offline: { cn: 'text-muted dark:text-muted-foreground', text: 'Offline' },
+      online: { cn: 'text-emerald-500', text: 'Online' },
     };
 
-    return statusMap[status] || { color: 'gray', text: 'Offline' };
+    return statusMap[status] || statusMap.offline;
   };
 
   const statusInfo = status(data.discord_status);
@@ -37,7 +38,7 @@ export const DiscordStatus: React.FC<DiscordStatusProps> = ({ data }) => {
           <p className="text-xs text-muted-foreground">{data.discord_user.username}</p>
         </div>
       </div>
-      <div className="flex gap-2" style={{ color: statusInfo.color }}>
+      <div className={cn('flex gap-2', statusInfo.cn)}>
         <Icons.discord />
         <span className="text-sm">{statusInfo.text}</span>
       </div>
