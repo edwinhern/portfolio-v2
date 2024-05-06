@@ -23,7 +23,7 @@ export const DiscordStatus: React.FC<DiscordStatusProps> = ({ data }) => {
   const statusInfo = status(data.discord_status);
 
   return (
-    <div className="flex flex-col  items-baseline  gap-4 sm:flex-row">
+    <div className="flex flex-col items-baseline gap-4 sm:flex-row">
       <div className="flex gap-2">
         <div className="flex items-center justify-center">
           <Avatar>
