@@ -15,7 +15,7 @@ export const env = createEnv({
     WAKATIME_API_KEY: process.env.WAKATIME_API_KEY,
   },
   server: {
-    DISCORD_ID: z.string().min(1),
+    DISCORD_ID: z.string().min(1).default('123456789012345678'),
     WAKATIME_API_KEY: z.string().startsWith('waka_'),
   },
   skipValidation: true,
