@@ -35,7 +35,7 @@ const ActivityFeed = ({ activities, lanyard }: { activities: Activity[]; lanyard
 );
 
 export const DiscordActivity = () => {
-  const lanyard = useLanyardWS(`${BigInt(env.NEXT_PUBLIC_DISCORD_ID) || 1}`);
+  const lanyard = useLanyardWS(`${BigInt(env.NEXT_PUBLIC_DISCORD_ID || 1)}`);
 
   return (
     <Card className="w-full">
