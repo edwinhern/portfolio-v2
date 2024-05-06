@@ -10,7 +10,7 @@ export default async function Home() {
   const githubRepos = await fetchGithubRepos();
 
   return (
-    <main>
+    <>
       <AuroraBackground>
         <HeroSection className="container relative" />
       </AuroraBackground>
@@ -19,6 +19,6 @@ export default async function Home() {
         <Experience />
         <Projects repositories={githubRepos} />
       </SectionLayout>
-    </main>
+    </>
   );
 }

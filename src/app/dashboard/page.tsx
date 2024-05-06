@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Dashboard() {
   return (
-    <main className="container relative max-w-3xl space-y-4 py-16">
+    <div className="container relative max-w-3xl space-y-4 py-16">
       <PageHeader className="items-start py-0">
         <PageHeaderHeading className="text-2xl font-semibold sm:text-2xl md:text-2xl lg:text-2xl">
           Dashboard
@@ -21,6 +21,6 @@ export default function Dashboard() {
       <div className="flex flex-wrap gap-2">
         <DiscordActivity />
       </div>
-    </main>
+    </div>
   );
 }
