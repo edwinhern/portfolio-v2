@@ -2,13 +2,13 @@
 
 import type { Data } from 'use-lanyard';
 
+import { env } from '@/env';
 import { Activity, useLanyardWS } from 'use-lanyard';
 
 import { RenderIf } from '@/components/common/render-if';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { env } from '@/lib/utils';
 
 import { DiscordActivityCard } from './discord-activity-card';
 import { DiscordStatus } from './discord-status';
