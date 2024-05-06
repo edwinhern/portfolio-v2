@@ -4,8 +4,8 @@ import { z } from 'zod';
 
 export const env = createEnv({
   client: {
-    NEXT_PUBLIC_APP_URL: z.string().min(1).default('http://localhost:3000'),
-    NEXT_PUBLIC_DISCORD_ID: z.string().min(1).default('123456789012345678'),
+    NEXT_PUBLIC_APP_URL: z.string().min(1),
+    NEXT_PUBLIC_DISCORD_ID: z.string().min(1),
   },
   extends: [vercel()],
   runtimeEnv: {
@@ -15,7 +15,7 @@ export const env = createEnv({
     WAKATIME_API_KEY: process.env.WAKATIME_API_KEY,
   },
   server: {
-    DISCORD_ID: z.string().min(1).default('123456789012345678'),
+    DISCORD_ID: z.string().min(1),
     WAKATIME_API_KEY: z.string().startsWith('waka_'),
   },
   skipValidation: true,
