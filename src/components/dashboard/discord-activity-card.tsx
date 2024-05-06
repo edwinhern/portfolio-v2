@@ -29,7 +29,7 @@ export function DiscordActivityCard({ activity, data }: DiscordActivityCardProps
             >
               <Image
                 alt="Activity image 01"
-                className="rounded"
+                className="size-20 rounded object-cover"
                 height={90}
                 src={(data.spotify as Spotify)?.album_art_url as string}
                 width={90}
@@ -46,32 +46,24 @@ export function DiscordActivityCard({ activity, data }: DiscordActivityCardProps
               <Image
                 alt="Activity image 02"
                 className="size-20 rounded object-cover"
-                height={90}
+                height={1000}
                 src={`https://media.discordapp.net/external/${activity?.assets?.large_image.replace('mp:external/', '')}`}
-                width={1090}
+                width={1200}
               />
             </RenderIf>
 
             <RenderIf when={Boolean(!activity.assets && activity.application_id)}>
               <Image
                 alt="Activity image"
-                className="rounded"
-                height={90}
-                src={`https://dcdn.dstn.to/app-icons/${activity.application_id}.webp?size=512`}
-                width={90}
+                className="size-20 rounded object-cover"
+                height={1000}
+                src={`https://dcdn.dstn.to/app-icons/${activity.application_id}.webp?size=2048`}
+                width={1200}
               />
             </RenderIf>
 
             <RenderIf when={!activity.assets && !activity.application_id}>
-              <div
-                className="flex items-center justify-center"
-                style={{
-                  backgroundColor: 'gray',
-                  borderRadius: '0.25rem',
-                  height: 90,
-                  width: 90,
-                }}
-              >
+              <div className="flex size-20 items-center justify-center rounded bg-card object-cover">
                 <Icons.discord className="size-12" />
               </div>
             </RenderIf>
