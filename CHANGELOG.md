@@ -1,3 +1,9 @@
+## [0.4.5](https://github.com/edwinhern/portfolio-v2/compare/v0.4.4...v0.4.5) (2024-05-08)
+
+### Bug Fixes
+
+- **deps:** update dependency zod to v3.23.7 ([9905fcd](https://github.com/edwinhern/portfolio-v2/commit/9905fcdec167e51e88993903215a6b8255c510c7))
+
 ## [0.4.4](https://github.com/edwinhern/portfolio-v2/compare/v0.4.3...v0.4.4) (2024-05-07)
 
 ### Bug Fixes
