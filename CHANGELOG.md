@@ -1,3 +1,9 @@
+## [0.4.6](https://github.com/edwinhern/portfolio-v2/compare/v0.4.5...v0.4.6) (2024-05-10)
+
+### Bug Fixes
+
+- 🔧 Framer motion load ([#88](https://github.com/edwinhern/portfolio-v2/issues/88)) ([95619c5](https://github.com/edwinhern/portfolio-v2/commit/95619c5e23a0c1c6dd538931f1a5377c1d811939))
+
 ## [0.4.5](https://github.com/edwinhern/portfolio-v2/compare/v0.4.4...v0.4.5) (2024-05-08)
 
 ### Bug Fixes
