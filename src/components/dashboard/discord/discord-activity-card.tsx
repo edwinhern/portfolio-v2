@@ -3,9 +3,7 @@ import type { Data, Spotify } from 'use-lanyard';
 import Image from 'next/image';
 import { Activity } from 'use-lanyard';
 
-import { RenderIf } from '@/components/common/render-if';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Icons } from '@/components/ui/icons';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 import { ElapsedTime } from './timer/elapsed-time';
