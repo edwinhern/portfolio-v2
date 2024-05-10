@@ -3,7 +3,7 @@ import { EmploymentType } from '@/types/enum';
 export const experiences: ExperienceItem[] = [
   {
     company: 'Tesla Inc.',
-    date: 'Jul 2023 - Present',
+    date: 'Jul 2023 - May 2024',
     description:
       "My first full-time role at Tesla came right after my internship, during a critical project phase. I developed a comprehensive admin configuration system, which allows for customizable profiles and advanced access controls specifically for Payroll Users. This system is designed to handle large-scale operations that impact millions. Additionally, I created a reusable query-builder component that's now used across various Tesla apps, improving development efficiency and user experience.",
     employmentType: EmploymentType.FullTime,
