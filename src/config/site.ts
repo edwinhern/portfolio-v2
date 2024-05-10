@@ -19,6 +19,7 @@ export const siteConfig = {
   links: {
     github: 'https://github.com/edwinhern',
     githubRepo: 'https://github.com/edwinhern/portfolio-v2',
+    githubRepositories: 'https://github.com/edwinhern?tab=repositories',
     linkedin: 'https://www.linkedin.com/in/edwinhern/',
   },
   name: 'edwinhern',
