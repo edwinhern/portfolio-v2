@@ -1,3 +1,7 @@
+import Link from 'next/link';
+
+import { siteConfig } from '@/config/site';
+
 import { GitHubRepositoryHoverCard } from './github-repository-hover-card';
 
 interface ProjectsProps {
@@ -11,6 +15,9 @@ export const Projects: React.FC<ProjectsProps> = ({ repositories }) => {
         Projects
       </h2>
       <GitHubRepositoryHoverCard items={repositories} />
+      <Link className="flex justify-end text-sm underline" href={siteConfig.links.githubRepositories}>
+        See More...
+      </Link>
     </section>
   );
 };
