@@ -1,5 +1,3 @@
-import million from 'million/compiler';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compiler: {
@@ -24,4 +22,4 @@ const nextConfig = {
   trailingSlash: false,
 };
 
-export default million.next(nextConfig);
+export default nextConfig;
