@@ -22,8 +22,11 @@ export function About() {
       </h2>
       <Reveal
         className="lg:text-lg/loose lg:font-medium"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.4 }, x: 0 }}
+        transition={{ duration: 0.4 }}
+        variants={{
+          hidden: { opacity: 0, x: 50 },
+          visible: { opacity: 1, x: 0 },
+        }}
       >
         <p className="lg:text-xl">
           Hello! I&apos;m a Software Engineer based in the vibrant tech hubs of Dallas and Austin, TX.

@@ -19,7 +19,13 @@ export function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <Card className="w-full">
-      <Reveal initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, transition: { duration: 0.4 }, y: 0 }}>
+      <Reveal
+        transition={{ duration: 0.4 }}
+        variants={{
+          hidden: { opacity: 0, y: -50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+      >
         <CardHeader>
           {image && (
             <Image alt="Company Logo" className="mb-4 rounded-lg object-cover" height="1000" src={image} width="1200" />
@@ -37,7 +43,13 @@ export function ExperienceCard({
         </CardHeader>
       </Reveal>
       <CardContent className="flex flex-col gap-4">
-        <Reveal initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, transition: { duration: 0.4 }, x: 0 }}>
+        <Reveal
+          transition={{ duration: 0.4 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <Balancer as="p" className="text-base/loose leading-7 md:text-lg/loose" preferNative={false} ratio={0.1}>
             {description}
           </Balancer>
@@ -46,9 +58,12 @@ export function ExperienceCard({
           <div className="flex flex-wrap gap-2">
             {skills.map((skill, index) => (
               <Reveal
-                initial={{ opacity: 0, y: 30 }}
                 key={skill}
-                whileInView={{ opacity: 1, transition: { delay: index / 40, duration: 0.1 }, y: 0 }}
+                transition={{ delay: index / 40, duration: 0.1 }}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 },
+                }}
               >
                 <Badge variant="default">{skill}</Badge>
               </Reveal>

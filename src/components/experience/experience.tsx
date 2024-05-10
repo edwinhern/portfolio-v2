@@ -10,25 +10,9 @@ export function Experience() {
       data-testid="experience-section"
       id="experience-section"
     >
-      <div className="flex flex-col gap-4 md:hidden">
-        <h2 className="w-full scroll-m-20 text-center font-heading text-3xl font-extrabold tracking-tight lg:text-4xl">
-          Where I&apos;ve Worked
-        </h2>
-        {experiences.map((experience, idx) => (
-          <ExperienceCard
-            company={experience.company}
-            date={experience.date}
-            description={experience.description}
-            employmentType={experience.employmentType}
-            key={`${experience.title}-${idx}`}
-            skills={experience.skills}
-            title={experience.title}
-          />
-        ))}
-      </div>
-      <TracingBeam className=" hidden md:flex md:flex-col">
+      <TracingBeam className="flex flex-col">
         <div className="flex flex-col gap-4">
-          <h2 className="scroll-m-20 font-heading text-3xl font-extrabold tracking-tight lg:text-4xl">
+          <h2 className="scroll-m-20 text-center font-heading text-3xl font-extrabold tracking-tight md:text-left lg:text-4xl">
             Where I&apos;ve Worked
           </h2>
           {experiences.map((experience, idx) => (

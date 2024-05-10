@@ -16,7 +16,13 @@ function PageHeader({ children, className, ...props }: React.HTMLAttributes<HTML
 
 function PageHeaderHeading({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
-    <Reveal initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, transition: { duration: 0.4 }, x: 0 }}>
+    <Reveal
+      transition={{ duration: 0.4 }}
+      variants={{
+        hidden: { opacity: 0, x: 50 },
+        visible: { opacity: 1, x: 0 },
+      }}
+    >
       <Balance
         className={cn(
           'text-center font-heading text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1]',
@@ -39,7 +45,13 @@ function PageHeaderDescription({ className, ...props }: React.HTMLAttributes<HTM
 
 function PageActions({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <Reveal initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, transition: { duration: 0.4 }, y: 0 }}>
+    <Reveal
+      transition={{ duration: 0.4 }}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+    >
       <div className={cn('flex w-full items-center justify-center space-x-4 py-4 md:pb-10', className)} {...props} />
     </Reveal>
   );

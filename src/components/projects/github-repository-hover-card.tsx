@@ -32,9 +32,12 @@ export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps>
     <div className={cn('grid grid-cols-1 py-4 md:grid-cols-2', gridLayoutClass, className)}>
       {items.map((item, idx) => (
         <Reveal
-          initial={{ opacity: 0, y: -50 }}
           key={item.repo}
-          whileInView={{ opacity: 1, transition: { delay: idx / 30, duration: 0.4 }, y: 0 }}
+          transition={{ delay: idx / 30, duration: 0.4 }}
+          variants={{
+            hidden: { opacity: 0, y: -50 },
+            visible: { opacity: 1, y: 0 },
+          }}
         >
           <Link
             className="group relative block size-full p-2"
