@@ -22,7 +22,26 @@ RUN npm run build
 # For Yarn, use the following command instead
 # RUN yarn build
 
-# Stage 2: Run the app
+# Stage 2: Run the app in development mode
+FROM node:20-alpine AS dev
+WORKDIR /app
+
+# Copy only the necessary files for development
+COPY package*.json ./
+COPY . .
+
+# Install dependencies (in case there are any new ones)
+RUN npm ci
+# For Yarn, use the following command instead
+# RUN yarn install
+
+# Expose the port Next.js runs on
+EXPOSE 3000
+
+# Command to run the app in development mode
+CMD ["npm", "run", "dev"]
+
+# Stage 3: Run the app in production mode
 FROM node:20-alpine AS runner
 WORKDIR /app
 
@@ -38,5 +57,3 @@ EXPOSE 3000
 
 # Command to run the app
 CMD ["npm", "start"]
-# For Yarn, use the following command instead
-# CMD ["yarn", "start"]

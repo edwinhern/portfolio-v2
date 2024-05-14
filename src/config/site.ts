@@ -1,7 +1,7 @@
 export const siteConfig = {
   assets: {
     avatar: '/assets/images/avatar.png',
-    discordGif: '/assets/gifs/github.gif',
+    discordGif: '/assets/gifs/discord.gif',
     logo: '/assets/images/logo.png',
     resume: '/assets/resume/Edwin-Hernandez-Resume-2024.pdf',
   },
