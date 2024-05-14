@@ -22,8 +22,9 @@ export const siteConfig = {
     githubRepositories: 'https://github.com/edwinhern?tab=repositories',
     linkedin: 'https://www.linkedin.com/in/edwinhern/',
   },
-  name: 'edwinhern',
+  name: 'Edwin Hernandez',
   opImage: '/og-image.png',
+  siteTitle: 'edwinhern',
   url: new URL('https://portfolio-v2-two-murex.vercel.app'),
 };
 

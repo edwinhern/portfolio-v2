@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compiler: {
-    removeConsole: {
-      exclude: ['error', 'info'],
-    },
+    removeConsole: true,
   },
   experimental: {
     optimizePackageImports: ['framer-motion'],
@@ -19,7 +17,6 @@ const nextConfig = {
     ],
   },
   reactStrictMode: true,
-  trailingSlash: false,
 };
 
 export default nextConfig;
