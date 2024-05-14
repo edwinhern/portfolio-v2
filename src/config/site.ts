@@ -2,7 +2,7 @@ export const siteConfig = {
   assets: {
     avatar: '/assets/images/avatar.png',
     logo: '/assets/images/logo.png',
-    resume: '/assets/Edwin-Hernandez-Resume-2024.pdf',
+    resume: '/assets/resume/Edwin-Hernandez-Resume-2024.pdf',
   },
   description: 'Software Engineer, Gamer, Soccer Player, and minimalist, based in Dallas, TX.',
   keywords: [

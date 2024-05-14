@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   creator: 'Edwin Hernandez',
   description: siteConfig.description,
   icons: {
-    apple: '/apple-touch-icon.png',
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
+    apple: '/favicons/apple-touch-icon.png',
+    icon: '/favicons/favicon.ico',
+    shortcut: '/favicons/favicon-16x16.png',
   },
   keywords: siteConfig.keywords,
   manifest: `/site.webmanifest`,
