@@ -6,7 +6,6 @@ vi.stubEnv('NODE_ENV', 'test');
 vi.stubEnv('NEXT_PUBLIC_APP_URL', 'http://localhost:3000');
 vi.stubEnv('NEXT_PUBLIC_DISCORD_ID', '123456789012345678');
 vi.stubEnv('DISCORD_ID', '123456789012345678');
-vi.stubEnv('WAKATIME_API_KEY', 'waka_123456789012345678');
 
 // Mock IntersectionObserver
 export class IntersectionObserver {

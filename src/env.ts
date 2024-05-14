@@ -12,11 +12,9 @@ export const env = createEnv({
     DISCORD_ID: process.env.DISCORD_ID,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     NEXT_PUBLIC_DISCORD_ID: process.env.NEXT_PUBLIC_DISCORD_ID,
-    WAKATIME_API_KEY: process.env.WAKATIME_API_KEY,
   },
   server: {
     DISCORD_ID: z.string().min(1),
-    WAKATIME_API_KEY: z.string().startsWith('waka_'),
   },
   skipValidation: true,
 });
