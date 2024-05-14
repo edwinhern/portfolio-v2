@@ -1,3 +1,9 @@
+# [0.5.0](https://github.com/edwinhern/portfolio-v2/compare/v0.4.6...v0.5.0) (2024-05-14)
+
+### Features
+
+- :sparkles: Add Discord Link Card and Sun Rise Card ([#94](https://github.com/edwinhern/portfolio-v2/issues/94)) ([df4a14a](https://github.com/edwinhern/portfolio-v2/commit/df4a14ab5ff281d972890fdb3e2ab2295feeb24c))
+
 ## [0.4.6](https://github.com/edwinhern/portfolio-v2/compare/v0.4.5...v0.4.6) (2024-05-10)
 
 ### Bug Fixes
