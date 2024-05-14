@@ -6,6 +6,7 @@ import Link from 'next/link';
 
 import { Card } from '@/components/ui/card';
 import { Reveal } from '@/components/ui/reveal';
+import { siteConfig } from '@/config/site';
 
 export const DiscordLinkCard = () => {
   return (
@@ -23,7 +24,8 @@ export const DiscordLinkCard = () => {
             className="scale-75 md:w-72 md:scale-100"
             draggable={false}
             height={1000}
-            src="/assets/gifs/discord.gif"
+            src={siteConfig.assets.discordGif}
+            unoptimized
             width={1200}
           />
         </Link>
