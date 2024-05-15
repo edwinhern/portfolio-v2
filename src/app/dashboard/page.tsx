@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 export default async function Dashboard() {
-  const weatherForecast = await fetchWeatherForecast();
+  // const weatherForecast = await fetchWeatherForecast();
 
   return (
     <div className="container relative max-w-3xl space-y-4 py-16">
@@ -25,10 +25,10 @@ export default async function Dashboard() {
 
       <div className="flex flex-wrap gap-2">
         <DiscordActivity />
-        <div className="flex size-full flex-wrap gap-4">
+        {/* <div className="flex size-full flex-wrap gap-4">
           <DiscordLinkCard />
           <CurrentTimeCard data={weatherForecast} />
-        </div>
+        </div> */}
       </div>
     </div>
   );
