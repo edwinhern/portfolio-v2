@@ -25,7 +25,7 @@ export const siteConfig = {
   name: 'Edwin Hernandez',
   opImage: '/og-image.png',
   siteTitle: 'edwinhern',
-  url: new URL('https://edwinhern.vercel.app'),
+  url: new URL('https://edwinhern.com'),
 };
 
 export type SiteConfig = typeof siteConfig;

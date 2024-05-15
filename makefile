@@ -1,7 +1,7 @@
 # Makefile for building, running, and shutting down a Docker container for a Next.js portfolio
 
 # Variables
-PROJECT_NAME := nextjs-portfolio
+PROJECT_NAME := nextjs-portfolio-v2
 DOCKER_IMAGE := $(PROJECT_NAME):latest
 DOCKER_DEV_IMAGE := $(PROJECT_NAME)-dev:latest
 CONTAINER_NAME := $(PROJECT_NAME)-container
