@@ -27,12 +27,10 @@ export function HeroSection({ className }: HeroSectionProps) {
       <div className={cn('grid min-h-[calc(100vh-4rem)] grid-cols-1 lg:grid-cols-2')}>
         <Image
           alt="Picture of the author"
-          className="mx-auto mb-0 mt-auto h-auto w-full max-w-md justify-center object-cover object-center lg:m-auto lg:max-w-xl"
+          className="m-auto mb-0 h-auto w-full max-w-md justify-center object-cover object-center lg:m-auto lg:max-w-xl"
           draggable={false}
           height={1000}
-          loading="eager"
           priority
-          quality={100}
           src={siteConfig.assets.avatar}
           width={1200}
         />
