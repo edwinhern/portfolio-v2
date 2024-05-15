@@ -19,6 +19,6 @@ export const fetchGithubRepos = async () => {
     return response;
   } catch (error) {
     console.error('Error fetching pinned repositories:', error);
-    return null;
+    return [];
   }
 };
