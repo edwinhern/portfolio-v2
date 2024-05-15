@@ -1,3 +1,5 @@
+import million from 'million/compiler';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -14,6 +16,12 @@ const nextConfig = {
     ],
   },
   reactStrictMode: true,
+  trailingSlash: false,
 };
 
-export default nextConfig;
+const millionConfig = {
+  rsc: true,
+  server: true,
+};
+
+export default million.next(nextConfig, millionConfig);
