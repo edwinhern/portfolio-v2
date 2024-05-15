@@ -1,3 +1,9 @@
+# [0.6.0](https://github.com/edwinhern/portfolio-v2/compare/v0.5.0...v0.6.0) (2024-05-15)
+
+### Features
+
+- :heavy_plus_sign: Add million v3.0.6 and configure million compiler in next.config.mjs ([00d6497](https://github.com/edwinhern/portfolio-v2/commit/00d6497cf9d6cb18f7256f5119ff193b880dffc0))
+
 # [0.5.0](https://github.com/edwinhern/portfolio-v2/compare/v0.4.6...v0.5.0) (2024-05-14)
 
 ### Features
