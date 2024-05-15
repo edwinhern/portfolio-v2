@@ -1,5 +1,6 @@
+import type { Data } from '@/types/lanyard';
+
 import { HttpResponse, http } from 'msw';
-import { Data } from 'use-lanyard';
 
 /**
  * @description This mock url is associated with retrieving discord presence data

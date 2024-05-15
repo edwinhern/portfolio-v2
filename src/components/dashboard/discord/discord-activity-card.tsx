@@ -1,7 +1,6 @@
-import type { Data, Spotify } from 'use-lanyard';
+import type { Activity, Data, Spotify } from '@/types/lanyard';
 
 import Image from 'next/image';
-import { Activity } from 'use-lanyard';
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';

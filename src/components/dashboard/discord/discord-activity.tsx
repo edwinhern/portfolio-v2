@@ -1,9 +1,9 @@
 'use client';
 
-import type { Data } from 'use-lanyard';
+import type { Activity, Data } from '@/types/lanyard';
 
 import { env } from '@/env';
-import { Activity, useLanyardWS } from 'use-lanyard';
+import { useLanyardWS } from '@/hooks/useLanyardWS';
 
 import { RenderIf } from '@/components/common/render-if';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -53,6 +53,29 @@ export const DiscordActivity = () => {
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-base font-medium">Discord activity</CardTitle>
         </CardHeader>
+
+        <CardContent className="flex flex-col gap-4">
+          {/* Render if no data is present */}
+          <RenderIf when={!lanyard}>
+            <NoDataSkeleton />
+          </RenderIf>
+
+          <RenderIf when={Boolean(lanyard)}>
+            <DiscordStatus data={lanyard as Data} />
+
+            {/* Render if no activities */}
+            <RenderIf when={!lanyard?.activities?.length}>
+              <Alert className="border-none bg-primary">
+                <AlertDescription>No activities currently.</AlertDescription>
+              </Alert>
+            </RenderIf>
+
+            {/* Render activities */}
+            <RenderIf when={Boolean(lanyard?.activities?.some((a) => a.name !== 'Custom Status'))}>
+              <ActivityFeed activities={lanyard?.activities || []} lanyard={lanyard as Data} />
+            </RenderIf>
+          </RenderIf>
+        </CardContent>
       </Card>
     </Reveal>
   );
