@@ -14,5 +14,11 @@ const api = wretch(apiUrl, {
 
 // Function to fetch pinned repository
 export const fetchGithubRepos = async () => {
-  return await api.get(`/?username=${githubUsername}`);
+  try {
+    const response = await api.get(`?username=${githubUsername}`);
+    return response;
+  } catch (error) {
+    console.error('Error fetching pinned repositories:', error);
+    return null;
+  }
 };

@@ -15,10 +15,9 @@ const api = wretch(apiUrl, {
 export const fetchWeatherForecast = async () => {
   try {
     const response = await api.get();
-    console.log('Weather Forecast Response:', response); // Log the response
     return response;
   } catch (error) {
     console.error('Error fetching weather forecast:', error);
-    return null; // Return null or a default value in case of an error
+    return null;
   }
 };
