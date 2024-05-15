@@ -26,7 +26,7 @@ const NoDataSkeleton = () => (
 
 const ActivityFeed = ({ activities, lanyard }: { activities: Activity[]; lanyard: Data }) => (
   <>
-    {activities.map(
+    {activities?.map(
       (activity, idx) =>
         activity.name !== 'Custom Status' && (
           <DiscordActivityCard activity={activity} data={lanyard as Data} key={idx} />
@@ -71,7 +71,7 @@ export const DiscordActivity = () => {
             </RenderIf>
 
             {/* Render activities */}
-            <RenderIf when={Boolean(lanyard?.activities?.some((a) => a.name !== 'Custom Status'))}>
+            <RenderIf when={Boolean(lanyard?.activities?.some((a) => a?.name !== 'Custom Status'))}>
               <ActivityFeed activities={lanyard?.activities || []} lanyard={lanyard as Data} />
             </RenderIf>
           </RenderIf>
