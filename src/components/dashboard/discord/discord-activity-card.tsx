@@ -1,4 +1,4 @@
-import type { Activity, Data, Spotify } from '@/types/lanyard';
+import type { Activity, Data, Spotify } from 'use-lanyard';
 
 import Image from 'next/image';
 

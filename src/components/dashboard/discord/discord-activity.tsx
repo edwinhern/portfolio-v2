@@ -1,9 +1,8 @@
 'use client';
 
-import type { Activity, Data } from '@/types/lanyard';
+import type { Activity, Data } from 'use-lanyard';
 
-import { env } from '@/env';
-import { useLanyardWS } from '@/hooks/useLanyardWS';
+import { useLanyardWS } from 'use-lanyard';
 
 import { RenderIf } from '@/components/common/render-if';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -36,11 +35,7 @@ const ActivityFeed = ({ activities, lanyard }: { activities: Activity[]; lanyard
 );
 
 export const DiscordActivity = () => {
-  console.log(env.NEXT_PUBLIC_DISCORD_ID, process.env.NEXT_PUBLIC_DISCORD_ID);
-  console.log('env:', process.env, env);
-  const lanyard = useLanyardWS(`${BigInt(env.NEXT_PUBLIC_DISCORD_ID || 1)}`);
-
-  console.log(lanyard);
+  const lanyard = useLanyardWS(`${BigInt(196399908771725312)}`);
 
   return (
     <Reveal

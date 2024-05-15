@@ -1,4 +1,4 @@
-import type { Data } from '@/types/lanyard';
+import type { Data } from 'use-lanyard';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Icons } from '@/components/ui/icons';

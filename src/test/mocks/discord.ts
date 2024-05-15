@@ -1,4 +1,4 @@
-import type { Data } from '@/types/lanyard';
+import type { Data } from 'use-lanyard';
 
 import { HttpResponse, http } from 'msw';
 
