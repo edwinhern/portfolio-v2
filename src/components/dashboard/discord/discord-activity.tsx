@@ -36,6 +36,8 @@ const ActivityFeed = ({ activities, lanyard }: { activities: Activity[]; lanyard
 );
 
 export const DiscordActivity = () => {
+  console.log(env.NEXT_PUBLIC_DISCORD_ID, process.env.NEXT_PUBLIC_DISCORD_ID);
+  console.log('env:', process.env, env);
   const lanyard = useLanyardWS(`${BigInt(env.NEXT_PUBLIC_DISCORD_ID || 1)}`);
 
   console.log(lanyard);
@@ -60,7 +62,7 @@ export const DiscordActivity = () => {
             <NoDataSkeleton />
           </RenderIf>
 
-          <RenderIf when={Boolean(lanyard)}>
+          <RenderIf when={Boolean(lanyard && lanyard.discord_status)}>
             <DiscordStatus data={lanyard as Data} />
 
             {/* Render if no activities */}
