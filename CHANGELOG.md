@@ -1,3 +1,9 @@
+## [0.6.1](https://github.com/edwinhern/portfolio-v2/compare/v0.6.0...v0.6.1) (2024-05-15)
+
+### Bug Fixes
+
+- **deps:** update dependency framer-motion to v11.2.2 ([#95](https://github.com/edwinhern/portfolio-v2/issues/95)) ([d648f47](https://github.com/edwinhern/portfolio-v2/commit/d648f475ffd0ee223162d852443f30854e466c92))
+
 # [0.6.0](https://github.com/edwinhern/portfolio-v2/compare/v0.5.0...v0.6.0) (2024-05-15)
 
 ### Features
