@@ -97,11 +97,11 @@ export function useLanyardWS(snowflake: Snowflake | Snowflake[], _options?: Part
             switch (message.t) {
               case SocketEvents.INIT_STATE:
               case SocketEvents.PRESENCE_UPDATE: {
-                if (message.d) {
+                if (message.d && Object.keys(message.d).length > 0) {
                   console.log('Lanyard: Setting data', message.d); // Log the data being set
                   setData(message.d);
                 } else {
-                  console.error('Lanyard: Received undefined data', message); // Log the error if data is undefined
+                  console.error('Lanyard: Received empty or undefined data', message); // Log the error if data is empty or undefined
                 }
 
                 break;
