@@ -24,7 +24,7 @@ export default async function Dashboard() {
       </PageHeader>
 
       <div className="flex flex-wrap gap-2">
-        {/* <DiscordActivity /> */}
+        <DiscordActivity />
         <div className="flex size-full flex-wrap gap-4">
           <DiscordLinkCard />
           <CurrentTimeCard data={weatherForecast} />

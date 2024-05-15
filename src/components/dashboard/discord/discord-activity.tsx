@@ -38,6 +38,8 @@ const ActivityFeed = ({ activities, lanyard }: { activities: Activity[]; lanyard
 export const DiscordActivity = () => {
   const lanyard = useLanyardWS(`${BigInt(env.NEXT_PUBLIC_DISCORD_ID || 1)}`);
 
+  console.log(lanyard);
+
   return (
     <Reveal
       className="relative flex flex-1"
@@ -51,29 +53,6 @@ export const DiscordActivity = () => {
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-base font-medium">Discord activity</CardTitle>
         </CardHeader>
-
-        <CardContent className="flex flex-col gap-4">
-          {/* Render if no data is present */}
-          <RenderIf when={!lanyard}>
-            <NoDataSkeleton />
-          </RenderIf>
-
-          <RenderIf when={Boolean(lanyard)}>
-            <DiscordStatus data={lanyard as Data} />
-
-            {/* Render if no activities */}
-            <RenderIf when={!lanyard?.activities?.length}>
-              <Alert className="border-none bg-primary">
-                <AlertDescription>No activities currently.</AlertDescription>
-              </Alert>
-            </RenderIf>
-
-            {/* Render activities */}
-            <RenderIf when={Boolean(lanyard?.activities?.some((a) => a.name !== 'Custom Status'))}>
-              <ActivityFeed activities={lanyard?.activities || []} lanyard={lanyard as Data} />
-            </RenderIf>
-          </RenderIf>
-        </CardContent>
       </Card>
     </Reveal>
   );
