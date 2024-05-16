@@ -16,10 +16,10 @@ const TextUrl = ({ children, className, href }: TextUrlProps) => (
 
 export function About() {
   return (
-    <section className="flex flex-col items-start justify-start gap-4 py-16" data-testid="about-section">
-      <h2 className="scroll-m-20 font-heading text-3xl font-extrabold tracking-tight lg:text-4xl" id="about-section">
+    <section className="flex flex-col space-y-4 px-4" data-testid="about-section">
+      <h1 className="text-3xl lg:text-4xl" id="about-section">
         About Me
-      </h2>
+      </h1>
       <Reveal
         className="lg:text-lg/loose lg:font-medium"
         transition={{ duration: 0.4 }}
@@ -28,36 +28,33 @@ export function About() {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <p className="lg:text-xl">
-          Hello! I&apos;m a Software Engineer based in the vibrant tech hubs of Dallas and Austin, TX.
-        </p>
-        <br />
-
-        <p className="leading-8 lg:text-lg">
+        <p>Hello! I&apos;m a Software Engineer based in the vibrant tech hubs of Dallas and Austin, TX.</p>
+        <p>
           Since diving into coding in 2019, I&apos;ve loved the magic of turning ideas into reality. From humble
           beginnings with C++ to crafting my
           <TextUrl href="https://edwinhern.github.io/edwinhern/">first portfolio</TextUrl>, every line of code has been
           a step in my journey of constant growth.
-          <br />
-          <br />
+        </p>
+        <p>
           Resilience is key; despite initial setbacks in securing internships, my determination led me to seize
           opportunities that sharpened my full-stack capabilities at
           <TextUrl href=" https://www.seo-usa.org/">SEO</TextUrl> and
           <TextUrl href="https://www.jpmorganchase.com/">JPMorgan Chase & Co.</TextUrl> Today, I channel that same
           dedication into enhancing
           <TextUrl href="https://www.tesla.com/">Tesla&apos;s</TextUrl> payroll systems as a P2 Software Engineer.
-          <br />
-          <br />
+        </p>
+
+        <p>
           My current focus is on building software that makes a difference—high-quality, scalable applications that are
           as enjoyable to use as they are efficient. With each project, I aim to bridge the gap between technology and
           user-friendly experiences.
-          <br />
-          <br />
+        </p>
+        <p>
           Outside the digital world, I explore life’s various flavors through video games, culinary adventures, and
           travel. I believe in balance—pushing the boundaries of code during the day and embracing the joy of new
           experiences after hours.
-          <br />
-          <br />
+        </p>
+        <p>
           I&apos;m driven by the belief that technology not only solves problems but also connects and enhances lives.
           Let&apos;s build tomorrow, together.
         </p>

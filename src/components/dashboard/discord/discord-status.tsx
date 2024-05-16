@@ -35,7 +35,7 @@ export const DiscordStatus: React.FC<DiscordStatusProps> = ({ data }) => {
         </div>
         <div>
           <div className="text-lg font-bold">{data.discord_user.global_name}</div>
-          <p className="text-xs text-muted-foreground">{data.discord_user.username}</p>
+          <div className="text-xs text-muted-foreground">{data.discord_user.username}</div>
         </div>
       </div>
       <div className={cn('flex gap-2', statusInfo.cn)}>

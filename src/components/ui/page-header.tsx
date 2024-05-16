@@ -1,4 +1,4 @@
-import Balance from 'react-wrap-balancer';
+import Balancer from 'react-wrap-balancer';
 
 import { Reveal } from '@/components/ui/reveal';
 import { cn } from '@/lib/utils';
@@ -23,21 +23,15 @@ function PageHeaderHeading({ className, ...props }: React.HTMLAttributes<HTMLHea
         visible: { opacity: 1, x: 0 },
       }}
     >
-      <Balance
-        className={cn(
-          'text-center font-heading text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1]',
-          className
-        )}
-        {...props}
-      />
+      <Balancer as="h1" className={cn('text-center text-3xl md:text-6xl lg:leading-[1.1]', className)} {...props} />
     </Reveal>
   );
 }
 
 function PageHeaderDescription({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) {
   return (
-    <Balance
-      className={cn('text-md max-w-[750px] text-center font-body text-muted-foreground sm:text-xl', className)}
+    <Balancer
+      className={cn('text-md max-w-[750px] text-center text-muted-foreground sm:text-xl', className)}
       {...props}
     />
   );

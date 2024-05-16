@@ -2,8 +2,8 @@ import type { Config } from 'tailwindcss';
 const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette');
 
 const config = {
-  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
-  darkMode: ['class'],
+  content: ['src/app/**/*.{js,ts,jsx,tsx,mdx,json}', 'src/components/**/*.{js,ts,jsx,tsx,mdx,json}'],
+  darkMode: ['selector'],
   plugins: [require('tailwindcss-animate'), addVariablesForColors],
   prefix: '',
   theme: {
@@ -61,17 +61,16 @@ const config = {
         },
       },
       fontFamily: {
-        body: 'var(--body-font)',
         heading: 'var(--heading-font)',
       },
       fontSize: {
-        '2xl': '1.777rem',
-        '3xl': '2.369rem',
-        '4xl': '3.158rem',
-        '5xl': '4.210rem',
+        '2xl': '1.563rem',
+        '3xl': '1.954rem',
+        '4xl': '2.442rem',
+        '5xl': '3.053rem',
         base: '1rem',
-        sm: '0.750rem',
-        xl: '1.333rem',
+        sm: '0.800rem',
+        xl: '1.250rem',
       },
       fontWeight: {
         bold: '700',
@@ -94,6 +93,9 @@ const config = {
             backgroundPosition: '350% 50%, 350% 50%',
           },
         },
+      },
+      lineHeight: {
+        slacker: '1.75',
       },
     },
   },
