@@ -6,7 +6,9 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Reveal } from '@/components/ui/reveal';
 
-interface ExperienceCardProps extends ExperienceItem {}
+interface ExperienceCardProps extends ExperienceItem {
+  index: number;
+}
 
 export function ExperienceCard({
   company,
@@ -14,35 +16,36 @@ export function ExperienceCard({
   description,
   employmentType,
   image,
+  index,
   skills,
   title,
 }: ExperienceCardProps) {
   return (
     <Card className="w-full">
-      <Reveal
-        transition={{ duration: 0.4 }}
-        variants={{
-          hidden: { opacity: 0, y: -50 },
-          visible: { opacity: 1, y: 0 },
-        }}
-      >
-        <CardHeader>
-          {image && (
-            <Image alt="Company Logo" className="mb-4 rounded-lg object-cover" height="1000" src={image} width="1200" />
-          )}
+      <CardHeader>
+        {image && (
+          <Image
+            alt="Company Logo"
+            className="mb-4 animate-reveal rounded-lg object-cover"
+            height="900"
+            loading={index < 1 ? 'eager' : 'lazy'}
+            src={image}
+            width="900"
+          />
+        )}
 
-          <CardTitle className="font-heading text-xl font-bold md:text-2xl">
-            <Balancer preferNative={false} ratio={0.4}>
-              {title} · {company}
-            </Balancer>
-          </CardTitle>
+        <CardTitle className="font-heading text-xl font-semibold md:text-2xl">
+          <Balancer preferNative={false} ratio={0.4}>
+            {title} · {company}
+          </Balancer>
+        </CardTitle>
 
-          <CardDescription className="text-lg">
-            {employmentType} | {date}
-          </CardDescription>
-        </CardHeader>
-      </Reveal>
-      <CardContent className="flex flex-col gap-4">
+        <CardDescription className="text-lg">
+          {employmentType} | {date}
+        </CardDescription>
+      </CardHeader>
+
+      <CardContent className="flex flex-col">
         <Reveal
           transition={{ duration: 0.4 }}
           variants={{
@@ -50,7 +53,7 @@ export function ExperienceCard({
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <Balancer as="p" className="text-base/loose leading-7 md:text-lg/loose" preferNative={false} ratio={0.1}>
+          <Balancer as="p" className="text-base/loose md:text-lg/loose" preferNative={false} ratio={0.3}>
             {description}
           </Balancer>
         </Reveal>

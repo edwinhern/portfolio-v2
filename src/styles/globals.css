@@ -72,17 +72,8 @@
     @apply mb-4 leading-slacker;
   }
 
-  a,
-  button {
-    @apply cursor-pointer outline-none;
-  }
-
   a {
     @apply transition-colors duration-1000;
-  }
-
-  button:focus {
-    @apply outline-none;
   }
 
   h1,

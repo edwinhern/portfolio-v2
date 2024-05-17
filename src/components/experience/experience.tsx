@@ -5,16 +5,12 @@ import { experiences } from './experience-config';
 
 export function Experience() {
   return (
-    <section
-      className="flex flex-col items-start justify-start gap-4 py-16 md:mx-16"
-      data-testid="experience-section"
-      id="experience-section"
-    >
+    <section className="flex flex-col items-start justify-start gap-4 md:mx-16" data-testid="experience-section">
       <TracingBeam className="flex flex-col">
         <div className="flex flex-col gap-4">
-          <h2 className="scroll-m-20 text-center font-heading text-3xl font-extrabold tracking-tight md:text-left lg:text-4xl">
+          <h1 className="text-3xl lg:text-4xl" id="experience-section">
             Where I&apos;ve Worked
-          </h2>
+          </h1>
           {experiences.map((experience, idx) => (
             <ExperienceCard
               company={experience.company}
@@ -22,6 +18,7 @@ export function Experience() {
               description={experience.description}
               employmentType={experience.employmentType}
               image={experience.image}
+              index={idx}
               key={`${experience.title}-${idx}`}
               skills={experience.skills}
               title={experience.title}

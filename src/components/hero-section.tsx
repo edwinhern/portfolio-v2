@@ -23,7 +23,7 @@ export function HeroSection({ className }: HeroSectionProps) {
     'thanks for visiting!',
   ];
   return (
-    <section className={cn(className)} data-testid="hero-section">
+    <section className={cn('py-0', className)} data-testid="hero-section">
       <div className={cn('grid min-h-[calc(100vh-4rem)] grid-cols-1 lg:grid-cols-2')}>
         <Image
           alt="Picture of the author"

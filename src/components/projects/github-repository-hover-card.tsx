@@ -7,7 +7,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import Link from 'next/link';
 
-import { Reveal } from '@/components/ui/reveal';
 import { cn } from '@/lib/utils';
 
 import { CardHeader } from '../ui/card';
@@ -31,47 +30,38 @@ export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps>
   return (
     <div className={cn('grid grid-cols-1 py-4 md:grid-cols-2', gridLayoutClass, className)}>
       {items.map((item, idx) => (
-        <Reveal
-          key={item.repo}
-          transition={{ delay: idx / 30, duration: 0.4 }}
-          variants={{
-            hidden: { opacity: 0, y: -50 },
-            visible: { opacity: 1, y: 0 },
-          }}
+        <Link
+          className="group relative block size-full p-2"
+          href={item.link}
+          key={item.link}
+          onMouseEnter={() => setHoveredIndex(idx)}
+          onMouseLeave={() => setHoveredIndex(null)}
         >
-          <Link
-            className="group relative block size-full p-2"
-            href={item.link}
-            key={item.link}
-            onMouseEnter={() => setHoveredIndex(idx)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            <AnimatePresence>
-              {hoveredIndex === idx && (
-                <motion.span
-                  animate={{
-                    opacity: 1,
-                    transition: { duration: 0.15 },
-                  }}
-                  className="absolute inset-0 block size-full rounded-lg bg-card-foreground text-card-foreground shadow-sm"
-                  exit={{ opacity: 0, transition: { delay: 0.2, duration: 0.15 } }}
-                  initial={{ opacity: 0 }}
-                  layoutId="hoverBackground"
-                />
-              )}
-            </AnimatePresence>
-            <Card>
-              <CardHeader className="p-0">
-                <CardTitle>{item.repo}</CardTitle>
-                <CardDescription className="text-muted-foreground dark:text-muted">{item.description}</CardDescription>
-              </CardHeader>
-              <CardDescription className="flex items-center gap-1 ">
-                <Star className="size-5" />
-                {item.stars}
-              </CardDescription>
-            </Card>
-          </Link>
-        </Reveal>
+          <AnimatePresence>
+            {hoveredIndex === idx && (
+              <motion.span
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 0.15 },
+                }}
+                className="absolute inset-0 block size-full rounded-lg bg-card-foreground text-card-foreground shadow-sm"
+                exit={{ opacity: 0, transition: { delay: 0.2, duration: 0.15 } }}
+                initial={{ opacity: 0 }}
+                layoutId="hoverBackground"
+              />
+            )}
+          </AnimatePresence>
+          <Card>
+            <CardHeader className="p-0">
+              <CardTitle>{item.repo}</CardTitle>
+              <CardDescription className="font-thin text-muted">{item.description}</CardDescription>
+            </CardHeader>
+            <CardDescription className="flex items-center gap-1 ">
+              <Star className="size-5" />
+              {item.stars}
+            </CardDescription>
+          </Card>
+        </Link>
       ))}
     </div>
   );
@@ -93,11 +83,11 @@ export const Card = ({ children, className }: { children: React.ReactNode; class
 };
 export const CardTitle = ({ children, className }: { children: React.ReactNode; className?: string }) => {
   return (
-    <Balancer as="h4" className={cn('mt-4 font-heading text-lg font-bold md:text-2xl', className)}>
+    <Balancer as="h1" className={cn('text-2xl font-semibold leading-none tracking-tight', className)}>
       {children}
     </Balancer>
   );
 };
 export const CardDescription = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-  return <p className={cn('text-base/loose text-sm leading-7 md:text-lg/loose', className)}>{children}</p>;
+  return <p className={cn('text-base/slacker text-muted', className)}>{children}</p>;
 };

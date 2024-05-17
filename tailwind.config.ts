@@ -19,6 +19,7 @@ const config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         aurora: 'aurora 60s linear infinite',
+        reveal: 'reveal 0.7s ease-in-out',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -92,6 +93,11 @@ const config = {
           to: {
             backgroundPosition: '350% 50%, 350% 50%',
           },
+        },
+        reveal: {
+          '0%': { filter: 'brightness(1) blur(15px)', opacity: '0', scale: '1.0125' },
+          '10%': { filter: 'brightness(1.25) blur(10px)', opacity: '1' },
+          '100%': { filter: 'brightness(1) blur(0)', opacity: '1', scale: '1' },
         },
       },
       lineHeight: {
