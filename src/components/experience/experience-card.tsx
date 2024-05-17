@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Reveal } from '@/components/ui/reveal';
 
+import { calculateExperienceDuration } from './experience-config';
 import { ExperienceDescription } from './experience-description';
 
 interface ExperienceCardProps extends ExperienceItem {
@@ -22,6 +23,8 @@ export function ExperienceCard({
   skills,
   title,
 }: ExperienceCardProps) {
+  const duration = calculateExperienceDuration(date);
+
   return (
     <Card className="w-full">
       <CardHeader>
@@ -44,7 +47,9 @@ export function ExperienceCard({
           <Balancer as="h3" className="text-foreground">
             {company} · {employmentType}
           </Balancer>
-          <div>{date}</div>
+          <div>
+            {date.start} - {date.end} ({duration})
+          </div>
         </CardDescription>
       </CardHeader>
 
