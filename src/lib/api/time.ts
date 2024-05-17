@@ -13,11 +13,6 @@ const api = wretch(apiUrl, {
 
 // Function to fetch pinned repository
 export const fetchWeatherForecast = async () => {
-  try {
-    const response = await api.get();
-    return response;
-  } catch (error) {
-    console.error('Error fetching weather forecast:', error);
-    return null;
-  }
+  const response = await api.get();
+  return response || null;
 };
