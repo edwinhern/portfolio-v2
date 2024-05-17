@@ -1,3 +1,5 @@
+import Balancer from 'react-wrap-balancer';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,8 +20,8 @@ export function HeroSection({ className }: HeroSectionProps) {
     'nice to meet you.',
     'my name is edwin.',
     'i am a computer engineer.',
-    'i love drinking boba and coffee.',
-    'i also love to build using code!',
+    'i love sipping coffee.',
+    'i also love to build apps!',
     'thanks for visiting!',
   ];
   return (
@@ -37,7 +39,9 @@ export function HeroSection({ className }: HeroSectionProps) {
         <PageHeader>
           <PageHeaderHeading>Edwin Hernandez</PageHeaderHeading>
           <PageHeaderDescription>
-            <TypewriterEffect words={words} />
+            <Balancer as="p" className="mb-0 w-full text-center text-base/loose md:text-lg/loose">
+              <TypewriterEffect words={words} />
+            </Balancer>
           </PageHeaderDescription>
           <PageActions>
             <a className={cn(buttonVariants())} download href={siteConfig.assets.resume}>

@@ -73,7 +73,7 @@
   }
 
   a {
-    @apply transition-colors duration-1000;
+    @apply cursor-pointer transition-colors duration-1000;
   }
 
   h1,

@@ -30,7 +30,7 @@ const NightComponent: React.FC = () => {
   }, []);
 
   return (
-    <TimeCard className="bg-[#001324] text-white">
+    <TimeCard bgClassName="bg-[#001324]" timeClassName="text-white">
       <canvas className="absolute inset-0 size-full opacity-70 md:opacity-100" ref={canvasRef} />
       <motion.div
         animate={{ scale: [1, 1.1, 1.1, 1, 1] }}

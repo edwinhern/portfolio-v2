@@ -4,7 +4,7 @@ import TimeCard from './time-card';
 
 const DayComponent: React.FC = () => {
   return (
-    <TimeCard className="bg-gradient-to-br from-[#0A8DFF] to-[#98CFFF]">
+    <TimeCard bgClassName="bg-gradient-to-br from-[#0A8DFF] to-[#98CFFF]" timeClassName="text-current">
       <motion.div
         animate={{
           scale: [1, 1.1, 1.1, 1, 1],

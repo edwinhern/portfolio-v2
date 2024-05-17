@@ -21,42 +21,40 @@ export function About() {
         About Me
       </h1>
       <Reveal
-        className="lg:text-lg/loose lg:font-medium"
+        className="text-base/loose text-foreground lg:text-lg/loose"
         transition={{ duration: 0.4 }}
         variants={{
           hidden: { opacity: 0, x: 50 },
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <p>Hello! I&apos;m a Software Engineer based in the vibrant tech hubs of Dallas and Austin, TX.</p>
-        <p>
-          Since diving into coding in 2019, I&apos;ve loved the magic of turning ideas into reality. From humble
-          beginnings with C++ to crafting my
-          <TextUrl href="https://edwinhern.github.io/edwinhern/">first portfolio</TextUrl>, every line of code has been
-          a step in my journey of constant growth.
-        </p>
-        <p>
-          Resilience is key; despite initial setbacks in securing internships, my determination led me to seize
-          opportunities that sharpened my full-stack capabilities at
-          <TextUrl href=" https://www.seo-usa.org/">SEO</TextUrl> and
-          <TextUrl href="https://www.jpmorganchase.com/">JPMorgan Chase & Co.</TextUrl> Today, I channel that same
-          dedication into enhancing
-          <TextUrl href="https://www.tesla.com/">Tesla&apos;s</TextUrl> payroll systems as a P2 Software Engineer.
-        </p>
+        <p>Hi 👋 I&apos;m a software engineer, gamer, soccer player, and minimalist based in Dallas, Texas.</p>
 
         <p>
-          My current focus is on building software that makes a difference—high-quality, scalable applications that are
-          as enjoyable to use as they are efficient. With each project, I aim to bridge the gap between technology and
-          user-friendly experiences.
+          My coding journey began in 2019 with C++ in college. Inspired by my parents&apos; support and the opportunity
+          to be a first-generation college student, I built my first terminal script to show,
+          <span className="font-medium italic text-primary">&quot;Hey familia, I can do this.&quot; </span>
+          This experience sparked my passion for turning ideas into reality.
+        </p>
+        <blockquote className="mt-6 border-l-2 pl-6 italic">
+          <p>
+            &quot;échele con ganas,&quot; a constant reminder to give my all, rise out of poverty, and achieve greatness
+            for our family.
+          </p>
+        </blockquote>
+
+        <p>
+          Along the way, I&apos;ve met amazing mentors and friends who have helped me grow. From creating apps to help
+          friends with car registration and trash collection to developing platforms for school software services, every
+          project has been a step in my journey of constant growth.
         </p>
         <p>
-          Outside the digital world, I explore life’s various flavors through video games, culinary adventures, and
-          travel. I believe in balance—pushing the boundaries of code during the day and embracing the joy of new
-          experiences after hours.
+          I thrive on building high-quality, scalable applications that bridge the gap between technology and
+          user-friendly experiences. Outside of work, I dive into video games, culinary adventures, and travel,
+          balancing the push of code with the pull of new experiences.
         </p>
         <p>
-          I&apos;m driven by the belief that technology not only solves problems but also connects and enhances lives.
-          Let&apos;s build tomorrow, together.
+          Driven by the belief that technology can connect and enhance lives, I’m excited to build tomorrow, together.
         </p>
       </Reveal>
     </section>

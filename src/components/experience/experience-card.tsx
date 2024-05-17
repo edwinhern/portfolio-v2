@@ -3,8 +3,10 @@ import Balancer from 'react-wrap-balancer';
 import Image from 'next/image';
 
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Reveal } from '@/components/ui/reveal';
+
+import { ExperienceDescription } from './experience-description';
 
 interface ExperienceCardProps extends ExperienceItem {
   index: number;
@@ -34,18 +36,19 @@ export function ExperienceCard({
           />
         )}
 
-        <CardTitle className="font-heading text-xl font-semibold md:text-2xl">
-          <Balancer preferNative={false} ratio={0.4}>
-            {title} · {company}
-          </Balancer>
+        <CardTitle className="font-heading text-xl md:text-2xl">
+          <Balancer as="h1">{title}</Balancer>
         </CardTitle>
 
-        <CardDescription className="text-lg">
-          {employmentType} | {date}
+        <CardDescription>
+          <Balancer as="h3" className="text-foreground">
+            {company} · {employmentType}
+          </Balancer>
+          <div>{date}</div>
         </CardDescription>
       </CardHeader>
 
-      <CardContent className="flex flex-col">
+      <CardContent className="flex flex-col gap-4">
         <Reveal
           transition={{ duration: 0.4 }}
           variants={{
@@ -53,10 +56,11 @@ export function ExperienceCard({
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <Balancer as="p" className="text-base/loose md:text-lg/loose" preferNative={false} ratio={0.3}>
-            {description}
-          </Balancer>
+          <ExperienceDescription description={description} />
         </Reveal>
+      </CardContent>
+
+      <CardFooter>
         {skills && (
           <div className="flex flex-wrap gap-2">
             {skills.map((skill, index) => (
@@ -68,12 +72,12 @@ export function ExperienceCard({
                   visible: { opacity: 1, y: 0 },
                 }}
               >
-                <Badge variant="default">{skill}</Badge>
+                <Badge className="rounded-md">{skill}</Badge>
               </Reveal>
             ))}
           </div>
         )}
-      </CardContent>
+      </CardFooter>
     </Card>
   );
 }

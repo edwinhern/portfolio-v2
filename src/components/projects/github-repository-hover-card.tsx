@@ -53,8 +53,14 @@ export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps>
           </AnimatePresence>
           <Card>
             <CardHeader className="p-0">
-              <CardTitle>{item.repo}</CardTitle>
-              <CardDescription className="font-thin text-muted">{item.description}</CardDescription>
+              <CardTitle className="font-heading text-xl md:text-2xl">
+                <Balancer as="h1">{item.repo}</Balancer>
+              </CardTitle>
+              <CardDescription>
+                <Balancer as="p" className="text-base/loose md:text-lg/loose" preferNative={false} ratio={0.3}>
+                  {`${item.description.substring(0, 100)}...`}
+                </Balancer>
+              </CardDescription>
             </CardHeader>
             <CardDescription className="flex items-center gap-1 ">
               <Star className="size-5" />
@@ -82,12 +88,8 @@ export const Card = ({ children, className }: { children: React.ReactNode; class
   );
 };
 export const CardTitle = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-  return (
-    <Balancer as="h1" className={cn('text-2xl font-semibold leading-none tracking-tight', className)}>
-      {children}
-    </Balancer>
-  );
+  return <div className={cn('text-2xl font-semibold leading-none tracking-tight', className)}>{children}</div>;
 };
 export const CardDescription = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-  return <p className={cn('text-base/slacker text-muted', className)}>{children}</p>;
+  return <div className={cn('text-base/slacker text-muted', className)}>{children}</div>;
 };
