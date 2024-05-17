@@ -5,7 +5,7 @@ export const siteConfig = {
     logo: '/assets/images/logo.png',
     resume: '/assets/resume/Edwin-Hernandez-Resume-2024.pdf',
   },
-  description: 'Software Engineer, Gamer, Soccer Player, and minimalist, based in Dallas, TX.',
+  description: 'Software Engineer, gamer, soccer player, and minimalist, based in Dallas, TX.',
   keywords: [
     'Next.js',
     'TypeScript',

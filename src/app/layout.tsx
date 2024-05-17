@@ -18,12 +18,6 @@ const raleway = Raleway({
   variable: '--heading-font',
 });
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  variable: '--body-font',
-  weight: ['400', '700'],
-});
-
 export const metadata: Metadata = {
   authors: [{ name: 'Edwin Hernandez', url: siteConfig.links.linkedin }],
   creator: 'Edwin Hernandez',
@@ -69,7 +63,7 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={cn('min-h-screen bg-background font-body antialiased', raleway.variable, poppins.variable)}>
+      <body className={cn(raleway.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange enableSystem>
           <ReactWrapProvider>
             <div className="relative flex min-h-screen flex-col bg-background">{children}</div>

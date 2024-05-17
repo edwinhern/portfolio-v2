@@ -3,10 +3,15 @@ import Balancer from 'react-wrap-balancer';
 import Image from 'next/image';
 
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Reveal } from '@/components/ui/reveal';
 
-interface ExperienceCardProps extends ExperienceItem {}
+import { calculateExperienceDuration } from './experience-config';
+import { ExperienceDescription } from './experience-description';
+
+interface ExperienceCardProps extends ExperienceItem {
+  index: number;
+}
 
 export function ExperienceCard({
   company,
@@ -14,34 +19,40 @@ export function ExperienceCard({
   description,
   employmentType,
   image,
+  index,
   skills,
   title,
 }: ExperienceCardProps) {
+  const duration = calculateExperienceDuration(date);
+
   return (
     <Card className="w-full">
-      <Reveal
-        transition={{ duration: 0.4 }}
-        variants={{
-          hidden: { opacity: 0, y: -50 },
-          visible: { opacity: 1, y: 0 },
-        }}
-      >
-        <CardHeader>
-          {image && (
-            <Image alt="Company Logo" className="mb-4 rounded-lg object-cover" height="1000" src={image} width="1200" />
-          )}
+      <CardHeader>
+        {image && (
+          <Image
+            alt="Company Logo"
+            className="mb-4 animate-reveal rounded-lg object-cover"
+            height="900"
+            loading={index < 1 ? 'eager' : 'lazy'}
+            src={image}
+            width="900"
+          />
+        )}
 
-          <CardTitle className="font-heading text-xl font-bold md:text-2xl">
-            <Balancer preferNative={false} ratio={0.4}>
-              {title} · {company}
-            </Balancer>
-          </CardTitle>
+        <CardTitle className="font-heading text-xl md:text-2xl">
+          <Balancer as="h1">{title}</Balancer>
+        </CardTitle>
 
-          <CardDescription className="text-lg">
-            {employmentType} | {date}
-          </CardDescription>
-        </CardHeader>
-      </Reveal>
+        <CardDescription>
+          <Balancer as="h3" className="text-foreground">
+            {company} · {employmentType}
+          </Balancer>
+          <div>
+            {date.start} - {date.end} ({duration})
+          </div>
+        </CardDescription>
+      </CardHeader>
+
       <CardContent className="flex flex-col gap-4">
         <Reveal
           transition={{ duration: 0.4 }}
@@ -50,10 +61,11 @@ export function ExperienceCard({
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <Balancer as="p" className="text-base/loose leading-7 md:text-lg/loose" preferNative={false} ratio={0.1}>
-            {description}
-          </Balancer>
+          <ExperienceDescription description={description} />
         </Reveal>
+      </CardContent>
+
+      <CardFooter>
         {skills && (
           <div className="flex flex-wrap gap-2">
             {skills.map((skill, index) => (
@@ -65,12 +77,12 @@ export function ExperienceCard({
                   visible: { opacity: 1, y: 0 },
                 }}
               >
-                <Badge variant="default">{skill}</Badge>
+                <Badge className="rounded-md">{skill}</Badge>
               </Reveal>
             ))}
           </div>
         )}
-      </CardContent>
+      </CardFooter>
     </Card>
   );
 }

@@ -28,7 +28,7 @@ export const TracingBeam = ({ children, className }: { children: React.ReactNode
 
         // Define minimum and maximum allowed heights
         const minHeight = 0; // Set this to whatever is appropriate for your layout
-        const maxHeight = 3400; // Set this to whatever is appropriate for your layout
+        const maxHeight = 2900; // Set this to whatever is appropriate for your layout
 
         // Constrain newHeight to be within minHeight and maxHeight
         const constrainedHeight = Math.max(minHeight, Math.min(newHeight, maxHeight));

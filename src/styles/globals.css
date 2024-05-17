@@ -50,13 +50,44 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  html,
   body {
     @apply bg-background text-foreground;
-    font-synthesis-weight: none;
+  }
+  html {
+    @apply scroll-smooth antialiased;
+    text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply font-sans text-base;
+  }
+
+  #__next {
+    @apply min-h-dvh;
+  }
+
+  p {
+    @apply mb-4 leading-slacker;
+  }
+
+  a {
+    @apply cursor-pointer transition-colors duration-1000;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply scroll-mt-16 font-heading font-semibold slashed-zero tracking-tight;
+  }
+
+  section {
+    @apply py-8;
+  }
+
+  * {
+    @apply border-border;
   }
 }
 
