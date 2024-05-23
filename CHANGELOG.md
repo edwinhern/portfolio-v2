@@ -1,3 +1,9 @@
+## [0.6.5](https://github.com/edwinhern/portfolio-v2/compare/v0.6.4...v0.6.5) (2024-05-23)
+
+### Bug Fixes
+
+- **deps:** update dependency @vercel/analytics to v1.3.0 ([3ec30ab](https://github.com/edwinhern/portfolio-v2/commit/3ec30abf5b98492738ad1f4468ff4f1d50becea3))
+
 ## [0.6.4](https://github.com/edwinhern/portfolio-v2/compare/v0.6.3...v0.6.4) (2024-05-22)
 
 ### Bug Fixes
