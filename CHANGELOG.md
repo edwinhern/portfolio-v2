@@ -1,3 +1,9 @@
+## [0.6.8](https://github.com/edwinhern/portfolio-v2/compare/v0.6.7...v0.6.8) (2024-05-25)
+
+### Bug Fixes
+
+- **deps:** update dependency react-wrap-balancer to v1.1.1 ([#112](https://github.com/edwinhern/portfolio-v2/issues/112)) ([608318a](https://github.com/edwinhern/portfolio-v2/commit/608318a9bf74953e8a3f0679f03c56ef9310da60))
+
 ## [0.6.7](https://github.com/edwinhern/portfolio-v2/compare/v0.6.6...v0.6.7) (2024-05-24)
 
 ### Bug Fixes
