@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Balancer from 'react-wrap-balancer';
 
 import { PlusCircle, XCircle } from 'lucide-react';
 
@@ -22,26 +21,22 @@ export const ExperienceDescription: React.FC<ExperienceDescriptionProps> = ({ de
     setIsOpen(!isOpen);
   };
 
+  if (description.length < 100) {
+    return <CardDescription className="text-foreground">{description}</CardDescription>;
+  }
+
   return (
     <Collapsible className="w-full" onOpenChange={setIsOpen} open={isOpen}>
       {!isOpen && (
-        <CardDescription className="text-foreground">
-          <Balancer as="p" className="text-base/loose md:text-lg/loose" preferNative={false} ratio={0.3}>
-            {`${description.substring(0, 100)}...`}
-          </Balancer>
-        </CardDescription>
+        <CardDescription className="text-foreground">{`${description.substring(0, 100)}...`}</CardDescription>
       )}
 
       <CollapsibleContent>
-        <CardDescription className="text-foreground">
-          <Balancer as="p" className="text-base/loose md:text-lg/loose" preferNative={false} ratio={0.3}>
-            {description}
-          </Balancer>
-        </CardDescription>
+        <CardDescription className="text-foreground">{description}</CardDescription>
       </CollapsibleContent>
 
       <CollapsibleTrigger asChild>
-        <Button className={cn('flex gap-2 text-sm')} onClick={toggleDescription} size={'sm'} variant={'outline'}>
+        <Button className={cn('mt-2 flex gap-2 text-sm')} onClick={toggleDescription} size={'sm'} variant={'outline'}>
           {!isOpen ? <PlusCircle className="size-5" /> : <XCircle className="size-5" />}
           {!isOpen ? 'See More' : 'See Less'}
         </Button>

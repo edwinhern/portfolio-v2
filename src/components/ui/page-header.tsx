@@ -1,5 +1,3 @@
-import Balancer from 'react-wrap-balancer';
-
 import { cn } from '@/lib/utils';
 
 function PageHeader({ children, className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
@@ -11,7 +9,7 @@ function PageHeader({ children, className, ...props }: React.HTMLAttributes<HTML
 }
 
 function PageHeaderHeading({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
-  return <Balancer as="h1" className={cn('text-center text-3xl md:text-6xl lg:leading-[1.1]', className)} {...props} />;
+  return <h1 className={cn('text-center text-3xl md:text-6xl lg:leading-[1.1]', className)} {...props} />;
 }
 
 function PageHeaderDescription({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) {

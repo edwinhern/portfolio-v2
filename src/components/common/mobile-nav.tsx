@@ -7,7 +7,6 @@ import Link, { LinkProps } from 'next/link';
 
 import { Button } from '@/components/ui/button';
 import { MobileModeToggleButton } from '@/components/ui/mode-toggle';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { mainNav } from '@/config/mainNav';
 import { siteConfig } from '@/config/site';
@@ -25,7 +24,7 @@ export function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent className="container pr-0" side="right">
-        <ScrollArea className="container my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
+        <div className="container my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
             <MobileLink className="w-fit" href="/" onOpenChange={setOpen}>
               <span className="font-heading font-bold">{siteConfig.siteTitle}</span>
@@ -37,7 +36,7 @@ export function MobileNav() {
             ))}
             <MobileModeToggleButton />
           </div>
-        </ScrollArea>
+        </div>
       </SheetContent>
     </Sheet>
   );
