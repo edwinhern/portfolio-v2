@@ -1,15 +1,11 @@
 import type { Metadata } from 'next';
 
 import { PropsWithChildren } from 'react';
-import { Provider as ReactWrapProvider } from 'react-wrap-balancer';
 
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Poppins, Raleway } from 'next/font/google';
+import { Raleway } from 'next/font/google';
 
 import { ThemeProvider } from '@/components/common/providers';
 import { siteConfig } from '@/config/site';
-import { cn } from '@/lib/utils';
 
 import '@/styles/globals.css';
 
@@ -63,13 +59,9 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={cn(raleway.variable)}>
+      <body className={raleway.variable}>
         <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange enableSystem>
-          <ReactWrapProvider>
-            <div className="relative flex min-h-screen flex-col bg-background">{children}</div>
-          </ReactWrapProvider>
-          <SpeedInsights />
-          <Analytics />
+          <div className="relative flex min-h-screen flex-col">{children}</div>
         </ThemeProvider>
       </body>
     </html>

@@ -6,7 +6,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 import { ElapsedTime } from './timer/elapsed-time';
-import { ProgressBar } from './timer/progress-bar';
 
 interface DiscordActivityCardProps {
   activity: Activity;
@@ -61,11 +60,7 @@ export function DiscordActivityCard({ activity, data }: DiscordActivityCardProps
         <AlertTitle className="line-clamp-1">{activity.name}</AlertTitle>
         <AlertDescription className="line-clamp-1">{activity.details || null}</AlertDescription>
         <AlertDescription className="line-clamp-1">{activity.state || null}</AlertDescription>
-        <AlertDescription className="flex justify-center sm:block">
-          {activity.timestamps?.start && activity.timestamps?.end ? (
-            <ProgressBar end={activity.timestamps.end} start={activity.timestamps.start} />
-          ) : null}
-        </AlertDescription>
+
         <AlertDescription className="line-clamp-1">
           {activity.timestamps?.start ? <ElapsedTime unixTimestamp={activity.timestamps.start} /> : null}
         </AlertDescription>

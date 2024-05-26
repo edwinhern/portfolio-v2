@@ -24,18 +24,3 @@ export function discordTimestamp(unixTimestamp: number): string {
     return `${seconds} second${seconds !== 1 ? 's' : ''}`;
   }
 }
-
-export function calculateProgress(startTimestamp: number, endTimestamp: number): number {
-  const currentDateTimestamp: number = new Date().getTime();
-
-  if (startTimestamp > endTimestamp) {
-    throw new Error('Invalid timestamps: startTimestamp should be less than endTimestamp.');
-  }
-
-  const totalDuration: number = endTimestamp - startTimestamp;
-  const elapsedTime: number = currentDateTimestamp - startTimestamp;
-  let progress: number = (elapsedTime / totalDuration) * 100;
-  progress = Math.min(100, Math.max(0, progress));
-
-  return parseFloat(progress.toFixed(2));
-}

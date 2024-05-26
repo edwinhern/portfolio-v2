@@ -8,7 +8,7 @@ export const experiences: ExperienceItem[] = [
       start: 'Jul 2023',
     },
     description:
-      "My first full-time role at Tesla came right after my internship, during a critical project phase. I developed a comprehensive admin configuration system, which allows for customizable profiles and advanced access controls specifically for Payroll Users. This system is designed to handle large-scale operations that impact millions. Additionally, I created a reusable query-builder component that's now used across various Tesla apps, improving development efficiency and user experience.",
+      "Worked full-stack to build the admin configuration portal for Tesla's new Payroll System. Transitioned to the frontend team to lead the development of the admin portal. Contributed to backend micro-services using C# and MySQL, and helped in onboarding new team members.",
     employmentType: EmploymentType.FullTime,
     image: '/assets/companies/tesla.jpg',
     skills: ['React', 'TypeScript', 'C#', 'MySQL'],
@@ -22,7 +22,7 @@ export const experiences: ExperienceItem[] = [
       start: 'Aug 2022',
     },
     description:
-      'As an intern, I was part of the team that developed Tesla’s new Payroll System from the ground up, replacing Kronos. My role focused on frontend development, particularly Angular, but I also contributed to backend services using .NET Core. This internship was a practical application of my classroom learnings, blending full-time work with part-time studies.',
+      'Enhanced the employee persona experience, focusing on features for timecard and schedule views using Angular, as part of Tesla’s new Payroll System. Contributed to backend micro-services using .NET Core.',
     employmentType: EmploymentType.Intern,
     image: '/assets/companies/tesla-02.jpg',
     skills: ['Angular', 'TypeScript', 'C#', 'MySQL'],
@@ -34,8 +34,7 @@ export const experiences: ExperienceItem[] = [
       end: 'Aug 2022',
       start: 'Jun 2022',
     },
-    description:
-      "At JPMorgan, I contributed to a Java/Spring Boot batch application for processing over 100,000 US loans, ensuring rapid and accurate confirmation for homeowners. My role was critical in enhancing the application's efficiency and in integrating a custom API for improved third-party tool interaction.",
+    description: 'Contributed to a Java/Spring Boot batch application for processing over 100k US home loans.',
     employmentType: EmploymentType.Intern,
     image: '/assets/companies/jpmc.jpg',
     skills: ['Java', 'Spring Boot'],
@@ -48,9 +47,9 @@ export const experiences: ExperienceItem[] = [
       start: 'Aug 2020',
     },
     description:
-      'As a Technical Lead for Engineer’s United, I managed the annual HackUNT event, drawing over 400 participants. My responsibilities included event planning, coordination, and managing relationships with key sponsors like GitHub and JPMorgan. I also played a significant role in developing and maintaining the event’s website.',
+      'Assisted in managing the annual HackUNT event with over 400 participants. Focused on event planning, coordination, and managing relationships with key sponsors like GitHub and JPMorgan. Played a significant role in developing and maintaining the event’s website.',
     employmentType: EmploymentType.PartTime,
-    skills: ['Angular', 'Event Planning', 'Leadership', 'Sponsorship Management'],
+    skills: ['Event Planning', 'Sponsorship Management'],
     title: 'Technical Lead',
   },
   {
@@ -60,7 +59,7 @@ export const experiences: ExperienceItem[] = [
       start: 'Jun 2021',
     },
     description:
-      'At SEO, I underwent an intensive full-stack development bootcamp where I developed web applications using Python and Flask, and deployed them using Heroku. The internship emphasized agile methods, testing, and pair programming, significantly improving my technical and team collaboration skills.',
+      'Learned full-stack development principles and developed web applications using Python and Flask, deployed on Heroku. Emphasized agile methods, testing, and pair programming, significantly improving technical and team collaboration skills.',
     employmentType: EmploymentType.Intern,
     skills: ['Python', 'Flask', 'MySQL', 'Heroku'],
     title: 'Tech Developer',

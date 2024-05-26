@@ -54,6 +54,7 @@
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply scroll-smooth antialiased;
     text-size-adjust: 100%;
@@ -62,18 +63,6 @@
 
   body {
     @apply font-sans text-base;
-  }
-
-  #__next {
-    @apply min-h-dvh;
-  }
-
-  p {
-    @apply mb-4 leading-slacker;
-  }
-
-  a {
-    @apply cursor-pointer transition-colors duration-1000;
   }
 
   h1,

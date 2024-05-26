@@ -1,15 +1,14 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import Balancer from 'react-wrap-balancer';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import Link from 'next/link';
 
+import { RenderIf } from '@/components/common/render-if';
+import { CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-
-import { CardHeader } from '../ui/card';
 
 interface GitHubRepositoryHoverCardProps {
   className?: string;
@@ -54,15 +53,16 @@ export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps>
           <Card>
             <CardHeader className="p-0">
               <CardTitle className="font-heading text-xl md:text-2xl">
-                <Balancer as="h1">{item.repo}</Balancer>
+                <h2>{item.repo}</h2>
               </CardTitle>
+
               <CardDescription>
-                <Balancer as="p" className="text-base/loose md:text-lg/loose" preferNative={false} ratio={0.3}>
+                <RenderIf fallback={item.description} when={item.description.length > 100}>
                   {`${item.description.substring(0, 100)}...`}
-                </Balancer>
+                </RenderIf>
               </CardDescription>
             </CardHeader>
-            <CardDescription className="flex items-center gap-1 ">
+            <CardDescription className="flex items-center gap-1 text-sm/normal">
               <Star className="size-5" />
               {item.stars}
             </CardDescription>
@@ -86,10 +86,4 @@ export const Card = ({ children, className }: { children: React.ReactNode; class
       </div>
     </div>
   );
-};
-export const CardTitle = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-  return <div className={cn('text-2xl font-semibold leading-none tracking-tight', className)}>{children}</div>;
-};
-export const CardDescription = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-  return <div className={cn('text-base/slacker text-muted', className)}>{children}</div>;
 };

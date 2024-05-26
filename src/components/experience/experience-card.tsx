@@ -1,5 +1,3 @@
-import Balancer from 'react-wrap-balancer';
-
 import Image from 'next/image';
 
 import { Badge } from '@/components/ui/badge';
@@ -40,14 +38,12 @@ export function ExperienceCard({
         )}
 
         <CardTitle className="font-heading text-xl md:text-2xl">
-          <Balancer as="h1">{title}</Balancer>
+          <h2>{title}</h2>
         </CardTitle>
 
-        <CardDescription>
-          <Balancer as="h3" className="text-foreground">
-            {company} · {employmentType}
-          </Balancer>
-          <div>
+        <CardDescription className="text-sm text-foreground md:text-sm">
+          {company} · {employmentType}
+          <div className="text-muted">
             {date.start} - {date.end} ({duration})
           </div>
         </CardDescription>
