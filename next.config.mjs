@@ -22,9 +22,4 @@ const nextConfig = {
   trailingSlash: false,
 };
 
-const millionConfig = {
-  rsc: true,
-  server: true,
-};
-
-export default million.next(nextConfig, millionConfig);
+export default million.next(nextConfig);
