@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { PlusCircle, XCircle } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { CardDescription } from '@/components/ui/card';
@@ -36,9 +36,13 @@ export const ExperienceDescription: React.FC<ExperienceDescriptionProps> = ({ de
       </CollapsibleContent>
 
       <CollapsibleTrigger asChild>
-        <Button className={cn('mt-2 flex gap-2 text-sm')} onClick={toggleDescription} size={'sm'} variant={'outline'}>
-          {!isOpen ? <PlusCircle className="size-5" /> : <XCircle className="size-5" />}
-          {!isOpen ? 'See More' : 'See Less'}
+        <Button
+          className={cn('mt-1.5 inline-flex size-fit items-center gap-1 rounded-md p-1.5 text-xs/3 font-normal')}
+          onClick={toggleDescription}
+          variant={'outline'}
+        >
+          {!isOpen ? <Eye className="size-3.5" /> : <EyeOff className="size-3.5" />}
+          {!isOpen ? 'View More' : 'View Less'}
         </Button>
       </CollapsibleTrigger>
     </Collapsible>

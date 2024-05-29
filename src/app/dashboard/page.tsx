@@ -13,8 +13,8 @@ export default async function Dashboard() {
   const weatherForecast = await fetchWeatherForecast();
 
   return (
-    <div className="container relative max-w-3xl space-y-4 py-16">
-      <PageHeader className="items-start py-0">
+    <section className="container relative max-w-3xl space-y-4">
+      <PageHeader className="items-start">
         <PageHeaderHeading className="text-2xl font-semibold sm:text-2xl md:text-2xl lg:text-2xl">
           Dashboard
         </PageHeaderHeading>
@@ -30,6 +30,6 @@ export default async function Dashboard() {
           <CurrentTimeCard data={weatherForecast} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
