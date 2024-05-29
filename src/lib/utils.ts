@@ -1,5 +1,8 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import resolveConfig from 'tailwindcss/resolveConfig';
+
+import tailwindConfig from '../../tailwind.config';
 
 /**
  * Combines and merges multiple CSS class names or values using the classix and tailwind-merge libraries.
@@ -13,3 +16,11 @@ import { twMerge } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+
+/**
+ * Resolves the Tailwind CSS configuration object using the tailwindcss/resolveConfig library.
+ *
+ * @param config - The Tailwind CSS configuration object to be resolved.
+ * @returns - The resolved Tailwind CSS configuration object.
+ */
+export const fullConfig = resolveConfig(tailwindConfig);

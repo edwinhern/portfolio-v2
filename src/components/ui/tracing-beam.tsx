@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import { motion, useScroll, useSpring, useTransform, useVelocity } from 'framer-motion';
 
-import { cn } from '@/lib/utils';
+import { cn, fullConfig } from '@/lib/utils';
 
 export const TracingBeam = ({ children, className }: { children: React.ReactNode; className?: string }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -68,8 +68,14 @@ export const TracingBeam = ({ children, className }: { children: React.ReactNode
         >
           <motion.div
             animate={{
-              backgroundColor: scrollYProgress.get() > 0 ? 'var(--white)' : 'var(--emerald-400)',
-              borderColor: scrollYProgress.get() > 0 ? 'var(--white)' : 'var(--emerald-600)',
+              backgroundColor:
+                scrollYProgress.get() > 0
+                  ? fullConfig.theme.colors.foreground
+                  : fullConfig.theme.colors.primary.DEFAULT,
+              borderColor:
+                scrollYProgress.get() > 0
+                  ? fullConfig.theme.colors.foreground
+                  : fullConfig.theme.colors.primary.DEFAULT,
             }}
             className="size-2 rounded-full border border-neutral-300 bg-white"
             transition={{ delay: 0.5, duration: 0.2 }}
@@ -110,10 +116,10 @@ export const TracingBeam = ({ children, className }: { children: React.ReactNode
               y1={y1} // set y1 for gradient
               y2={y2} // set y2 for gradient
             >
-              <stop stopColor="#49d073" stopOpacity="0"></stop>
-              <stop stopColor="#49d073"></stop>
-              <stop offset="0.325" stopColor="#49d073"></stop>
-              <stop offset="1" stopColor="#49d073" stopOpacity="0"></stop>
+              <stop stopColor={fullConfig.theme.colors.primary.DEFAULT} stopOpacity="0"></stop>
+              <stop stopColor={fullConfig.theme.colors.primary.DEFAULT}></stop>
+              <stop offset="0.325" stopColor={fullConfig.theme.colors.primary.DEFAULT}></stop>
+              <stop offset="1" stopColor={fullConfig.theme.colors.primary.DEFAULT} stopOpacity="0"></stop>
             </motion.linearGradient>
           </defs>
         </svg>
