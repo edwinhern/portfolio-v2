@@ -13,13 +13,16 @@ function PageHeaderHeading({ className, ...props }: React.HTMLAttributes<HTMLHea
 }
 
 function PageHeaderDescription({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) {
-  return <div className={cn('text-muted sm:text-xl', className)} {...props} />;
+  return (
+    <div
+      className={cn('text-pretty text-sm/relaxed font-light text-muted md:text-base/relaxed', className)}
+      {...props}
+    />
+  );
 }
 
 function PageActions({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return (
-    <div className={cn('flex w-full items-center justify-center space-x-4 py-4 md:pb-10', className)} {...props} />
-  );
+  return <div className={cn('inline-flex space-x-4 py-4 md:pb-10', className)} {...props} />;
 }
 
 export { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading };
