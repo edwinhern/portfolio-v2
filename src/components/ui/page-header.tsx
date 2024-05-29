@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 
 function PageHeader({ children, className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <section className={cn('mx-auto flex max-w-4xl flex-col items-center gap-2 py-0 lg:m-auto', className)} {...props}>
+    <section className={cn('mx-auto flex max-w-4xl flex-col items-center py-0 lg:m-auto', className)} {...props}>
       {children}
     </section>
   );
