@@ -21,8 +21,7 @@ export function About() {
             personal projects.
           </p>
           <blockquote className="mb-4 border-l-2 pl-6 italic">
-            &quot;<span className="text-primary">échele con ganas</span>&quot; - a constant reminder to give my all,
-            rise out of poverty, and achieve greatness for our family.
+            &quot;<span className="text-primary">échele con ganas</span>&quot; - a constant reminder to give my all
           </blockquote>
           <p>
             I developed things as a Full-Stack Software Engineer at Tesla. Previously, I worked as a Frontend Software
