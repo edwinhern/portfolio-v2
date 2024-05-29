@@ -25,12 +25,12 @@ export const DiscordStatus: React.FC<DiscordStatusProps> = ({ data }) => {
   return (
     <div className="flex flex-col items-baseline gap-4 sm:flex-row">
       <div className="flex gap-2">
-        <div className="flex items-center justify-center">
+        <div className="inline-flex items-center justify-center">
           <Avatar>
             <AvatarImage
               src={`https://cdn.discordapp.com/avatars/${data.discord_user.id}/${data.discord_user.avatar}`}
             />
-            <AvatarFallback>EH</AvatarFallback>
+            <AvatarFallback className="animate-pulse" />
           </Avatar>
         </div>
         <div>

@@ -62,7 +62,7 @@ export const DiscordActivity = () => {
 
             {/* Render if no activities */}
             <RenderIf when={!lanyard?.activities?.length}>
-              <Alert className="border-none bg-primary">
+              <Alert className="border-none bg-secondary">
                 <AlertDescription>No activities currently.</AlertDescription>
               </Alert>
             </RenderIf>
