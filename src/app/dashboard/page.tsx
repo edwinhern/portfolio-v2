@@ -1,10 +1,12 @@
+import type { Metadata } from 'next';
+
 import { CurrentTimeCard } from '@/components/dashboard/current-time/current-time-card';
 import { DiscordActivity } from '@/components/dashboard/discord/discord-activity';
 import { DiscordLinkCard } from '@/components/dashboard/discord-link/discord-link-card';
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/ui/page-header';
 import { fetchWeatherForecast } from '@/lib/api/time';
 
-export const metadata = {
+export const metadata: Metadata = {
   description: 'Statistics about my activities',
   title: 'Dashboard',
 };

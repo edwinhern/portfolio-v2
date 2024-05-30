@@ -7,7 +7,7 @@ import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 import { RenderIf } from '@/components/common/render-if';
-import { CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
 interface GitHubRepositoryHoverCardProps {
@@ -26,8 +26,9 @@ export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps>
       return 'lg:grid-cols-2';
     }
   }, [items.length]);
+
   return (
-    <div className={cn('grid grid-cols-1 py-4 md:grid-cols-2', gridLayoutClass, className)}>
+    <div className={cn('grid grid-cols-1 md:grid-cols-2', gridLayoutClass, className)}>
       {items.map((item, idx) => (
         <Link
           className="group relative block size-full p-2"
@@ -55,17 +56,22 @@ export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps>
               <CardTitle className="font-heading text-xl md:text-2xl">
                 <h2>{item.repo}</h2>
               </CardTitle>
+            </CardHeader>
 
+            <CardContent className="p-0">
               <CardDescription>
                 <RenderIf fallback={item.description} when={item.description.length > 100}>
                   {`${item.description.substring(0, 100)}...`}
                 </RenderIf>
               </CardDescription>
-            </CardHeader>
-            <CardDescription className="flex items-center gap-1 text-sm/normal">
-              <Star className="size-5" />
-              {item.stars}
-            </CardDescription>
+            </CardContent>
+
+            <CardFooter className="p-0">
+              <CardDescription className="flex items-center gap-1 text-sm/normal">
+                <Star className="size-3 md:size-4" />
+                {item.stars}
+              </CardDescription>
+            </CardFooter>
           </Card>
         </Link>
       ))}
@@ -75,14 +81,9 @@ export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps>
 
 export const Card = ({ children, className }: { children: React.ReactNode; className?: string }) => {
   return (
-    <div
-      className={cn(
-        'relative z-20 h-full w-full overflow-hidden rounded-lg bg-card text-card-foreground shadow-sm md:p-4',
-        className
-      )}
-    >
+    <div className={cn('relative z-20 size-full rounded-md bg-card text-card-foreground shadow-sm', className)}>
       <div className="relative z-50">
-        <div className="flex flex-col space-y-1.5 p-4">{children}</div>
+        <div className="flex flex-col space-y-1 p-3.5">{children}</div>
       </div>
     </div>
   );

@@ -24,6 +24,7 @@ Here's what powers edwinhern.com, from the framework down to the animation libra
 Explore these tools to further enhance your development workflow:
 
 - [Realtime Colors](https://www.realtimecolors.com) - Elevate your design with modern fonts and a dynamic color palette generator.
+  - Color Schema I used - https://www.realtimecolors.com/?colors=F1F1F1-0F0F0F-F1F1F1-272727-15F5BA&fonts=Roboto-Roboto
 - [Meta Tags](https://metatags.io) - Debug and generate meta tag code for any website
 - [Favicon.io](https://favicon.io/favicon-converter/) - Quickly generate variety of favicon sizes
 - [Open Graph Generator](https://imgsrc.io/) - Generate beautiful Open Graph images with zero effort.
