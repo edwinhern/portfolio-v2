@@ -83,7 +83,7 @@ export const TracingBeam = ({ children, className }: { children: React.ReactNode
         </motion.div>
         <svg
           aria-hidden="true"
-          className=" ml-4 block"
+          className="ml-4 block"
           height={svgHeight} // Set the SVG height
           viewBox={`0 0 20 ${svgHeight}`}
           width="20"

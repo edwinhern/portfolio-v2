@@ -78,7 +78,7 @@
     "vitest": "^1.4.0"
   },
   "lint-staged": {
-    "**/*": "npm run format",
+    "**/*": "prettier --write",
     "**/*.{ts,tsx}": "eslint --fix"
   },
   "author": "Edwin Hernandez",
