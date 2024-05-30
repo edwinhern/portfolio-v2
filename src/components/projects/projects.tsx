@@ -10,12 +10,12 @@ interface ProjectsProps {
 
 export const Projects: React.FC<ProjectsProps> = ({ repositories }) => {
   return (
-    <section className="flex flex-col" data-testid="project-section">
-      <h1 className="text-3xl lg:text-4xl" id="projects-section">
+    <section className="md:space-y-4" data-testid="project-section">
+      <h2 className="text-3xl lg:text-4xl" id="projects-section">
         Projects
-      </h1>
+      </h2>
       <GitHubRepositoryHoverCard items={repositories} />
-      <Link className="flex justify-end text-sm underline" href={siteConfig.links.githubRepositories}>
+      <Link className="mt-2 flex justify-end text-sm underline" href={siteConfig.links.githubRepositories}>
         See More...
       </Link>
     </section>
