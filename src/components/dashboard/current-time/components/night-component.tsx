@@ -56,7 +56,7 @@ const NightComponent: React.FC = () => {
                   repeatType: 'reverse',
                 }}
               />
-              <div className="absolute left-12 top-14 size-2 rounded-full bg-[#C2C2C2] md:left-28 md:top-16 md:size-4  xl:left-56 xl:top-20 xl:size-12" />
+              <div className="absolute left-12 top-14 size-2 rounded-full bg-[#C2C2C2] md:left-28 md:top-16 md:size-4 xl:left-56 xl:top-20 xl:size-12" />
               <div className="absolute left-14 top-10 size-4 rounded-full bg-[#C2C2C2] md:left-[115px] md:top-24 xl:left-[230px] xl:top-36 xl:size-8" />
               <div className="absolute left-10 top-10 size-2 rounded-full bg-[#C2C2C2] md:left-20 md:top-20 md:size-8 xl:left-36 xl:top-32 xl:size-16" />
             </div>
