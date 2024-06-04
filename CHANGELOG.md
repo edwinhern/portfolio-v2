@@ -1,3 +1,9 @@
+## [0.6.15](https://github.com/edwinhern/portfolio-v2/compare/v0.6.14...v0.6.15) (2024-06-04)
+
+### Bug Fixes
+
+- **deps:** update dependency million to v3.1.10 ([638f028](https://github.com/edwinhern/portfolio-v2/commit/638f02885d3164688d10eb37062b5d5e386699fb))
+
 ## [0.6.14](https://github.com/edwinhern/portfolio-v2/compare/v0.6.13...v0.6.14) (2024-06-03)
 
 ### Bug Fixes
