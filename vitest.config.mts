@@ -20,6 +20,6 @@ export default defineConfig({
     environment: 'jsdom',
     restoreMocks: true,
     exclude: [...configDefaults.exclude],
-    setupFiles: ['vitest.setup.ts'],
+    setupFiles: ['src/test/vitest.setup.ts'],
   },
 });
