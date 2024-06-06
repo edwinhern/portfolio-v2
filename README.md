@@ -1,6 +1,4 @@
-<h1 align="center">
-  🌐 edwinhern.com
-</h1>
+# 🌐 edwinhern.com
 
 [![Build Next.js Application](https://github.com/edwinhern/portfolio-v2/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/edwinhern/portfolio-v2/actions/workflows/build.yml)
 [![CodeQL](https://github.com/edwinhern/portfolio-v2/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/edwinhern/portfolio-v2/actions/workflows/github-code-scanning/codeql)
