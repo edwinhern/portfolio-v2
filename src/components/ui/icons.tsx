@@ -1,4 +1,6 @@
-type IconProps = React.HTMLAttributes<SVGElement>;
+import { ReactElement } from 'react';
+
+type IconProps = ReactElement['props'];
 
 export const Icons = {
   apple: (props: IconProps) => (

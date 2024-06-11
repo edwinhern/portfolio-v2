@@ -16,8 +16,6 @@ const config = {
     },
     extend: {
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
         aurora: 'aurora 60s linear infinite',
         reveal: 'reveal 0.7s ease-in-out',
       },
@@ -73,35 +71,16 @@ const config = {
         sm: '0.800rem',
         xl: '1.250rem',
       },
-      fontWeight: {
-        bold: '700',
-        normal: '400',
-      },
       keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
-        },
         aurora: {
-          from: {
-            backgroundPosition: '50% 50%, 50% 50%',
-          },
-          to: {
-            backgroundPosition: '350% 50%, 350% 50%',
-          },
+          from: { backgroundPosition: '50% 50%, 50% 50%' },
+          to: { backgroundPosition: '350% 50%, 350% 50%' },
         },
         reveal: {
           '0%': { filter: 'brightness(1) blur(15px)', opacity: '0', scale: '1.0125' },
           '10%': { filter: 'brightness(1.25) blur(10px)', opacity: '1' },
           '100%': { filter: 'brightness(1) blur(0)', opacity: '1', scale: '1' },
         },
-      },
-      lineHeight: {
-        slacker: '1.75',
       },
     },
   },

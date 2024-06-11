@@ -1,3 +1,5 @@
+import { ReactElement } from 'react';
+
 import { Icons } from '@/components/ui/icons';
 
 declare global {
@@ -67,7 +69,7 @@ declare global {
     disabled?: boolean;
     external?: boolean;
     href: string;
-    icon?: keyof typeof Icons;
+    icon?: ReactElement;
     label?: string;
     title: string;
   };

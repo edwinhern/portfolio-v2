@@ -43,9 +43,16 @@ export const MobileModeToggleButton: React.FC<ButtonProps> = ({ className, ...pr
   }, [theme, setTheme]);
 
   return (
-    <Button {...props} className={cn('space-x-2', className)} onClick={toggleTheme} variant="outline">
-      <span>Appearance</span>
-      {theme === 'light' ? <SunIcon size={18} /> : <MoonIcon size={18} />}
+    <Button
+      {...props}
+      className={cn('items-start justify-start border-none font-heading', className)}
+      onClick={toggleTheme}
+      variant="outline"
+    >
+      <span className="flex items-center gap-2">
+        {theme === 'light' ? <SunIcon size={16} /> : <MoonIcon size={16} />}
+        <span>Appearance</span>
+      </span>
     </Button>
   );
 };

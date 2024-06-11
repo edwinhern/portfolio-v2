@@ -4,9 +4,9 @@ import { PropsWithChildren } from 'react';
 
 import { Raleway } from 'next/font/google';
 
+import { MenuContent } from '@/components/common/navbar/menu-content';
+import { SideMenu } from '@/components/common/navbar/side-menu';
 import { ThemeProvider } from '@/components/common/providers';
-import { SiteFooter } from '@/components/common/site-footer';
-import { SiteHeader } from '@/components/common/site-header';
 import { siteConfig } from '@/config/site';
 
 import '@/styles/globals.css';
@@ -63,11 +63,14 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
       <head />
       <body className={raleway.variable}>
         <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange enableSystem>
-          <div className="relative flex min-h-screen flex-col">
-            <SiteHeader />
-            {children}
-            <SiteFooter />
-          </div>
+          <main className="min-h-screen">
+            <div className="lg:flex">
+              <SideMenu>
+                <MenuContent />
+              </SideMenu>
+              <div className="relative flex max-h-dvh flex-1 flex-col overflow-y-auto">{children}</div>
+            </div>
+          </main>
         </ThemeProvider>
       </body>
     </html>
