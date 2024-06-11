@@ -5,6 +5,8 @@ import { PropsWithChildren } from 'react';
 import { Raleway } from 'next/font/google';
 
 import { ThemeProvider } from '@/components/common/providers';
+import { SiteFooter } from '@/components/common/site-footer';
+import { SiteHeader } from '@/components/common/site-header';
 import { siteConfig } from '@/config/site';
 
 import '@/styles/globals.css';
@@ -61,7 +63,11 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
       <head />
       <body className={raleway.variable}>
         <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange enableSystem>
-          <div className="relative flex min-h-screen flex-col">{children}</div>
+          <div className="relative flex min-h-screen flex-col">
+            <SiteHeader />
+            {children}
+            <SiteFooter />
+          </div>
         </ThemeProvider>
       </body>
     </html>
