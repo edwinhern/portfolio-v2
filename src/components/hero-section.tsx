@@ -1,12 +1,12 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import { buttonVariants } from '@/components/ui/button';
-import { Icons } from '@/components/ui/icons';
-import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/ui/page-header';
-import { TypewriterEffect } from '@/components/ui/typewriter-effect';
-import { siteConfig } from '@/config/site';
-import { cn } from '@/lib/utils';
+import { buttonVariants } from "@/components/ui/button";
+import { Icons } from "@/components/ui/icons";
+import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "@/components/ui/page-header";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
 
 interface HeroSectionProps {
   className?: string;
@@ -14,17 +14,17 @@ interface HeroSectionProps {
 
 export function HeroSection({ className }: HeroSectionProps) {
   const words = [
-    'hey there!',
-    'nice to meet you.',
-    'my name is edwin.',
-    'i am a computer engineer.',
-    'i love sipping coffee.',
-    'i also love to build apps!',
-    'thanks for visiting!',
+    "hey there!",
+    "nice to meet you.",
+    "my name is edwin.",
+    "i am a computer engineer.",
+    "i love sipping coffee.",
+    "i also love to build apps!",
+    "thanks for visiting!",
   ];
   return (
-    <section className={cn('py-0', className)} data-testid="hero-section">
-      <div className={cn('grid min-h-[calc(100vh-4rem)] grid-cols-1 lg:grid-cols-2')}>
+    <section className={cn("py-0", className)} data-testid="hero-section">
+      <div className={cn("grid min-h-[calc(100vh-4rem)] grid-cols-1 lg:grid-cols-2")}>
         <Image
           alt="Picture of the author"
           className="m-auto mb-0 h-auto w-full max-w-md justify-center object-cover object-center lg:m-auto lg:max-w-xl"
@@ -44,7 +44,7 @@ export function HeroSection({ className }: HeroSectionProps) {
               Download Resume
             </a>
             <Link
-              className={cn(buttonVariants({ variant: 'outline' }))}
+              className={cn(buttonVariants({ variant: "outline" }))}
               href={siteConfig.links.github}
               rel="noreferrer"
               target="_blank"

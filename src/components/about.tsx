@@ -1,5 +1,5 @@
-import { CardDescription } from '@/components/ui/card';
-import { Reveal } from '@/components/ui/reveal';
+import { CardDescription } from "@/components/ui/card";
+import { Reveal } from "@/components/ui/reveal";
 
 export function About() {
   return (

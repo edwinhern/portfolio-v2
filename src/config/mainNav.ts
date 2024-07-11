@@ -1,18 +1,18 @@
 export const mainNav: NavItem[] = [
   {
-    href: '/#about-section',
-    title: 'About',
+    href: "/#about-section",
+    title: "About",
   },
   {
-    href: '/#experience-section',
-    title: 'Experience',
+    href: "/#experience-section",
+    title: "Experience",
   },
   {
-    href: '/#projects-section',
-    title: 'Projects',
+    href: "/#projects-section",
+    title: "Projects",
   },
   {
-    href: '/dashboard',
-    title: 'Dashboard',
+    href: "/dashboard",
+    title: "Dashboard",
   },
 ];

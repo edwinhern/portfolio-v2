@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
-import { HTMLMotionProps, motion, useAnimation, useInView } from 'framer-motion';
+import { type HTMLMotionProps, motion, useAnimation, useInView } from "framer-motion";
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
-interface RevealProps extends HTMLMotionProps<'div'> {
+interface RevealProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode;
 }
 
@@ -17,7 +17,7 @@ export const Reveal = ({ children, className, ...props }: RevealProps) => {
 
   useEffect(() => {
     if (isInView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [controls, isInView]);
 

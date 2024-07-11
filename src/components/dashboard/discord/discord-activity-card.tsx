@@ -1,11 +1,11 @@
-import type { Activity, Data, Spotify } from 'use-lanyard';
+import type { Activity, Data, Spotify } from "use-lanyard";
 
-import Image from 'next/image';
+import Image from "next/image";
 
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
-import { ElapsedTime } from './timer/elapsed-time';
+import { ElapsedTime } from "./timer/elapsed-time";
 
 interface DiscordActivityCardProps {
   activity: Activity;
@@ -13,11 +13,11 @@ interface DiscordActivityCardProps {
 }
 
 function ActivityImage({ activity, data }: { activity: Activity; data: Data }) {
-  const isSpotify = activity.assets?.large_image?.startsWith('spotify:');
+  const isSpotify = activity.assets?.large_image?.startsWith("spotify:");
   const imageUrl = isSpotify
     ? (data.spotify as Spotify)?.album_art_url
     : activity.assets?.large_image
-      ? `https://media.discordapp.net/external/${activity.assets.large_image.replace('mp:external/', '')}`
+      ? `https://media.discordapp.net/external/${activity.assets.large_image.replace("mp:external/", "")}`
       : `https://dcdn.dstn.to/app-icons/${activity.application_id}.webp?size=2048`;
 
   if (!activity.assets && !activity.application_id) {
@@ -26,7 +26,7 @@ function ActivityImage({ activity, data }: { activity: Activity; data: Data }) {
         alt="Discord Icon"
         className="flex size-20 items-center justify-center rounded bg-card object-cover"
         height={1000}
-        src={'/assets/gifs/discord.gif'}
+        src={"/assets/gifs/discord.gif"}
         width={1200}
       />
     );

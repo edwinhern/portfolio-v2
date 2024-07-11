@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import { siteConfig } from '@/config/site';
+import { siteConfig } from "@/config/site";
 
-import { GitHubRepositoryHoverCard } from './github-repository-hover-card';
+import { GitHubRepositoryHoverCard } from "./github-repository-hover-card";
 
 interface ProjectsProps {
   repositories: GithubRepo[];

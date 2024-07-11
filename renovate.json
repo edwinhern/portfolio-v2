@@ -1,11 +1,8 @@
 {
-  "extends": ["config:recommended"],
+  "extends": ["config:recommended", "customManagers:biomeVersions"],
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "labels": ["type: dependencies"],
-  "automerge": true,
-  "major": {
-    "automerge": false
-  },
+  "labels": ["chore: dependencies"],
+  "major": { "automerge": false },
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
@@ -14,16 +11,28 @@
       "automerge": true
     },
     {
-      "packagePatterns": ["eslint"],
-      "groupName": "eslint"
+      "matchPackageNames": ["@biomejs/biome"],
+      "groupName": "biome",
+      "groupSlug": "biome",
+      "automerge": true
     },
     {
-      "packagePatterns": ["react"],
-      "groupName": "react"
+      "matchPackageNames": ["@commitlint/cli", "@commitlint/config-conventional"],
+      "groupName": "commitlint",
+      "groupSlug": "commitlint",
+      "automerge": true
     },
     {
-      "packagePatterns": ["@vitest", "vitest"],
-      "groupName": "vitest"
+      "matchPackageNames": ["@types/node", "@types/react", "@types/react-dom"],
+      "groupName": "types",
+      "groupSlug": "types",
+      "automerge": true
+    },
+    {
+      "matchPackageNames": ["autoprefixer", "postcss", "tailwindcss"],
+      "groupName": "postcss",
+      "groupSlug": "postcss",
+      "automerge": true
     }
   ],
   "dependencyDashboard": true,

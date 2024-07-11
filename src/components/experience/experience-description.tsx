@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-import { Eye, EyeOff } from 'lucide-react';
+import { Eye, EyeOff } from "lucide-react";
 
-import { Button } from '@/components/ui/button';
-import { CardDescription } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
+import { Button } from "@/components/ui/button";
+import { CardDescription } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../ui/collapsible';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../ui/collapsible";
 
 interface ExperienceDescriptionProps {
   description: string;
@@ -37,12 +37,12 @@ export const ExperienceDescription: React.FC<ExperienceDescriptionProps> = ({ de
 
       <CollapsibleTrigger asChild>
         <Button
-          className={cn('mt-1.5 inline-flex size-fit items-center gap-1 rounded-md p-1.5 text-xs/3 font-normal')}
+          className={cn("mt-1.5 inline-flex size-fit items-center gap-1 rounded-md p-1.5 font-normal text-xs/3")}
           onClick={toggleDescription}
-          variant={'outline'}
+          variant={"outline"}
         >
           {!isOpen ? <Eye className="size-3.5" /> : <EyeOff className="size-3.5" />}
-          {!isOpen ? 'View More' : 'View Less'}
+          {!isOpen ? "View More" : "View Less"}
         </Button>
       </CollapsibleTrigger>
     </Collapsible>

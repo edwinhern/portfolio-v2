@@ -1,4 +1,4 @@
-import { Icons } from '@/components/ui/icons';
+import type { Icons } from "@/components/ui/icons";
 
 declare global {
   /**

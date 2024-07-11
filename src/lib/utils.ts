@@ -1,8 +1,8 @@
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-import resolveConfig from 'tailwindcss/resolveConfig';
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import resolveConfig from "tailwindcss/resolveConfig";
 
-import tailwindConfig from '../../tailwind.config';
+import tailwindConfig from "../../tailwind.config";
 
 /**
  * Combines and merges multiple CSS class names or values using the classix and tailwind-merge libraries.
