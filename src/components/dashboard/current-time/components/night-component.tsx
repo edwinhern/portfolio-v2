@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-import TimeCard from './time-card';
+import TimeCard from "./time-card";
 
 const NightComponent: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -13,7 +13,7 @@ const NightComponent: React.FC = () => {
     if (!canvasRef.current) return;
 
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+    const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
 
     // set canvas dimensions
     const isMobile = window.innerWidth < 768;
@@ -22,7 +22,7 @@ const NightComponent: React.FC = () => {
 
     // draw some stars
     for (let i = 0; i < 100; i++) {
-      ctx.fillStyle = 'white';
+      ctx.fillStyle = "white";
       ctx.beginPath();
       ctx.arc(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 2, 0, Math.PI * 2);
       ctx.fill();
@@ -37,9 +37,9 @@ const NightComponent: React.FC = () => {
         className="absolute bottom-0 right-0 rounded-tl-full bg-white/10 pl-2 pt-2 md:pl-4 md:pt-4"
         transition={{
           duration: 4,
-          ease: 'easeInOut',
-          repeat: Infinity,
-          repeatType: 'reverse',
+          ease: "easeInOut",
+          repeat: Number.POSITIVE_INFINITY,
+          repeatType: "reverse",
         }}
       >
         <motion.div>
@@ -51,9 +51,9 @@ const NightComponent: React.FC = () => {
                 initial={false}
                 transition={{
                   duration: 4,
-                  ease: 'easeInOut',
-                  repeat: Infinity,
-                  repeatType: 'reverse',
+                  ease: "easeInOut",
+                  repeat: Number.POSITIVE_INFINITY,
+                  repeatType: "reverse",
                 }}
               />
               <div className="absolute left-12 top-14 size-2 rounded-full bg-[#C2C2C2] md:left-28 md:top-16 md:size-4 xl:left-56 xl:top-20 xl:size-12" />

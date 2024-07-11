@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import React, { useCallback } from 'react';
+import type React from "react";
+import { useCallback } from "react";
 
-import { DropdownMenuTriggerProps } from '@radix-ui/react-dropdown-menu';
-import { MoonIcon, SunIcon } from 'lucide-react';
-import { useTheme } from 'next-themes';
+import type { DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu";
+import { MoonIcon, SunIcon } from "lucide-react";
+import { useTheme } from "next-themes";
 
-import { Button, ButtonProps } from '@/components/ui/button';
+import { Button, type ButtonProps } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { cn } from '@/lib/utils';
+} from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 
 export const ModeToggleButton: React.FC<DropdownMenuTriggerProps> = ({ className, ...props }) => {
   const { setTheme } = useTheme();
@@ -28,9 +29,9 @@ export const ModeToggleButton: React.FC<DropdownMenuTriggerProps> = ({ className
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>Light</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>Dark</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>System</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
@@ -39,13 +40,13 @@ export const ModeToggleButton: React.FC<DropdownMenuTriggerProps> = ({ className
 export const MobileModeToggleButton: React.FC<ButtonProps> = ({ className, ...props }) => {
   const { setTheme, theme } = useTheme();
   const toggleTheme = useCallback(() => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    setTheme(theme === "light" ? "dark" : "light");
   }, [theme, setTheme]);
 
   return (
-    <Button {...props} className={cn('space-x-2', className)} onClick={toggleTheme} variant="outline">
+    <Button {...props} className={cn("space-x-2", className)} onClick={toggleTheme} variant="outline">
       <span>Appearance</span>
-      {theme === 'light' ? <SunIcon size={18} /> : <MoonIcon size={18} />}
+      {theme === "light" ? <SunIcon size={18} /> : <MoonIcon size={18} />}
     </Button>
   );
 };

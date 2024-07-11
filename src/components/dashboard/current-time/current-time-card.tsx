@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
-import { add, isAfter } from 'date-fns';
+import { add, isAfter } from "date-fns";
 
-import { Card } from '@/components/ui/card';
-import { Reveal } from '@/components/ui/reveal';
+import { Card } from "@/components/ui/card";
+import { Reveal } from "@/components/ui/reveal";
 
-import DayComponent from './components/day-component';
-import NightComponent from './components/night-component';
+import DayComponent from "./components/day-component";
+import NightComponent from "./components/night-component";
 
 interface CurrentTimeCardProps {
   data: WeatherForecast | null;
@@ -42,7 +42,7 @@ export const CurrentTimeCard: React.FC<CurrentTimeCardProps> = ({ data }) => {
       initial="visible"
       whileHover={{
         scale: 1.02,
-        transition: { duration: 0.4, ease: 'easeInOut' },
+        transition: { duration: 0.4, ease: "easeInOut" },
       }}
     >
       <Card className="size-full">{timeComponent}</Card>

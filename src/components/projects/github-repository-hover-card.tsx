@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState } from "react";
 
-import { AnimatePresence, motion } from 'framer-motion';
-import { Star } from 'lucide-react';
-import Link from 'next/link';
+import { AnimatePresence, motion } from "framer-motion";
+import { Star } from "lucide-react";
+import Link from "next/link";
 
-import { RenderIf } from '@/components/common/render-if';
-import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
+import { RenderIf } from "@/components/common/render-if";
+import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 interface GitHubRepositoryHoverCardProps {
   className?: string;
@@ -21,14 +21,14 @@ export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps>
   const gridLayoutClass = useMemo(() => {
     const length = items.length;
     if (length === 3 || length === 6) {
-      return 'lg:grid-cols-3';
+      return "lg:grid-cols-3";
     } else {
-      return 'lg:grid-cols-2';
+      return "lg:grid-cols-2";
     }
   }, [items.length]);
 
   return (
-    <div className={cn('grid grid-cols-1 md:grid-cols-2', gridLayoutClass, className)}>
+    <div className={cn("grid grid-cols-1 md:grid-cols-2", gridLayoutClass, className)}>
       {items.map((item, idx) => (
         <Link
           className="group relative block size-full p-2"
@@ -81,7 +81,7 @@ export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps>
 
 export const Card = ({ children, className }: { children: React.ReactNode; className?: string }) => {
   return (
-    <div className={cn('relative z-20 size-full rounded-md bg-card text-card-foreground shadow-sm', className)}>
+    <div className={cn("relative z-20 size-full rounded-md bg-card text-card-foreground shadow-sm", className)}>
       <div className="relative z-50">
         <div className="flex flex-col space-y-1 p-3.5">{children}</div>
       </div>

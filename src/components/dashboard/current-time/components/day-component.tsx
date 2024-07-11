@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-import TimeCard from './time-card';
+import TimeCard from "./time-card";
 
 const DayComponent: React.FC = () => {
   return (
@@ -12,9 +12,9 @@ const DayComponent: React.FC = () => {
         className="absolute bottom-0 right-0 rounded-tl-full bg-white/10 pl-2 pt-2 md:pl-4 md:pt-4"
         transition={{
           duration: 4,
-          ease: 'easeInOut',
-          repeat: Infinity,
-          repeatType: 'reverse',
+          ease: "easeInOut",
+          repeat: Number.POSITIVE_INFINITY,
+          repeatType: "reverse",
         }}
       >
         <motion.div>
@@ -26,9 +26,9 @@ const DayComponent: React.FC = () => {
                 initial={false}
                 transition={{
                   duration: 4,
-                  ease: 'easeInOut',
-                  repeat: Infinity,
-                  repeatType: 'reverse',
+                  ease: "easeInOut",
+                  repeat: Number.POSITIVE_INFINITY,
+                  repeatType: "reverse",
                 }}
               />
             </div>

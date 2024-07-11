@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Reveal } from '@/components/ui/reveal';
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Reveal } from "@/components/ui/reveal";
 
-import { calculateExperienceDuration } from './experience-config';
-import { ExperienceDescription } from './experience-description';
+import { calculateExperienceDuration } from "./experience-config";
+import { ExperienceDescription } from "./experience-description";
 
 interface ExperienceCardProps extends ExperienceItem {
   index: number;
@@ -31,7 +31,7 @@ export function ExperienceCard({
             alt="Company Logo"
             className="mb-4 animate-reveal rounded-lg object-cover"
             height="900"
-            loading={index < 1 ? 'eager' : 'lazy'}
+            loading={index < 1 ? "eager" : "lazy"}
             src={image}
             width="900"
           />

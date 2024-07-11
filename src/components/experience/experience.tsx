@@ -1,7 +1,7 @@
-import { TracingBeam } from '@/components/ui/tracing-beam';
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
-import { ExperienceCard } from './experience-card';
-import { experiences } from './experience-config';
+import { ExperienceCard } from "./experience-card";
+import { experiences } from "./experience-config";
 
 export function Experience() {
   return (

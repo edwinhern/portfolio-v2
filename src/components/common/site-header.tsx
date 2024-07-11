@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import { MainNav } from '@/components/common/main-nav';
-import { MobileNav } from '@/components/common/mobile-nav';
-import { buttonVariants } from '@/components/ui/button';
-import { Icons } from '@/components/ui/icons';
-import { ModeToggleButton } from '@/components/ui/mode-toggle';
-import { siteConfig } from '@/config/site';
-import { cn } from '@/lib/utils';
+import { MainNav } from "@/components/common/main-nav";
+import { MobileNav } from "@/components/common/mobile-nav";
+import { buttonVariants } from "@/components/ui/button";
+import { Icons } from "@/components/ui/icons";
+import { ModeToggleButton } from "@/components/ui/mode-toggle";
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   return (
@@ -16,14 +16,14 @@ export function SiteHeader() {
 
         <div className="flex flex-1 items-center justify-end">
           <Link href={siteConfig.links.github} rel="noreferrer" target="_blank">
-            <div className={cn(buttonVariants({ variant: 'ghost' }), 'w-9 px-0')}>
+            <div className={cn(buttonVariants({ variant: "ghost" }), "w-9 px-0")}>
               <Icons.gitHub className="size-4" />
               <span className="sr-only">GitHub</span>
             </div>
           </Link>
 
           <Link href={siteConfig.links.linkedin} rel="noreferrer" target="_blank">
-            <div className={cn(buttonVariants({ variant: 'ghost' }), 'w-9 px-0')}>
+            <div className={cn(buttonVariants({ variant: "ghost" }), "w-9 px-0")}>
               <Icons.linkedIn className="size-4 fill-current" />
               <span className="sr-only">LinkedIn</span>
             </div>

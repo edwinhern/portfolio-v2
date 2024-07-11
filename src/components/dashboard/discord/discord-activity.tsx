@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import type { Activity, Data } from 'use-lanyard';
+import type { Activity, Data } from "use-lanyard";
 
-import { useLanyardWS } from 'use-lanyard';
+import { useLanyardWS } from "use-lanyard";
 
-import { RenderIf } from '@/components/common/render-if';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Reveal } from '@/components/ui/reveal';
-import { Skeleton } from '@/components/ui/skeleton';
+import { RenderIf } from "@/components/common/render-if";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Reveal } from "@/components/ui/reveal";
+import { Skeleton } from "@/components/ui/skeleton";
 
-import { DiscordActivityCard } from './discord-activity-card';
-import { DiscordStatus } from './discord-status';
+import { DiscordActivityCard } from "./discord-activity-card";
+import { DiscordStatus } from "./discord-status";
 
 const NoDataSkeleton = () => (
   <div className="flex flex-col gap-2">
@@ -27,15 +27,16 @@ const ActivityFeed = ({ activities, lanyard }: { activities: Activity[]; lanyard
   <>
     {activities?.map(
       (activity, idx) =>
-        activity.name !== 'Custom Status' && (
-          <DiscordActivityCard activity={activity} data={lanyard as Data} key={idx} />
-        )
+        activity.name !== "Custom Status" && (
+          <DiscordActivityCard activity={activity} data={lanyard as Data} key={`${activity.name}-${idx}`} />
+        ),
     )}
   </>
 );
 
 export const DiscordActivity = () => {
-  const lanyard = useLanyardWS(`${BigInt(196399908771725312)}`);
+  const userID = BigInt("196399908771725312");
+  const lanyard = useLanyardWS(`${userID}`);
 
   return (
     <Reveal
@@ -43,7 +44,7 @@ export const DiscordActivity = () => {
       initial="visible"
       whileHover={{
         scale: 1.02,
-        transition: { duration: 0.4, ease: 'easeInOut' },
+        transition: { duration: 0.4, ease: "easeInOut" },
       }}
     >
       <Card className="w-full">
@@ -57,7 +58,7 @@ export const DiscordActivity = () => {
             <NoDataSkeleton />
           </RenderIf>
 
-          <RenderIf when={Boolean(lanyard && lanyard.discord_status)}>
+          <RenderIf when={Boolean(lanyard?.discord_status)}>
             <DiscordStatus data={lanyard as Data} />
 
             {/* Render if no activities */}
@@ -68,7 +69,7 @@ export const DiscordActivity = () => {
             </RenderIf>
 
             {/* Render activities */}
-            <RenderIf when={Boolean(lanyard?.activities?.some((a) => a?.name !== 'Custom Status'))}>
+            <RenderIf when={Boolean(lanyard?.activities?.some((a) => a?.name !== "Custom Status"))}>
               <ActivityFeed activities={lanyard?.activities || []} lanyard={lanyard as Data} />
             </RenderIf>
           </RenderIf>

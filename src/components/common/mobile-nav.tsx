@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useCallback, useState } from 'react';
+import { useCallback, useState } from "react";
 
-import { Command } from 'lucide-react';
-import Link, { LinkProps } from 'next/link';
+import { Command } from "lucide-react";
+import Link, { type LinkProps } from "next/link";
 
-import { Button } from '@/components/ui/button';
-import { MobileModeToggleButton } from '@/components/ui/mode-toggle';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { mainNav } from '@/config/mainNav';
-import { siteConfig } from '@/config/site';
-import { cn } from '@/lib/utils';
+import { Button } from "@/components/ui/button";
+import { MobileModeToggleButton } from "@/components/ui/mode-toggle";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { mainNav } from "@/config/mainNav";
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -18,7 +18,7 @@ export function MobileNav() {
   return (
     <Sheet onOpenChange={setOpen} open={open}>
       <SheetTrigger asChild>
-        <Button className="flex w-9 px-0 md:hidden" variant={'ghost'}>
+        <Button className="flex w-9 px-0 md:hidden" variant={"ghost"}>
           <Command className="size-5" />
           <span className="sr-only">Toggle Menu</span>
         </Button>
