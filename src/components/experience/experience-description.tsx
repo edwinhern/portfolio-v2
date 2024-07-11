@@ -37,7 +37,7 @@ export const ExperienceDescription: React.FC<ExperienceDescriptionProps> = ({ de
 
       <CollapsibleTrigger asChild>
         <Button
-          className={cn("mt-1.5 inline-flex size-fit items-center gap-1 rounded-md p-1.5 text-xs/3 font-normal")}
+          className={cn("mt-1.5 inline-flex size-fit items-center gap-1 rounded-md p-1.5 font-normal text-xs/3")}
           onClick={toggleDescription}
           variant={"outline"}
         >

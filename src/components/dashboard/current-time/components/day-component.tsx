@@ -9,7 +9,7 @@ const DayComponent: React.FC = () => {
         animate={{
           scale: [1, 1.1, 1.1, 1, 1],
         }}
-        className="absolute bottom-0 right-0 rounded-tl-full bg-white/10 pl-2 pt-2 md:pl-4 md:pt-4"
+        className="absolute right-0 bottom-0 rounded-tl-full bg-white/10 pt-2 pl-2 md:pt-4 md:pl-4"
         transition={{
           duration: 4,
           ease: "easeInOut",
@@ -18,8 +18,8 @@ const DayComponent: React.FC = () => {
         }}
       >
         <motion.div>
-          <div className="bottom-0 right-0 rounded-tl-full bg-white/20 pl-2 pt-2 md:pl-4 md:pt-4">
-            <div className="bottom-0 right-0 rounded-tl-full bg-white/20 pl-2 pt-2 md:pl-4 md:pt-4">
+          <div className="right-0 bottom-0 rounded-tl-full bg-white/20 pt-2 pl-2 md:pt-4 md:pl-4">
+            <div className="right-0 bottom-0 rounded-tl-full bg-white/20 pt-2 pl-2 md:pt-4 md:pl-4">
               <motion.div
                 animate={{ scale: [1, 0.9, 0.9, 1, 1] }}
                 className="relative size-48 rounded-tl-full bg-[#FEEA9A]"

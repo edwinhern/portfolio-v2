@@ -27,7 +27,7 @@ export function MobileNav() {
         <div className="container my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
             <MobileLink className="w-fit" href="/" onOpenChange={setOpen}>
-              <span className="font-heading font-bold">{siteConfig.siteTitle}</span>
+              <span className="font-bold font-heading">{siteConfig.siteTitle}</span>
             </MobileLink>
             {mainNav.map((item) => (
               <MobileLink className="border-b" href={item.href} key={item.href} onOpenChange={setOpen}>

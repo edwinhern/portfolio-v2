@@ -8,7 +8,7 @@ export function MainNav() {
   return (
     <div className="flex">
       <Link className="mr-4" href="/">
-        <span className="font-heading text-lg font-bold">{siteConfig.siteTitle}</span>
+        <span className="font-bold font-heading text-lg">{siteConfig.siteTitle}</span>
       </Link>
       <nav className="mt-[0.099rem] hidden items-center gap-6 text-sm md:flex">
         {mainNav.map((item) => (

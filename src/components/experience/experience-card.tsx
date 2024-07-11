@@ -41,7 +41,7 @@ export function ExperienceCard({
           <h2>{title}</h2>
         </CardTitle>
 
-        <CardDescription className="text-sm text-foreground md:text-sm">
+        <CardDescription className="text-foreground text-sm md:text-sm">
           {company} · {employmentType}
           <div className="text-muted">
             {date.start} - {date.end} ({duration})

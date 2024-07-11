@@ -42,12 +42,12 @@ const TimeCard: React.FC<TimeCardProps> = ({ bgClassName, children, timeClassNam
             when={Boolean(time)}
           >
             <div className="size-2 animate-pulse rounded-full bg-current md:size-3" />
-            <div className="text-xl font-semibold md:text-3xl">{time}</div>
+            <div className="font-semibold text-xl md:text-3xl">{time}</div>
           </RenderIf>
         </div>
 
         <RenderIf fallback={<Skeleton className="mt-2 h-4 w-24 md:h-6 md:w-32" />} when={Boolean(time)}>
-          <div className="text-lg text-current md:text-2xl">in Dallas, TX</div>
+          <div className="text-current text-lg md:text-2xl">in Dallas, TX</div>
         </RenderIf>
       </div>
 

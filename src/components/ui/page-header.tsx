@@ -15,7 +15,7 @@ function PageHeaderHeading({ className, ...props }: React.HTMLAttributes<HTMLHea
 function PageHeaderDescription({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) {
   return (
     <div
-      className={cn("text-pretty text-sm/relaxed font-light text-muted md:text-base/relaxed", className)}
+      className={cn("text-pretty font-light text-muted text-sm/relaxed md:text-base/relaxed", className)}
       {...props}
     />
   );

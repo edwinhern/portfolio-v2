@@ -17,7 +17,7 @@ export default async function Dashboard() {
   return (
     <section className="container relative max-w-3xl space-y-4">
       <PageHeader className="items-start">
-        <PageHeaderHeading className="text-2xl font-semibold sm:text-2xl md:text-2xl lg:text-2xl">
+        <PageHeaderHeading className="font-semibold text-2xl sm:text-2xl md:text-2xl lg:text-2xl">
           Dashboard
         </PageHeaderHeading>
         <PageHeaderDescription className="font-light text-muted sm:text-base md:text-base lg:text-base">

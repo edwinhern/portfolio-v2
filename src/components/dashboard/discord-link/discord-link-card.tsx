@@ -29,7 +29,7 @@ export const DiscordLinkCard = () => {
             width={1200}
           />
         </Link>
-        <ArrowUpIcon className="absolute bottom-0 right-0 m-2 size-8 rotate-45" />
+        <ArrowUpIcon className="absolute right-0 bottom-0 m-2 size-8 rotate-45" />
       </Card>
     </Reveal>
   );

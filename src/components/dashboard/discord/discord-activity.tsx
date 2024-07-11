@@ -49,7 +49,7 @@ export const DiscordActivity = () => {
     >
       <Card className="w-full">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-base font-medium">Discord activity</CardTitle>
+          <CardTitle className="font-medium text-base">Discord activity</CardTitle>
         </CardHeader>
 
         <CardContent className="flex flex-col gap-4">
