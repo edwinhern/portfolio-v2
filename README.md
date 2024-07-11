@@ -1,9 +1,10 @@
 # 🌐 edwinhern.com
 
-[![Build Next.js Application](https://github.com/edwinhern/portfolio-v2/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/edwinhern/portfolio-v2/actions/workflows/build.yml)
+[![Build](https://github.com/edwinhern/portfolio-v2/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/edwinhern/portfolio-v2/actions/workflows/build.yml)
+[![Code Quality](https://github.com/edwinhern/portfolio-v2/actions/workflows/code-quality.yml/badge.svg?branch=main)](https://github.com/edwinhern/portfolio-v2/actions/workflows/code-quality.yml)
 [![CodeQL](https://github.com/edwinhern/portfolio-v2/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/edwinhern/portfolio-v2/actions/workflows/github-code-scanning/codeql)
 [![Docker Image CI](https://github.com/edwinhern/portfolio-v2/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/edwinhern/portfolio-v2/actions/workflows/docker-image.yml)
-[![Release](https://github.com/edwinhern/portfolio-v2/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/edwinhern/portfolio-v2/actions/workflows/release.yml)
+
 
 Welcome to the documentation for edwinhern.com, a portfolio designed to showcase cutting-edge web development technologies and design principles.
 
