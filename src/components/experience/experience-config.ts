@@ -4,7 +4,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'Tesla Inc.',
     date: {
-      end: 'May 2024',
+      end: 'Present',
       start: 'Jul 2023',
     },
     description:
@@ -68,7 +68,10 @@ export const experiences: ExperienceItem[] = [
 
 export const calculateExperienceDuration = (date: ExperienceDate) => {
   const startDate = new Date(date.start);
-  const endDate = new Date(date.end);
+  let endDate = new Date();
+  if (date.end !== 'Present') {
+    endDate = new Date(date.end);
+  }
   const months = endDate.getMonth() - startDate.getMonth() + 1 + 12 * (endDate.getFullYear() - startDate.getFullYear());
   const years = Math.floor(months / 12);
   const remainingMonths = months % 12;
