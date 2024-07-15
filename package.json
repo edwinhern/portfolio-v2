@@ -51,6 +51,10 @@
     "tailwindcss": "^3.4.3",
     "typescript": "^5"
   },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"],
+    "formatter": "@commitlint/format"
+  },
   "lint-staged": {
     "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": ["biome check --apply --no-errors-on-unmatched"]
   }
