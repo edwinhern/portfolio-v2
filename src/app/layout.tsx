@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-
 import type { PropsWithChildren } from "react";
 
 import { Raleway } from "next/font/google";
 
 import { ThemeProvider } from "@/components/common/providers";
+import { SiteFooter } from "@/components/common/site-footer";
+import { SiteHeader } from "@/components/common/site-header";
 import { siteConfig } from "@/config/site";
-
 import "@/styles/globals.css";
 
 const raleway = Raleway({
@@ -61,7 +61,11 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
       <head />
       <body className={raleway.variable}>
         <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange enableSystem>
-          <div className="relative flex min-h-screen flex-col">{children}</div>
+          <SiteHeader />
+          <main className="relative flex min-h-screen flex-col">
+            <div className="flex-1 overflow-hidden">{children}</div>
+          </main>
+          <SiteFooter />
         </ThemeProvider>
       </body>
     </html>
