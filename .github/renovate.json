@@ -1,8 +1,11 @@
 {
-  "extends": ["config:recommended", "customManagers:biomeVersions"],
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", "customManagers:biomeVersions"],
   "labels": ["chore: dependencies"],
-  "major": { "automerge": false },
+  "dependencyDashboard": true,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
@@ -33,10 +36,24 @@
       "groupName": "postcss",
       "groupSlug": "postcss",
       "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["^@radix-ui/react-"],
+      "groupName": "radix-ui",
+      "groupSlug": "radix-ui",
+      "automerge": true
+    },
+    {
+      "matchPackageNames": ["class-variance-authority", "clsx"],
+      "groupName": "class-utils",
+      "groupSlug": "class-utils",
+      "automerge": true
+    },
+    {
+      "matchPackageNames": ["tailwind-merge", "tailwindcss-animate"],
+      "groupName": "tailwind-utils",
+      "groupSlug": "tailwind-utils",
+      "automerge": true
     }
-  ],
-  "dependencyDashboard": true,
-  "lockFileMaintenance": {
-    "enabled": true
-  }
+  ]
 }
