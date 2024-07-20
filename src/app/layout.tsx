@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Raleway } from "next/font/google";
 
 import { ThemeProvider } from "@/components/common/providers";
@@ -66,6 +68,8 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
             <div className="flex-1 overflow-hidden">{children}</div>
           </main>
           <SiteFooter />
+          <SpeedInsights />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
