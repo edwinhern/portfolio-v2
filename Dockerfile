@@ -1,34 +1,51 @@
-# Stage 1: Building the app
+# Build stage
 FROM node:20-alpine AS builder
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
 
-# Set the working directory in the Docker container
 WORKDIR /app
 
-# Copy the package.json and package-lock.json (or yarn.lock) files
-COPY package*.json ./
+# Copy package.json and pnpm-lock.yaml
+COPY package.json pnpm-lock.yaml* ./
 
-# Install dependencies
-RUN npm ci
+# Install dependencies (including devDependencies)
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
-# Copy the rest of your app's source code from your host to your image filesystem.
+# Copy all files
 COPY . .
 
-# Build the Next.js application
-RUN npm run build
+# Build the application
+RUN pnpm run build
 
-# Stage 3: Run the app in production mode
+# Production stage
 FROM node:20-alpine AS runner
 WORKDIR /app
 
-# Copy the build output from the builder stage
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Copy necessary files from the builder stage
 COPY --from=builder /app/next.config.mjs ./
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
 
-# Expose the port Next.js runs on
+# Set correct permissions for the .next directory
+RUN chown nextjs:nodejs .next
+
+# Switch to nextjs user
+USER nextjs
+
+# Create cache directory with correct permissions
+RUN mkdir -p .next/cache
+
 EXPOSE 3000
 
-# Command to run the app
-CMD ["npm", "start"]
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+CMD ["node", "server.js"]

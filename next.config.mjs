@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   experimental: {
     optimizePackageImports: ["framer-motion"],
     webVitalsAttribution: ["FCP", "LCP", "CLS", "FID", "TTFB", "INP"],
