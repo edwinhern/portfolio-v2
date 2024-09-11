@@ -3,9 +3,6 @@
   "extends": ["config:recommended", "customManagers:biomeVersions"],
   "labels": ["chore: dependencies"],
   "dependencyDashboard": true,
-  "lockFileMaintenance": {
-    "enabled": true
-  },
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
