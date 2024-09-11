@@ -6,10 +6,16 @@ RUN corepack enable
 
 WORKDIR /app
 
+# Copy package.json and pnpm-lock.yaml
 COPY package.json pnpm-lock.yaml* ./
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile --ignore-scripts
 
+# Install dependencies (including devDependencies)
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+
+# Copy all files
 COPY . .
+
+# Build the application
 RUN pnpm run build
 
 # Production stage
@@ -22,6 +28,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
+# Copy necessary files from the builder stage
 COPY --from=builder /app/next.config.mjs ./
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
