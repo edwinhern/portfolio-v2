@@ -38,7 +38,7 @@
     "wretch": "^2.8.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.0",
+    "@biomejs/biome": "1.9.1",
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
     "@types/node": "^20",
