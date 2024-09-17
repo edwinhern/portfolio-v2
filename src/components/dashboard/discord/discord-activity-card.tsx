@@ -17,7 +17,7 @@ function ActivityImage({ activity, data }: { activity: Activity; data: Data }) {
   const imageUrl = isSpotify
     ? (data.spotify as Spotify)?.album_art_url
     : activity.assets?.large_image
-      ? `https://media.discordapp.net/external/${activity.assets.large_image.replace("mp:external/", "")}`
+      ? `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.large_image}.png`
       : `https://dcdn.dstn.to/app-icons/${activity.application_id}.webp?size=2048`;
 
   if (!activity.assets && !activity.application_id) {
