@@ -14,7 +14,7 @@ import tailwindConfig from "../../tailwind.config";
  * @returns - A merged string containing the combined CSS class names or values.
  */
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+	return twMerge(clsx(inputs));
 }
 
 /**

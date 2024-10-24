@@ -6,14 +6,14 @@ const githubUsername = "edwinhern";
 
 // Create a wretch instance configured for API interactions
 const api = wretch(apiUrl, {
-  cache: "no-store",
-  mode: "cors",
+	cache: "no-store",
+	mode: "cors",
 })
-  .errorType("json")
-  .resolve((resolver) => resolver.json() as Promise<GithubRepo[]>);
+	.errorType("json")
+	.resolve((resolver) => resolver.json() as Promise<GithubRepo[]>);
 
 // Function to fetch pinned repository
 export const fetchGithubRepos = async () => {
-  const response = await api.get(`?username=${githubUsername}`);
-  return response || [];
+	const response = await api.get(`?username=${githubUsername}`);
+	return response || [];
 };

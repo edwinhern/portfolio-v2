@@ -5,14 +5,14 @@ const apiUrl = "https://api.sunrise-sunset.org/json?lat=32.780140&lng=-96.800453
 
 // Create a wretch instance configured for API interactions
 const api = wretch(apiUrl, {
-  cache: "no-store",
-  mode: "cors",
+	cache: "no-store",
+	mode: "cors",
 })
-  .errorType("json")
-  .resolve((resolver) => resolver.json() as Promise<WeatherForecast>);
+	.errorType("json")
+	.resolve((resolver) => resolver.json() as Promise<WeatherForecast>);
 
 // Function to fetch pinned repository
 export const fetchWeatherForecast = async () => {
-  const response = await api.get();
-  return response || null;
+	const response = await api.get();
+	return response || null;
 };
