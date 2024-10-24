@@ -1,7 +1,7 @@
 import { About } from "@/components/about";
 import { Experience } from "@/components/features/experience/experience";
+import { HeroSection } from "@/components/features/hero/hero-section";
 import { Projects } from "@/components/features/projects/projects";
-import { HeroSection } from "@/components/hero-section";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { SectionLayout } from "@/components/ui/section-layout";
 import { fetchGithubRepos } from "@/lib/api/github";
@@ -12,7 +12,7 @@ export default async function Home() {
 	return (
 		<>
 			<AuroraBackground>
-				<HeroSection className="container relative" />
+				<HeroSection />
 			</AuroraBackground>
 			<SectionLayout className="container relative">
 				<About />
