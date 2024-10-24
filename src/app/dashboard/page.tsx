@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
-import { CurrentTimeCard } from "@/components/dashboard/current-time/current-time-card";
-import { DiscordLinkCard } from "@/components/dashboard/discord-link/discord-link-card";
-import { DiscordActivity } from "@/components/dashboard/discord/discord-activity";
+import { CurrentTimeCard } from "@/components/features/dashboard/current-time/current-time-card";
+import { DiscordLinkCard } from "@/components/features/dashboard/discord-link/discord-link-card";
+import { DiscordActivity } from "@/components/features/dashboard/discord/discord-activity";
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from "@/components/ui/page-header";
 import { fetchWeatherForecast } from "@/lib/api/time";
 
