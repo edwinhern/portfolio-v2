@@ -1,5 +1,5 @@
-import { WEATHER_API_CONFIG } from "@/lib/weather/constants";
-import type { WeatherForecast } from "@/lib/weather/types";
+import { WEATHER_API_CONFIG } from "@/lib/api/weather/constants";
+import type { WeatherForecast } from "@/lib/api/weather/types";
 
 // Function to fetch pinned repository
 export async function fetchWeatherForecast(): Promise<WeatherForecast | null> {
