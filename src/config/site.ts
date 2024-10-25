@@ -27,5 +27,3 @@ export const siteConfig = {
 	siteTitle: "edwinhern",
 	url: new URL("https://edwinhern.com"),
 };
-
-export type SiteConfig = typeof siteConfig;

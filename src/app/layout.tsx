@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/components/common/providers";
 import { SiteFooter } from "@/components/common/site-footer";
 import { SiteHeader } from "@/components/common/site-header";
 import { siteConfig } from "@/config/site";
-import "@/styles/globals.css";
+import "@/globals.css";
 
 const raleway = Raleway({
 	subsets: ["latin"],
