@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-	output: "standalone",
+	// output: "standalone", // Use this when self-hosting
 	experimental: {
 		optimizePackageImports: ["framer-motion"],
 		webVitalsAttribution: ["FCP", "LCP", "CLS", "FID", "TTFB", "INP"],
