@@ -1,5 +1,5 @@
-import { GITHUB_API_CONFIG } from "@/lib/github/constants";
-import type { GitHubRepository } from "@/lib/github/types";
+import { GITHUB_API_CONFIG } from "@/lib/api/github/constants";
+import type { GitHubRepository } from "@/lib/api/github/types";
 
 export async function fetchGithubRepos(): Promise<GitHubRepository[]> {
 	const url = new URL(GITHUB_API_CONFIG.BASE_URL);
