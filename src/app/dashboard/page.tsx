@@ -4,7 +4,7 @@ import { CurrentTimeCard } from "@/components/features/dashboard/current-time/cu
 import { DiscordLinkCard } from "@/components/features/dashboard/discord-link/discord-link-card";
 import { DiscordActivity } from "@/components/features/dashboard/discord/discord-activity";
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from "@/components/ui/page-header";
-import { fetchWeatherForecast } from "@/lib/api/time";
+import { fetchWeatherForecast } from "@/lib/weather";
 
 export const metadata: Metadata = {
 	description: "Statistics about my activities",
