@@ -7,6 +7,7 @@ import { add, isAfter } from "date-fns";
 import { Card } from "@/components/ui/card";
 import { Reveal } from "@/components/ui/reveal";
 
+import type { WeatherForecast } from "@/lib/api/weather/types";
 import DayComponent from "./components/day-component";
 import NightComponent from "./components/night-component";
 

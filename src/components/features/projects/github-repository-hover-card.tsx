@@ -1,18 +1,18 @@
 "use client";
 
-import { useMemo, useState } from "react";
-
 import { AnimatePresence, motion } from "framer-motion";
 import { Star } from "lucide-react";
 import Link from "next/link";
+import { useMemo, useState } from "react";
 
 import { RenderIf } from "@/components/common/render-if";
 import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import type { GitHubRepository } from "@/lib/api/github/types";
 import { cn } from "@/lib/utils";
 
 interface GitHubRepositoryHoverCardProps {
 	className?: string;
-	items: GithubRepo[];
+	items: GitHubRepository[];
 }
 
 export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps> = ({ className, items }) => {
