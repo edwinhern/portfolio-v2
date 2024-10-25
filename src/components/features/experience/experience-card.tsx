@@ -1,11 +1,11 @@
 import Image from "next/image";
 
+import { ExperienceDescription } from "@/components/features/experience/experience-description";
+import type { ExperienceItem } from "@/components/features/experience/types";
+import { calculateExperienceDuration, formatExperienceDate } from "@/components/features/experience/utils";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Reveal } from "@/components/ui/reveal";
-
-import { calculateExperienceDuration } from "./experience-config";
-import { ExperienceDescription } from "./experience-description";
 
 interface ExperienceCardProps extends ExperienceItem {
 	index: number;
@@ -44,7 +44,7 @@ export function ExperienceCard({
 				<CardDescription className="text-foreground text-sm md:text-sm">
 					{company} · {employmentType}
 					<div className="text-muted">
-						{date.start} - {date.end} ({duration})
+						{formatExperienceDate(date.start)} - {formatExperienceDate(date.end)} ({duration})
 					</div>
 				</CardDescription>
 			</CardHeader>

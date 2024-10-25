@@ -1,5 +1,5 @@
 import { About } from "@/components/about";
-import { Experience } from "@/components/features/experience/experience";
+import { Experience } from "@/components/features/experience";
 import { HeroSection } from "@/components/features/hero/hero-section";
 import { Projects } from "@/components/features/projects/projects";
 import { AuroraBackground } from "@/components/ui/aurora-background";

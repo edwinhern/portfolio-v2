@@ -1,7 +1,6 @@
 import { WEATHER_API_CONFIG } from "@/lib/api/weather/constants";
 import type { WeatherForecast } from "@/lib/api/weather/types";
 
-// Function to fetch pinned repository
 export async function fetchWeatherForecast(): Promise<WeatherForecast | null> {
 	const url = new URL(WEATHER_API_CONFIG.API_URL);
 	url.searchParams.append("lat", WEATHER_API_CONFIG.DALLAS_COORDINATES.latitude.toString());
