@@ -1955,13 +1955,8 @@ snapshots:
 
   '@swc/helpers@0.5.13':
     dependencies:
-      tslib: 2.7.0
+      tslib: 2.8.0
 
-  '@types/conventional-commits-parser@5.0.0':
-    dependencies:
-      '@types/node': 20.17.1
-
-  '@types/node@20.17.1':
   '@types/node@20.17.1':
     dependencies:
       undici-types: 6.19.8
