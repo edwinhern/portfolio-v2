@@ -31,7 +31,7 @@ RUN adduser --system --uid 1001 nextjs
 # Copy necessary files from the builder stage
 COPY --from=builder /app/next.config.ts ./
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
+# COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
 # Set correct permissions for the .next directory
