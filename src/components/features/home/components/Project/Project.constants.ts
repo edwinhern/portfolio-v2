@@ -1,9 +1,11 @@
+import type { HTMLMotionProps } from "framer-motion";
+
 export const GRID_LAYOUTS = {
 	THREE_OR_SIX: "lg:grid-cols-3",
 	DEFAULT: "lg:grid-cols-2",
 } as const;
 
-export const CARD_ANIMATION = {
+export const CARD_ANIMATION: HTMLMotionProps<"span"> = {
 	initial: { opacity: 0 },
 	animate: {
 		opacity: 1,

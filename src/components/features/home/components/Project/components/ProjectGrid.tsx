@@ -4,19 +4,23 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
+import type { GitHubRepository } from "@/lib/api/github/types";
 import { cn } from "@/lib/utils";
-import { CARD_ANIMATION } from "../constants";
+import { CARD_ANIMATION } from "../Project.constants";
 import { useGridLayout } from "../hooks/useGridLayout";
-import type { GitHubRepositoryHoverCardProps } from "../types";
-import { RepositoryCard } from "./repository-card";
+import { ProjectRepositoryCard } from "./ProjectRepositoryCard";
 
-export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps> = ({ className, items }) => {
+interface ProjectGrid {
+	repositories: GitHubRepository[];
+}
+
+export const ProjectGrid: React.FC<ProjectGrid> = ({ repositories }) => {
 	const [hoveredIndex, setHoveredIndex] = useState<null | number>(null);
-	const gridLayoutClass = useGridLayout(items.length);
+	const gridLayoutClass = useGridLayout(repositories.length);
 
 	return (
-		<div className={cn("grid grid-cols-1 md:grid-cols-2", gridLayoutClass, className)}>
-			{items.map((item, idx) => (
+		<div className={cn("grid grid-cols-1 md:grid-cols-2", gridLayoutClass)}>
+			{repositories.map((item, idx) => (
 				<Link
 					className="group relative block size-full p-2"
 					href={item.link}
@@ -33,7 +37,7 @@ export const GitHubRepositoryHoverCard: React.FC<GitHubRepositoryHoverCardProps>
 							/>
 						)}
 					</AnimatePresence>
-					<RepositoryCard repository={item} />
+					<ProjectRepositoryCard repository={item} />
 				</Link>
 			))}
 		</div>

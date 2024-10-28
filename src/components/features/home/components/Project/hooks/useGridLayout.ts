@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { GRID_LAYOUTS } from "../constants";
+import { GRID_LAYOUTS } from "../Project.constants";
 
 export const useGridLayout = (itemsLength: number) => {
 	return useMemo(() => {

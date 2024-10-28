@@ -1,4 +1,4 @@
-export { About } from "./About";
-export { Experience } from "./Experience";
-export { Hero } from "./Hero";
-export { Projects } from "./projects";
+export * from "./About";
+export * from "./Experience";
+export * from "./Hero";
+export * from "./Project";

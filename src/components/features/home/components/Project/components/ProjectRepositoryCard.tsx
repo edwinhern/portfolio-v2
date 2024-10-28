@@ -3,14 +3,14 @@ import { Star } from "lucide-react";
 import { RenderIf } from "@/components/common/render-if";
 import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import type { GitHubRepository } from "@/lib/api/github/types";
-import { Card } from "./card";
+import { ProjectCard } from "./ProjectCard";
 
 interface RepositoryCardProps {
 	repository: GitHubRepository;
 }
 
-export const RepositoryCard = ({ repository }: RepositoryCardProps) => (
-	<Card>
+export const ProjectRepositoryCard = ({ repository }: RepositoryCardProps) => (
+	<ProjectCard>
 		<CardHeader className="p-0">
 			<CardTitle className="font-heading text-xl md:text-2xl">
 				<h2>{repository.repo}</h2>
@@ -31,5 +31,5 @@ export const RepositoryCard = ({ repository }: RepositoryCardProps) => (
 				{repository.stars}
 			</CardDescription>
 		</CardFooter>
-	</Card>
+	</ProjectCard>
 );
