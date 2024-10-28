@@ -1,12 +1,8 @@
 import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
-import type { GitHubRepository } from "@/lib/api/github/types";
-import { GitHubRepositoryHoverCard } from "./github-repository-hover-card";
-
-interface ProjectsProps {
-	repositories: GitHubRepository[];
-}
+import { GitHubRepositoryHoverCard } from "./components/github-repository-hover-card";
+import type { ProjectsProps } from "./types";
 
 export const Projects: React.FC<ProjectsProps> = ({ repositories }) => {
 	return (

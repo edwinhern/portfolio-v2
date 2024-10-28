@@ -3,10 +3,8 @@ import { Reveal } from "@/components/ui/reveal";
 
 export function About() {
 	return (
-		<section className="container space-y-4" data-testid="about-section">
-			<h2 className="text-3xl lg:text-4xl" id="about-section">
-				About Me
-			</h2>
+		<section className="container space-y-4">
+			<h2 className="text-3xl lg:text-4xl">About Me</h2>
 			<Reveal
 				transition={{ duration: 0.4 }}
 				variants={{

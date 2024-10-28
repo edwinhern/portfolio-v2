@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-import { ExperienceDescription } from "@/components/features/experience/experience-description";
-import type { ExperienceItem } from "@/components/features/experience/types";
-import { calculateExperienceDuration, formatExperienceDate } from "@/components/features/experience/utils";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Reveal } from "@/components/ui/reveal";
+import { ExperienceDescription } from "./experience-description";
+import type { ExperienceItem } from "./types";
+import { calculateExperienceDuration, formatExperienceDate } from "./utils";
 
 interface ExperienceCardProps extends ExperienceItem {
 	index: number;
