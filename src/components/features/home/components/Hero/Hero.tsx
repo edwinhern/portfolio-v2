@@ -3,10 +3,10 @@
 import { memo } from "react";
 
 import { cn } from "@/lib/utils";
-import { HeroContent } from "./components/hero-content";
-import { HeroImage } from "./components/hero-image";
+import { HeroContent } from "./components/HeroContent";
+import { HeroImage } from "./components/HeroImage";
 
-export const HeroSection = memo(function HeroSection() {
+export const Hero = memo(function HeroSection() {
 	return (
 		<section className={cn("container relative py-0")}>
 			<div className={cn("grid min-h-[calc(100vh-4rem)] grid-cols-1 lg:grid-cols-2")}>

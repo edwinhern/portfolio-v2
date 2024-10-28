@@ -1,6 +1,6 @@
 import type { Duration } from "date-fns";
 
-import type { ExperienceDate } from "@/components/features/experience/types";
+import type { ExperienceDate } from "./Experience.types";
 
 export function calculateExperienceDuration(date: ExperienceDate): string {
 	const duration = calculateDuration(date);

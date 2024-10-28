@@ -3,9 +3,9 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Reveal } from "@/components/ui/reveal";
-import { ExperienceDescription } from "./experience-description";
-import type { ExperienceItem } from "./types";
-import { calculateExperienceDuration, formatExperienceDate } from "./utils";
+import type { ExperienceItem } from "../Experience.types";
+import { calculateExperienceDuration, formatExperienceDate } from "../Experience.utils";
+import { ExperienceDescription } from "./ExperienceDescription";
 
 interface ExperienceCardProps extends ExperienceItem {
 	index: number;

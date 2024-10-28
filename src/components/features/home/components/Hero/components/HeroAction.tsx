@@ -6,7 +6,7 @@ import { Icons } from "@/components/ui/icons";
 import { PageActions } from "@/components/ui/page-header";
 import { siteConfig } from "@/config/site";
 
-export const HeroActions = memo(function HeroActions() {
+export const HeroAction = memo(function HeroActions() {
 	return (
 		<PageActions>
 			<Button asChild>

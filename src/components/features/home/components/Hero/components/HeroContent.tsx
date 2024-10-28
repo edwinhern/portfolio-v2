@@ -2,8 +2,8 @@ import { memo } from "react";
 
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from "@/components/ui/page-header";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import { HERO_SECTION_WORDS } from "../constants";
-import { HeroActions } from "./hero-action";
+import { HERO_SECTION_WORDS } from "../Hero.constants";
+import { HeroAction } from "./HeroAction";
 
 export const HeroContent = memo(function HeroContent() {
 	return (
@@ -12,7 +12,7 @@ export const HeroContent = memo(function HeroContent() {
 			<PageHeaderDescription>
 				<TypewriterEffect words={HERO_SECTION_WORDS} />
 			</PageHeaderDescription>
-			<HeroActions />
+			<HeroAction />
 		</PageHeader>
 	);
 });
