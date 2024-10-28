@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
-import TimeCard from "./time-card";
+import { TimeDisplay } from "./TimeDisplay";
 
-const DayComponent: React.FC = () => {
+export const DayScene = () => {
 	return (
-		<TimeCard bgClassName="bg-gradient-to-br from-[#0A8DFF] to-[#98CFFF]" timeClassName="text-current">
+		<TimeDisplay bgClassName="bg-gradient-to-br from-[#0A8DFF] to-[#98CFFF]" timeClassName="text-current">
 			<motion.div
 				animate={{
 					scale: [1, 1.1, 1.1, 1, 1],
@@ -35,8 +35,6 @@ const DayComponent: React.FC = () => {
 					</div>
 				</motion.div>
 			</motion.div>
-		</TimeCard>
+		</TimeDisplay>
 	);
 };
-
-export default DayComponent;

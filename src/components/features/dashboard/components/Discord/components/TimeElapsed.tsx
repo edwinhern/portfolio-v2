@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-import { discordTimestamp } from "../utils/time";
+import { discordTimestamp } from "../Discord.utils";
 
-interface TimestampProps {
+interface TimeElapsedProps {
 	unixTimestamp: number;
 }
 
-export function ElapsedTime({ unixTimestamp }: TimestampProps) {
+export const TimeElapsed: React.FC<TimeElapsedProps> = ({ unixTimestamp }) => {
 	const [timeAgo, setTimeAgo] = useState(discordTimestamp(unixTimestamp));
 
 	useEffect(() => {
@@ -20,4 +20,4 @@ export function ElapsedTime({ unixTimestamp }: TimestampProps) {
 	}, [unixTimestamp]);
 
 	return <>{timeAgo}</>;
-}
+};

@@ -4,9 +4,9 @@ import { useEffect, useRef } from "react";
 
 import { motion } from "framer-motion";
 
-import TimeCard from "./time-card";
+import { TimeDisplay } from "./TimeDisplay";
 
-const NightComponent: React.FC = () => {
+export const NightScene = () => {
 	const canvasRef = useRef<HTMLCanvasElement>(null);
 
 	useEffect(() => {
@@ -30,7 +30,7 @@ const NightComponent: React.FC = () => {
 	}, []);
 
 	return (
-		<TimeCard bgClassName="bg-[#001324]" timeClassName="text-white">
+		<TimeDisplay bgClassName="bg-[#001324]" timeClassName="text-white">
 			<canvas className="absolute inset-0 size-full opacity-70 md:opacity-100" ref={canvasRef} />
 			<motion.div
 				animate={{ scale: [1, 1.1, 1.1, 1, 1] }}
@@ -63,8 +63,6 @@ const NightComponent: React.FC = () => {
 					</div>
 				</motion.div>
 			</motion.div>
-		</TimeCard>
+		</TimeDisplay>
 	);
 };
-
-export default NightComponent;

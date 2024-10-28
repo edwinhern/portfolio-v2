@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/card";
 import { Reveal } from "@/components/ui/reveal";
 import { siteConfig } from "@/config/site";
 
-export const DiscordLinkCard = () => {
+export const DiscordLink = () => {
 	return (
 		<Reveal
 			initial="visible"

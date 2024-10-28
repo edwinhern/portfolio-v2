@@ -1,40 +1,17 @@
 "use client";
 
-import type { Activity, Data } from "use-lanyard";
-
+import type { Data } from "use-lanyard";
 import { useLanyardWS } from "use-lanyard";
 
 import { RenderIf } from "@/components/common/render-if";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Reveal } from "@/components/ui/reveal";
-import { Skeleton } from "@/components/ui/skeleton";
+import { ActivityFeed } from "./components/ActivityFeed";
+import { ActivitySkeleton } from "./components/ActivitySkeleton";
+import { StatusDisplay } from "./components/StatusDisplay";
 
-import { DiscordActivityCard } from "./discord-activity-card";
-import { DiscordStatus } from "./discord-status";
-
-const NoDataSkeleton = () => (
-	<div className="flex flex-col gap-2">
-		<div className="flex gap-2">
-			<Skeleton className="size-10 rounded-full" />
-			<Skeleton className="h-10 w-28 md:w-56" />
-		</div>
-		<Skeleton className="h-8 w-full" />
-	</div>
-);
-
-const ActivityFeed = ({ activities, lanyard }: { activities: Activity[]; lanyard: Data }) => (
-	<>
-		{activities?.map(
-			(activity, idx) =>
-				activity.name !== "Custom Status" && (
-					<DiscordActivityCard activity={activity} data={lanyard as Data} key={`${activity.name}-${idx}`} />
-				),
-		)}
-	</>
-);
-
-export const DiscordActivity = () => {
+export const Discord: React.FC = () => {
 	const userID = BigInt("196399908771725312");
 	const lanyard = useLanyardWS(`${userID}`);
 
@@ -55,11 +32,11 @@ export const DiscordActivity = () => {
 				<CardContent className="flex flex-col gap-4">
 					{/* Render if no data is present */}
 					<RenderIf when={!lanyard}>
-						<NoDataSkeleton />
+						<ActivitySkeleton />
 					</RenderIf>
 
 					<RenderIf when={Boolean(lanyard?.discord_status)}>
-						<DiscordStatus data={lanyard as Data} />
+						<StatusDisplay data={lanyard as Data} />
 
 						{/* Render if no activities */}
 						<RenderIf when={!lanyard?.activities?.length}>

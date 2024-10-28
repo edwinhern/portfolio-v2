@@ -4,11 +4,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Icons } from "@/components/ui/icons";
 import { cn } from "@/lib/utils";
 
-interface DiscordStatusProps {
+interface StatusDisplayProps {
 	data: Data;
 }
 
-export const DiscordStatus: React.FC<DiscordStatusProps> = ({ data }) => {
+export const StatusDisplay: React.FC<StatusDisplayProps> = ({ data }) => {
 	const status = (status: Data["discord_status"]) => {
 		const statusMap: Record<Data["discord_status"], { cn: string; text: string }> = {
 			dnd: { cn: "text-rose-400", text: "Do Not Disturb" },

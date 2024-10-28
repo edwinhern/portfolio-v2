@@ -6,15 +6,14 @@ import { useEffect, useState } from "react";
 import { RenderIf } from "@/components/common/render-if";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+import { USTimeFormatter } from "../CurrentTime.utils";
 
-import { USTimeFormatter } from "../../dashboard-config";
-
-interface TimeCardProps extends PropsWithChildren {
+interface TimeDisplayProps extends PropsWithChildren {
 	bgClassName: React.ComponentProps<"div">["className"];
 	timeClassName: React.ComponentProps<"div">["className"];
 }
 
-const TimeCard: React.FC<TimeCardProps> = ({ bgClassName, children, timeClassName }) => {
+export const TimeDisplay: React.FC<TimeDisplayProps> = ({ bgClassName, children, timeClassName }) => {
 	const [time, setTime] = useState<string | undefined>(undefined);
 
 	useEffect(() => {
@@ -56,5 +55,3 @@ const TimeCard: React.FC<TimeCardProps> = ({ bgClassName, children, timeClassNam
 		</div>
 	);
 };
-
-export default TimeCard;

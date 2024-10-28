@@ -8,8 +8,8 @@ import { Card } from "@/components/ui/card";
 import { Reveal } from "@/components/ui/reveal";
 
 import type { WeatherForecast } from "@/lib/api/weather/types";
-import DayComponent from "./components/day-component";
-import NightComponent from "./components/night-component";
+import { DayScene } from "./components/DayScene";
+import { NightScene } from "./components/NightScene";
 
 interface CurrentTimeCardProps {
 	data: WeatherForecast | null;
@@ -27,14 +27,14 @@ export const CurrentTimeCard: React.FC<CurrentTimeCardProps> = ({ data }) => {
 
 		const now = new Date();
 		if (isAfter(now, add(sunsetTime, { hours: 1 }))) {
-			return <NightComponent />;
+			return <NightScene />;
 		}
 
 		if (isAfter(now, sunriseTime)) {
-			return <DayComponent />;
+			return <DayScene />;
 		}
 
-		return <NightComponent />;
+		return <NightScene />;
 	}, [data, sunriseTime, sunsetTime]);
 
 	return (
