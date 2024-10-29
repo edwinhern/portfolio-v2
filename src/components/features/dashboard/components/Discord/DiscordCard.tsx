@@ -1,6 +1,6 @@
 "use client";
 
-import type { Data, DiscordUser } from "use-lanyard";
+import type { DiscordUser } from "use-lanyard";
 
 import { RenderIf } from "@/components/common/render-if";
 import { Alert, AlertDescription } from "@/components/ui/alert";
