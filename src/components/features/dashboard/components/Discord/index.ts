@@ -1,1 +1,1 @@
-export * from "./Discord";
+export * from "./DiscordCard";

@@ -7,16 +7,15 @@ import { TimeElapsed } from "./TimeElapsed";
 
 interface ActivityCardProps {
 	activity: Activity;
-	data: Data;
 }
 
-export const ActivityCard: React.FC<ActivityCardProps> = ({ activity, data }) => {
+export const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
 	return (
 		<Alert className="flex flex-col items-center gap-3 border-none bg-secondary text-center sm:flex-row sm:text-left">
 			<TooltipProvider>
 				<Tooltip>
 					<TooltipTrigger>
-						<ActivityImage activity={activity} data={data} />
+						<ActivityImage activity={activity} />
 					</TooltipTrigger>
 					<TooltipContent>
 						{activity.assets ? activity.assets.large_text || activity.name : activity.name}

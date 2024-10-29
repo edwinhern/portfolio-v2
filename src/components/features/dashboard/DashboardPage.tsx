@@ -1,14 +1,15 @@
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from "@/components/ui/page-header";
 import type { WeatherForecast } from "@/lib/api/weather/types";
 import { CurrentTimeCard } from "./components/CurrentTime";
-import { Discord } from "./components/Discord";
+import { DiscordCard } from "./components/Discord";
 import { DiscordLink } from "./components/DiscordLink/DiscordLink";
 
 interface DashboardPageProps {
 	weatherForecast: WeatherForecast | null;
+	userId: bigint;
 }
 
-export const DashboardPage: React.FC<DashboardPageProps> = ({ weatherForecast }) => {
+export const DashboardPage: React.FC<DashboardPageProps> = ({ weatherForecast, userId }) => {
 	return (
 		<section className="container relative max-w-3xl space-y-4">
 			<PageHeader className="items-start">
@@ -21,7 +22,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ weatherForecast })
 			</PageHeader>
 
 			<div className="flex flex-wrap gap-2">
-				<Discord />
+				<DiscordCard userId={userId} />
 				<div className="flex size-full flex-wrap gap-4">
 					<DiscordLink />
 					<CurrentTimeCard data={weatherForecast} />

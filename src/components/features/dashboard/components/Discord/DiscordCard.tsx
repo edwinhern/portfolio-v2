@@ -1,7 +1,6 @@
 "use client";
 
-import type { Data } from "use-lanyard";
-import { useLanyardWS } from "use-lanyard";
+import type { Data, DiscordUser } from "use-lanyard";
 
 import { RenderIf } from "@/components/common/render-if";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -10,10 +9,14 @@ import { Reveal } from "@/components/ui/reveal";
 import { ActivityFeed } from "./components/ActivityFeed";
 import { ActivitySkeleton } from "./components/ActivitySkeleton";
 import { StatusDisplay } from "./components/StatusDisplay";
+import { useDiscordStatus } from "./hooks/useDiscordStatus";
 
-export const Discord: React.FC = () => {
-	const userID = BigInt("196399908771725312");
-	const lanyard = useLanyardWS(`${userID}`);
+interface DiscordCardProps {
+	userId: bigint;
+}
+
+export const DiscordCard: React.FC<DiscordCardProps> = ({ userId }) => {
+	const { isLoading, status, activities, user } = useDiscordStatus(userId);
 
 	return (
 		<Reveal
@@ -31,23 +34,23 @@ export const Discord: React.FC = () => {
 
 				<CardContent className="flex flex-col gap-4">
 					{/* Render if no data is present */}
-					<RenderIf when={!lanyard}>
+					<RenderIf when={isLoading}>
 						<ActivitySkeleton />
 					</RenderIf>
 
-					<RenderIf when={Boolean(lanyard?.discord_status)}>
-						<StatusDisplay data={lanyard as Data} />
+					<RenderIf when={Boolean(status)}>
+						<StatusDisplay user={user as DiscordUser} status={status} />
 
 						{/* Render if no activities */}
-						<RenderIf when={!lanyard?.activities?.length}>
+						<RenderIf when={!activities?.length}>
 							<Alert className="border-none bg-secondary">
 								<AlertDescription>No activities currently.</AlertDescription>
 							</Alert>
 						</RenderIf>
 
 						{/* Render activities */}
-						<RenderIf when={Boolean(lanyard?.activities?.some((a) => a?.name !== "Custom Status"))}>
-							<ActivityFeed activities={lanyard?.activities || []} lanyard={lanyard as Data} />
+						<RenderIf when={Boolean(activities?.some((a) => a?.name !== "Custom Status"))}>
+							<ActivityFeed activities={activities || []} />
 						</RenderIf>
 					</RenderIf>
 				</CardContent>
