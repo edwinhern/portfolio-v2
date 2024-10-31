@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import { mainNav } from "@/config/mainNav";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { MAIN_NAV_CONFIG } from "./navigation.constants";
 
 export function MainNav() {
 	return (
@@ -11,9 +11,9 @@ export function MainNav() {
 				<span className="font-bold font-heading text-lg">{siteConfig.siteTitle}</span>
 			</Link>
 			<nav className="mt-[0.099rem] hidden items-center gap-6 text-sm md:flex">
-				{mainNav.map((item) => (
-					<Link className={cn("transition-colors hover:text-foreground/80")} href={item.href} key={item.title}>
-						{item.title}
+				{MAIN_NAV_CONFIG.map(({ href, title }) => (
+					<Link className={cn("transition-colors hover:text-foreground/80")} href={href} key={href}>
+						{title}
 					</Link>
 				))}
 			</nav>

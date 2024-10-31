@@ -1,7 +1,6 @@
 import Link from "next/link";
 
-import { MainNav } from "@/components/common/main-nav";
-import { MobileNav } from "@/components/common/mobile-nav";
+import { MainNav, MobileNav } from "@/components/common/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/ui/icons";
 import { ModeToggleButton } from "@/components/ui/mode-toggle";

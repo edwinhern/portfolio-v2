@@ -2,7 +2,7 @@
 
 import type { DiscordUser } from "use-lanyard";
 
-import { RenderIf } from "@/components/common/render-if";
+import { RenderIf } from "@/components/common/shared";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Reveal } from "@/components/ui/reveal";

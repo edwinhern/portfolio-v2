@@ -8,9 +8,9 @@ import Link, { type LinkProps } from "next/link";
 import { Button } from "@/components/ui/button";
 import { MobileModeToggleButton } from "@/components/ui/mode-toggle";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { mainNav } from "@/config/mainNav";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { MAIN_NAV_CONFIG } from "./navigation.constants";
 
 export function MobileNav() {
 	const [open, setOpen] = useState(false);
@@ -29,7 +29,7 @@ export function MobileNav() {
 						<MobileLink className="w-fit" href="/" onOpenChange={setOpen}>
 							<span className="font-bold font-heading">{siteConfig.siteTitle}</span>
 						</MobileLink>
-						{mainNav.map((item) => (
+						{MAIN_NAV_CONFIG.map((item) => (
 							<MobileLink className="border-b" href={item.href} key={item.href} onOpenChange={setOpen}>
 								{item.title}
 							</MobileLink>

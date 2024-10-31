@@ -1,6 +1,6 @@
 import { Star } from "lucide-react";
 
-import { RenderIf } from "@/components/common/render-if";
+import { RenderIf } from "@/components/common/shared";
 import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import type { GitHubRepository } from "@/lib/api/github/types";
 import { ProjectCard } from "./ProjectCard";

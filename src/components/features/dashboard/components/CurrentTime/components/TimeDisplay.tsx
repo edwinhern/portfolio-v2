@@ -3,7 +3,7 @@
 import type { PropsWithChildren } from "react";
 import { useEffect, useState } from "react";
 
-import { RenderIf } from "@/components/common/render-if";
+import { RenderIf } from "@/components/common/shared";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 import { USTimeFormatter } from "../CurrentTime.utils";
