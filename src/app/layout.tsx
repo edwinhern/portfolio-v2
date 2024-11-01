@@ -1,20 +1,8 @@
 import type { Metadata } from "next";
-import type { PropsWithChildren } from "react";
 
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Raleway } from "next/font/google";
-
-import { ThemeProvider } from "@/components/common/providers";
-import { SiteFooter } from "@/components/common/site-footer";
-import { SiteHeader } from "@/components/common/site-header";
+import { BaseLayout } from "@/components/common/layouts/BaseLayout";
 import { siteConfig } from "@/config/site";
 import "@/globals.css";
-
-const raleway = Raleway({
-	subsets: ["latin"],
-	variable: "--heading-font",
-});
 
 export const metadata: Metadata = {
 	authors: [{ name: "Edwin Hernandez", url: siteConfig.links.linkedin }],
@@ -57,23 +45,6 @@ export const metadata: Metadata = {
 	},
 };
 
-const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
-	return (
-		<html lang="en" suppressHydrationWarning>
-			<head />
-			<body className={raleway.variable}>
-				<ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange enableSystem>
-					<SiteHeader />
-					<main className="relative flex min-h-screen flex-col">
-						<div className="flex-1 overflow-hidden">{children}</div>
-					</main>
-					<SiteFooter />
-					<SpeedInsights />
-					<Analytics />
-				</ThemeProvider>
-			</body>
-		</html>
-	);
-};
-
-export default RootLayout;
+export default function RootLayout({ children }: React.PropsWithChildren) {
+	return <BaseLayout>{children}</BaseLayout>;
+}

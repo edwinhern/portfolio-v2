@@ -1,11 +1,12 @@
 import type { Config } from "tailwindcss";
-const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+// @ts-expect-error This is how Tailwind CSS is imported
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+import type { CSSRuleObject, PluginAPI } from "tailwindcss/types/config";
 
 const config = {
 	content: ["src/app/**/*.{js,ts,jsx,tsx,mdx,json}", "src/components/**/*.{js,ts,jsx,tsx,mdx,json}"],
 	darkMode: ["selector"],
 	plugins: [require("tailwindcss-animate"), addVariablesForColors],
-	prefix: "",
 	theme: {
 		container: {
 			center: true,
@@ -110,10 +111,9 @@ const config = {
 export default config;
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-function addVariablesForColors({ addBase, theme }: any) {
+function addVariablesForColors({ addBase, theme }: PluginAPI) {
 	const allColors = flattenColorPalette(theme("colors"));
-	const newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
+	const newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val])) as CSSRuleObject;
 
 	addBase({
 		":root": newVars,
