@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
+// @ts-expect-error This is how Tailwind CSS is imported
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 import type { CSSRuleObject, PluginAPI } from "tailwindcss/types/config";
-const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
 	content: ["src/app/**/*.{js,ts,jsx,tsx,mdx,json}", "src/components/**/*.{js,ts,jsx,tsx,mdx,json}"],

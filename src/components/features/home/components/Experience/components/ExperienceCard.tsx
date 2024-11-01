@@ -28,12 +28,14 @@ export function ExperienceCard({
 			<CardHeader>
 				{image && (
 					<Image
-						alt="Company Logo"
+						alt={`${company} logo`}
 						className="mb-4 animate-reveal rounded-lg object-cover"
 						height="900"
-						loading={index < 1 ? "eager" : "lazy"}
+						quality={75}
 						src={image}
 						width="900"
+						placeholder="blur"
+						blurDataURL={image}
 					/>
 				)}
 
