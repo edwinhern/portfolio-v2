@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 		url: siteConfig.url,
 	},
 	title: {
-		default: "Edwin Hernandez - Coffee Lover",
+		default: "Edwin Hernandez",
 		template: `%s | ${siteConfig.name}`,
 	},
 	twitter: {
