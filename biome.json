@@ -21,13 +21,20 @@
 		"enabled": true,
 		"rules": {
 			"recommended": true,
+			"correctness": {
+				"noUnusedImports": {
+					"level": "error",
+					"fix": "safe"
+				}
+			},
 			"nursery": {
 				"useSortedClasses": {
-					"level": "warn",
+					"level": "error",
 					"options": {
-						"attributes": ["classList"],
+						"attributes": ["class", "className"],
 						"functions": ["clsx", "cva", "cn"]
-					}
+					},
+					"fix": "safe"
 				}
 			}
 		},

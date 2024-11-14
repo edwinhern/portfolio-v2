@@ -1,4 +1,4 @@
-import type { Activity, Data } from "use-lanyard";
+import type { Activity } from "use-lanyard";
 
 import { ActivityCard } from "./ActivityCard";
 
