@@ -1,4 +1,4 @@
-import type { Activity, Data } from "use-lanyard";
+import type { Activity } from "use-lanyard";
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
