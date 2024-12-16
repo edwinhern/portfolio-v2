@@ -9,7 +9,7 @@ interface RepositoryCardProps {
 	repository: GitHubRepository;
 }
 
-export const ProjectRepositoryCard = ({ repository }: RepositoryCardProps) => (
+export const ProjectRepositoryCard = ({ repository } : RepositoryCardProps) => (
 	<ProjectCard>
 		<CardHeader className="p-0">
 			<CardTitle className="font-heading text-xl md:text-2xl">
@@ -19,8 +19,8 @@ export const ProjectRepositoryCard = ({ repository }: RepositoryCardProps) => (
 
 		<CardContent className="p-0">
 			<CardDescription>
-				<RenderIf fallback={repository.description} when={repository.description.length > 100}>
-					{`${repository.description.substring(0, 100)}...`}
+				<RenderIf fallback={repository.description} when={repository.description?.length > 100}>
+					{`${repository.description?.substring(0, 100)}...`}
 				</RenderIf>
 			</CardDescription>
 		</CardContent>
