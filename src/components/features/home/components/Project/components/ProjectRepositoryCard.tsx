@@ -9,7 +9,7 @@ interface RepositoryCardProps {
 	repository: GitHubRepository;
 }
 
-export const ProjectRepositoryCard = ({ repository } : RepositoryCardProps) => (
+export const ProjectRepositoryCard = ({ repository }: RepositoryCardProps) => (
 	<ProjectCard>
 		<CardHeader className="p-0">
 			<CardTitle className="font-heading text-xl md:text-2xl">
