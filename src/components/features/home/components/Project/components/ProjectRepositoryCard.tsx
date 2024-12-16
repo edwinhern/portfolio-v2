@@ -19,8 +19,8 @@ export const ProjectRepositoryCard = ({ repository }: RepositoryCardProps) => (
 
 		<CardContent className="p-0">
 			<CardDescription>
-				<RenderIf fallback={repository.description} when={repository.description.length > 100}>
-					{`${repository.description.substring(0, 100)}...`}
+				<RenderIf fallback={repository.description} when={repository.description?.length > 100}>
+					{`${repository.description?.substring(0, 100)}...`}
 				</RenderIf>
 			</CardDescription>
 		</CardContent>
