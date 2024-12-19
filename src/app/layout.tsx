@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 		url: siteConfig.url,
 	},
 	title: {
-		default: "Edwin Hernandez - Coffee Lover",
+		default: "Edwin Hernandez",
 		template: `%s | ${siteConfig.name}`,
 	},
 	twitter: {
@@ -45,6 +45,6 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({ children }: React.PropsWithChildren) {
+export default function RootLayout({ children }: Readonly<React.PropsWithChildren>) {
 	return <BaseLayout>{children}</BaseLayout>;
 }
