@@ -24,7 +24,7 @@ export const TimeDisplay: React.FC<TimeDisplayProps> = ({ bgClassName, children,
 	}, []);
 
 	return (
-		<div className="relative col-span-1 row-span-1 size-full overflow-auto rounded-lg">
+		<div className="relative col-span-1 row-span-1 size-full overflow-hidden rounded-lg">
 			{/* Background */}
 			<div className={cn("absolute inset-0 h-full", bgClassName)} />
 

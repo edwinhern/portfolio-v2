@@ -45,6 +45,6 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({ children }: React.PropsWithChildren) {
+export default function RootLayout({ children }: Readonly<React.PropsWithChildren>) {
 	return <BaseLayout>{children}</BaseLayout>;
 }

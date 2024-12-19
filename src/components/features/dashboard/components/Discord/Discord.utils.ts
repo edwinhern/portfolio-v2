@@ -1,27 +1,27 @@
-export function discordTimestamp(unixTimestamp: number): string {
-	const durationInMilliseconds = Date.now() - unixTimestamp;
-	const seconds = Math.floor(durationInMilliseconds / 1000);
-	const minutes = Math.floor(seconds / 60);
-	const hours = Math.floor(minutes / 60);
-	const days = Math.floor(hours / 24);
+interface TimeUnit {
+	value: number;
+	unit: string;
+	threshold: number;
+}
 
-	if (days > 0) {
-		const remainingHours = hours % 24;
-		return `${days} day${days > 1 ? "s" : ""}${
-			remainingHours > 0 ? `, ${remainingHours} hour${remainingHours > 1 ? "s" : ""}` : ""
-		}`;
-	}
-	if (hours > 0) {
-		const remainingMinutes = minutes % 60;
-		return `${hours} hour${hours > 1 ? "s" : ""}${
-			remainingMinutes > 0 ? `, ${remainingMinutes} minute${remainingMinutes > 1 ? "s" : ""}` : ""
-		}`;
-	}
-	if (minutes > 0) {
-		const remainingSeconds = seconds % 60;
-		return `${minutes} minute${minutes > 1 ? "s" : ""}${
-			remainingSeconds > 0 ? `, ${remainingSeconds} second${remainingSeconds > 1 ? "s" : ""}` : ""
-		}`;
-	}
-	return `${seconds} second${seconds !== 1 ? "s" : ""}`;
+const formatUnit = (value: number, unit: string): string => `${value} ${unit}${value !== 1 ? "s" : ""}`;
+
+const getTimeUnits = (seconds: number): TimeUnit[] => [
+	{ value: Math.floor(seconds / 86400), unit: "day", threshold: 86400 },
+	{ value: Math.floor((seconds % 86400) / 3600), unit: "hour", threshold: 3600 },
+	{ value: Math.floor((seconds % 3600) / 60), unit: "minute", threshold: 60 },
+	{ value: seconds % 60, unit: "second", threshold: 1 },
+];
+
+export function discordTimestamp(unixTimestamp: number): string {
+	const seconds = Math.floor((Date.now() - unixTimestamp) / 1000);
+	const timeUnits = getTimeUnits(seconds);
+
+	const primaryUnit = timeUnits.find((unit) => unit.value > 0) ?? timeUnits[3];
+	const secondaryUnit = timeUnits[timeUnits.indexOf(primaryUnit) + 1];
+
+	const primary = formatUnit(primaryUnit.value, primaryUnit.unit);
+
+	if (!secondaryUnit?.value) return primary;
+	return `${primary}, ${formatUnit(secondaryUnit.value, secondaryUnit.unit)}`;
 }
