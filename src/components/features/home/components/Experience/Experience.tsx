@@ -7,9 +7,9 @@ export function Experience() {
 		<section className="md:mx-14">
 			<TracingBeam>
 				<div className="flex flex-col gap-4">
-					<h1 className="text-3xl lg:text-4xl" id="experience-section">
+					<h2 className="text-3xl lg:text-4xl" id="experience-section">
 						Where I&apos;ve Worked
-					</h1>
+					</h2>
 					{experiences.map((experience, idx) => (
 						<ExperienceCard
 							company={experience.company}
