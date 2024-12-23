@@ -1,58 +1,35 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": [
-		"config:recommended",
-		"customManagers:biomeVersions"
-	],
-	"labels": [
-		"chore: dependencies"
-	],
+	"extends": ["config:recommended", "customManagers:biomeVersions"],
+	"labels": ["chore: dependencies"],
 	"dependencyDashboard": true,
 	"packageRules": [
 		{
-			"matchUpdateTypes": [
-				"minor",
-				"patch",
-				"pin",
-				"digest"
-			],
+			"matchUpdateTypes": ["minor", "patch", "pin", "digest"],
 			"groupName": "all non-major dependencies",
 			"groupSlug": "all-minor-patch",
 			"automerge": true
 		},
 		{
-			"matchPackageNames": [
-				"@biomejs/biome"
-			],
+			"matchPackageNames": ["@biomejs/biome"],
 			"groupName": "biome",
 			"groupSlug": "biome",
 			"automerge": true
 		},
 		{
-			"matchPackageNames": [
-				"@commitlint/cli",
-				"@commitlint/config-conventional"
-			],
+			"matchPackageNames": ["@commitlint/cli", "@commitlint/config-conventional"],
 			"groupName": "commitlint",
 			"groupSlug": "commitlint",
 			"automerge": true
 		},
 		{
-			"matchPackageNames": [
-				"@types/node",
-				"@types/react",
-				"@types/react-dom"
-			],
+			"matchPackageNames": ["@types/node", "@types/react", "@types/react-dom"],
 			"groupName": "types",
 			"groupSlug": "types",
 			"automerge": true
 		},
 		{
-			"matchPackageNames": [
-				"autoprefixer",
-				"postcss",
-				"tailwindcss"
-			],
+			"matchPackageNames": ["autoprefixer", "postcss", "tailwindcss"],
 			"groupName": "postcss",
 			"groupSlug": "postcss",
 			"automerge": true
@@ -61,24 +38,16 @@
 			"groupName": "radix-ui",
 			"groupSlug": "radix-ui",
 			"automerge": true,
-			"matchPackageNames": [
-				"/^@radix-ui/react-/"
-			]
+			"matchPackageNames": ["/^@radix-ui/react-/"]
 		},
 		{
-			"matchPackageNames": [
-				"class-variance-authority",
-				"clsx"
-			],
+			"matchPackageNames": ["class-variance-authority", "clsx"],
 			"groupName": "class-utils",
 			"groupSlug": "class-utils",
 			"automerge": true
 		},
 		{
-			"matchPackageNames": [
-				"tailwind-merge",
-				"tailwindcss-animate"
-			],
+			"matchPackageNames": ["tailwind-merge", "tailwindcss-animate"],
 			"groupName": "tailwind-utils",
 			"groupSlug": "tailwind-utils",
 			"automerge": true
