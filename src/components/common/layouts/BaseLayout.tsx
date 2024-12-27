@@ -9,7 +9,7 @@ interface BaseLayoutProps extends PropsWithChildren {
 	className?: string;
 }
 
-export function BaseLayout({ children, className }: BaseLayoutProps) {
+export function BaseLayout({ children, className }: Readonly<BaseLayoutProps>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head />
