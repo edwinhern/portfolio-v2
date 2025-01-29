@@ -1,4 +1,4 @@
-# 🌐 edwinhern.com
+# 🌐 v2.edwinhern.com
 
 [![Build](https://github.com/edwinhern/portfolio-v2/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/edwinhern/portfolio-v2/actions/workflows/build.yml)
 [![Code Quality](https://github.com/edwinhern/portfolio-v2/actions/workflows/code-quality.yml/badge.svg?branch=main)](https://github.com/edwinhern/portfolio-v2/actions/workflows/code-quality.yml)
@@ -19,7 +19,7 @@ Here's what powers edwinhern.com, from the framework down to the animation libra
 
 ## 🌟 Useful Links
 
-Explore these tools to further enhance your development workflow:
+Explore these tools to enhance your development workflow further:
 
 - [Realtime Colors](https://www.realtimecolors.com) - Elevate your design with modern fonts and a dynamic color palette generator.
   - Color Schema I used - <https://www.realtimecolors.com/?colors=F1F1F1-0F0F0F-F1F1F1-272727-15F5BA&fonts=Roboto-Roboto>
